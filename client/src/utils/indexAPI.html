@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Description" content="Enter your description here" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+	<title>Title</title>
+</head>
+
+<body>
+	<script>
+
+		const diagnosis = {
+			"async": true,
+			"crossDomain": true,
+			"url": "https://priaid-symptom-checker-v1.p.rapidapi.com/issues?language=en-gb",
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-key": "55a082967dmsh01d187363e4cebcp1cde3ajsn6d808025672e",
+				"x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com"
+			}
+		};
+
+		$.ajax(diagnosis).done(function (response) {
+			console.log(response);
+		});
+
+
+		const treatment = {
+			"async": true,
+			"crossDomain": true,
+			"url": "https://priaid-symptom-checker-v1.p.rapidapi.com/issues/13/info?language=en-gb",
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-key": "55a082967dmsh01d187363e4cebcp1cde3ajsn6d808025672e",
+				"x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com"
+			}
+		};
+
+		$.ajax(treatment).done(function (response) {
+			console.log(response);
+		});
+
+	</script>
+</body>
+
+</html>
