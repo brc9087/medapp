@@ -1,26 +1,24 @@
 import React from "react";
+// import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import Nav from "./components/Nav/index";
+import Footer from "./components/Footer/index";
+import Jumbotron from "../src/components/Jumbotron/index";
+import SaveBooks from "../src/pages/savedBooksPage";
+import SearchBooks from "../src/pages/searchBooksPage";
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <div>
         <Nav />
+        <Jumbotron/>
         <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
+          <Route exact path="/" component={SearchBooks} />
+          <Route exact path="/saved" component={SaveBooks} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
