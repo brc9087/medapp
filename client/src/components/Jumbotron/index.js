@@ -1,5 +1,6 @@
 import React from "react";
-import picture from "../../images/titans.PNG";
+import picture from "../../images/med2.jpg";
+
 
 const styles = {
     jumbo: {
