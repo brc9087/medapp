@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-import Registration from "./pages/Registration";
 
-function App() {
+import UserContext from "./utils/UserContext";
+
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+
+import ProfilePage from "./pages/ProfilePage";
+import PasswordReset from "./pages/PasswordReset";
+
+function Application() {
+  const user = useContext(UserContext);
+
   return (
-<div>
-  <Registration/>
-</div>
+        user ?
+        <ProfilePage />
+      :
+      <Router>
+        <Switch>
+          <Route exact path="/signUp">
+            <SignUp />
+          </Route>
+          <Route exact path="/">
+            <SignIn />
+          </Route>
+          <Route exact path="/passwordReset">
+            <PasswordReset />
+          </Route>
+        </Switch>
+      </Router>
   );
 }
 
-export default App;
+
+
+export default Application;
