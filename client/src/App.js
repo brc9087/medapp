@@ -9,6 +9,8 @@ import SignUp from "./pages/SignUp";
 import ProfilePage from "./pages/ProfilePage";
 import PasswordReset from "./pages/PasswordReset";
 
+
+
 function Application() {
   const user = useContext(UserContext);
 
