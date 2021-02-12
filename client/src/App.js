@@ -7,13 +7,18 @@ import Jumbotron from "../src/components/Jumbotron/index";
 import SaveBooks from "../src/pages/savedBooksPage";
 import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
+import Application from "./pages/Application";
+import UserProvider from "./components/UserProvier/UserProvier";
 
 function App() {
   return (
     <Router>
       <div>
         <Nav />
-        <Jumbotron/>
+        <UserProvider>
+          <Application />
+        </UserProvider>
+        <Jumbotron />
         <Switch>
           <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} />
