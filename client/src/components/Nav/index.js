@@ -23,16 +23,16 @@ function Nav() {
             </a>
             <div id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item" id="home">
+                    <li className="nav-item" id="search">
                         <a style={styles.text} className="nav-link" href="/">Search</a>
                         </li>
-                        <li className="nav-item" id="home">
+                        <li className="nav-item" id="save">
                         <a style={styles.text} className="nav-link" href="/">My symtoms</a>
                         </li>
-                        <li className="nav-item" id="home">
+                        <li className="nav-item" id="login">
                         <a style={styles.text} className="nav-link" href="/">login</a>
                         </li>
-                        <li className="nav-item" id="home">
+                        <li className="nav-item" id="signin">
                         <a style={styles.text} className="nav-link" href="/">signin</a>
                         </li>
                     
