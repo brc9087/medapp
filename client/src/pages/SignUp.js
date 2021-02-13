@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, signInWithGoogle, generateUserDocument } from "../utils/firebase";
 import Input from "../components/Input/Input";
-import Footer from "../components/Footer/Footer";
 
 
 
@@ -54,6 +53,7 @@ const SignUp = () => {
     title: {
       fontSize: "50px",
       textAlign: "center"
+      
     },
     body: {
       
@@ -132,7 +132,6 @@ const SignUp = () => {
             Sign in here
           </Link>{" "}
         </p>
-         <Footer />
   
       </div>
     </div>

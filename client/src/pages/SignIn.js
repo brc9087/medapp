@@ -1,129 +1,128 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { signInWithGoogle, auth } from "../utils/firebase";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 
 const SignIn = () => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
-    const signInWithEmailAndPasswordHandler = (event,email, password) => {
-        event.preventDefault();
-        auth.signInWithEmailAndPassword(email, password).catch(error => {
-        setError("Error signing in with password and email!");
-          console.error("Error signing in with password and email", error);
-        });
-      };
-      
-      const onChangeHandler = (event) => {
-          const {name, value} = event.currentTarget;
-        
-          if(name === 'userEmail') {
-              setEmail(value);
-          }
-          else if(name === 'userPassword'){
-            setPassword(value);
-          }
-      };
-   
+  const signInWithEmailAndPasswordHandler = (event, email, password) => {
+    event.preventDefault();
+    auth.signInWithEmailAndPassword(email, password).catch(error => {
+      setError("Error signing in with password and email!");
+      console.error("Error signing in with password and email", error);
+    });
+  };
 
-      //CSS
+  const onChangeHandler = (event) => {
+    const { name, value } = event.currentTarget;
 
-      const styles = {
-        body: {
-          backgroundColor: "black",
-          textAlign: "center"
-        },
-        form: {
-          textAlign: "center",
-          backgroundColor: "rgb(57, 78, 127)",
-          color: "white",
-          display: "inline-flexbox",
-          marginLeft: "20%",
-          marginRight: "20%",
-          marginTop: "2%",
-          marginBottom: "5%"
+    if (name === 'userEmail') {
+      setEmail(value);
+    }
+    else if (name === 'userPassword') {
+      setPassword(value);
+    }
+  };
 
-        },
-        inputdiv: {
-          marginLeft: "20%",
-          marginRight: "20%"
-        },
-        logo: {
-          backgroundImage: "url(" + "./logo/unnamed.png" + ")",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        },
-        footer: {
 
-        }
-      }
+  //CSS
+
+  const styles = {
+    body: {
+      backgroundColor: "black",
+      textAlign: "center",
+      height: "100%"
+    },
+    form: {
+      textAlign: "center",
+      backgroundColor: "rgb(57, 78, 127)",
+      color: "white",
+      display: "inline-flexbox",
+      marginLeft: "20%",
+      marginRight: "20%",
+      marginTop: "2%",
+      marginBottom: "5%"
+
+    },
+    inputdiv: {
+      marginLeft: "20%",
+      marginRight: "20%"
+    },
+    logo: {
+      backgroundImage: "url(" + "./logo/unnamed.png" + ")",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover"
+    },
+    footer: {
+
+    }
+  }
 
   return (
-    <div style = {styles.body}>
-    
-<div style = {styles.logo}>
-<Header Logo={"/logo/logo.png"} />
-</div>
+    <div style={styles.body}>
 
-    <form class="box" style = {styles.form}>
+     
+        <Header Logo={"/logo/steth.png"} />
+     
 
-      <h1 className="formtitle">Sign In</h1>
-      <div className="">
-        {error !== null && <div className = "py-4 bg-red-600 w-full text-white text-center mb-3">{error}</div>}
-        <form className="SigninForm" style = {styles.inputdiv}>
-          <label htmlFor="userEmail" className="block">
-            Email:
+      <form class="box" style={styles.form}>
+
+        <h1 className="formtitle">Sign In</h1>
+        <div className="">
+          {error !== null && <div className="py-4 bg-red-600 w-full text-white text-center mb-3">{error}</div>}
+          <form className="SigninForm" style={styles.inputdiv}>
+            <label htmlFor="userEmail" className="block">
+              Email:
           </label>
-          <Input
-            type="email"
-            name="userEmail"
-            value = {email}
-            placeholder="E.g: faruq123@gmail.com"
-            id="userEmail"
-            onChange = {onChangeHandler}
-          />
-          <label htmlFor="userPassword" className="block">
-            Password:
+            <Input
+              type="email"
+              name="userEmail"
+              value={email}
+              placeholder="E.g: faruq123@gmail.com"
+              id="userEmail"
+              onChange={onChangeHandler}
+            />
+            <label htmlFor="userPassword" className="block">
+              Password:
           </label>
-          <Input
-            type="password"
-            name="userPassword"
-            value = {password}
-            placeholder="Your Password"
-            id="userPassword"
-            onChange = {onChangeHandler}
-          />
-          <button class="button is-info is-rounded" onClick = {signInWithEmailAndPasswordHandler}>Sign in</button>
+            <Input
+              type="password"
+              name="userPassword"
+              value={password}
+              placeholder="Your Password"
+              id="userPassword"
+              onChange={onChangeHandler}
+            />
+            <button class="button is-info is-rounded" onClick={(event) =>{ signInWithEmailAndPasswordHandler(event, email, password)}}>Sign in</button>
 
-        </form>
-        <p className="text-center my-3">or</p>
-        <button
-          className="button is-danger is-rounded"
-          onClick= {signInWithGoogle}
-        >
-          Sign in with Google
+          </form>
+          <p className="text-center my-3">or</p>
+          <button
+            className="button is-danger is-rounded"
+            onClick={signInWithGoogle}
+          >
+            Sign in with Google
         </button>
-        <p className="text-center my-3">
-          Don't have an account?{" "}
-          <Link to="signUp" className="text-blue-500 hover:text-blue-600">
-            Sign up here
+          <p className="text-center my-3">
+            Don't have an account?{" "}
+            <Link to="signUp" className="text-blue-500 hover:text-blue-600">
+              Sign up here
           </Link>{" "}
-          <br />{" "}
-          <Link to="passwordReset" className="text-blue-500 hover:text-blue-600">
-            Forgot Password?
+            <br />{" "}
+            <Link to="passwordReset" className="text-blue-500 hover:text-blue-600">
+              Forgot Password?
           </Link>
 
 
-        </p>
-      </div>
-</form>
-<Footer style = {styles.footer}/>
-</div>
+          </p>
+        </div>
+      </form>
+    </div>
   );
 };
 

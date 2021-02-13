@@ -1,12 +1,10 @@
 import React from "react";
 import "./footer.css";
 
-
-
 function Footer() {
   return (
     <footer className="footer">
-      <span>OnlySymps 2021</span>
+      <span>Onlysymps 2017</span>
     </footer>
   );
 }

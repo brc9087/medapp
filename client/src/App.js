@@ -1,39 +1,24 @@
-import React, { useContext } from "react";
+  
+import React from "react";
+// import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
-import UserContext from "./utils/UserContext";
+import Application from "./pages/Application";
+import UserProvider from "./components/UserProvider/UserProvider";
 
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-
-import ProfilePage from "./pages/ProfilePage";
-import PasswordReset from "./pages/PasswordReset";
-
-
-
-function Application() {
-  const user = useContext(UserContext);
-
+function App() {
   return (
-        user ?
-        <ProfilePage />
-      :
-      <Router>
-        <Switch>
-          <Route exact path="/signUp">
-            <SignUp />
-          </Route>
-          <Route exact path="/">
-            <SignIn />
-          </Route>
-          <Route exact path="/passwordReset">
-            <PasswordReset />
-          </Route>
-        </Switch>
-      </Router>
+    <Router>
+      <div>
+        <UserProvider>
+          <Application />
+        </UserProvider>
+       
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
-
-
-export default Application;
+export default App;

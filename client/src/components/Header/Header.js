@@ -3,7 +3,7 @@ import React from "react";
 
 function Header({Logo}) {
     return (
-<img src={Logo}/>
+<img src={Logo} alt=""/>
     );
 }
 

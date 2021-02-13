@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { auth, generateUserDocument } from "../../utils/firebase";
-
 import UserContext from "../../utils/UserContext";
+
+
 
 class UserProvider extends Component {
   state = {
@@ -25,5 +26,4 @@ class UserProvider extends Component {
     );
   }
 }
-
 export default UserProvider;
