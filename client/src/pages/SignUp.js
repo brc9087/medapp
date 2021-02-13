@@ -62,9 +62,9 @@ const SignUp = () => {
 
   return (
     
-    <div  style = {styles.form}>
+    <div style = {styles.form}>
       <h1 style= {styles.title}>Sign Up</h1>
-     
+     <div >
         {error !== null && (
           <div>
             {error}
@@ -132,9 +132,9 @@ const SignUp = () => {
             Sign in here
           </Link>{" "}
         </p>
-         <Footer/>
+         <Footer />
   
-      
+      </div>
     </div>
    
     
