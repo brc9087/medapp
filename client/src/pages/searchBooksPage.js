@@ -20,7 +20,7 @@ class SearchBooks extends Component {
   //function to control the submit button of the search form 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.getGoogleSearchBooks(this.state.search)
+    API.diagnosis(this.state.search)
       .then(res => {
         if (res.data.items === "error") {
           throw new Error(res.data.items);
