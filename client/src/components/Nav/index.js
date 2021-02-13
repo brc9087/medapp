@@ -1,13 +1,48 @@
 import React from "react";
 
-function Nav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        React Reading List
-      </a>
-    </nav>
-  );
+const styles = {
+    navBar: {
+        backgroundColor: "navy"
+    },
+    font: {
+        color: "white",
+        fontSize: "14pt",
+        fontStyle: "italic"
+
+    },
+    text: {
+        color: "pink"
+    }
 }
 
-export default Nav;
+function Nav() {
+    return (
+        <nav style={styles.navBar} className="navbar navbar-expand-lg">
+            <a style={styles.font} className="navbar-brand" href="/">
+            <h2 className="text-white">OnlySymps</h2>
+            </a>
+            <div id="navbarNav">
+                <ul className="navbar-nav">
+                    <li className="nav-item" id="home">
+                        <a style={styles.text} className="nav-link" href="/">Search</a>
+                        </li>
+                        <li className="nav-item" id="home">
+                        <a style={styles.text} className="nav-link" href="/">My symtoms</a>
+                        </li>
+                        <li className="nav-item" id="home">
+                        <a style={styles.text} className="nav-link" href="/">login</a>
+                        </li>
+                        <li className="nav-item" id="home">
+                        <a style={styles.text} className="nav-link" href="/">signin</a>
+                        </li>
+                    
+                    
+                
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+    );
+}
+ export default Nav;
