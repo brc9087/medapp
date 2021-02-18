@@ -9,6 +9,9 @@ import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
 import Application from "./pages/Application";
 import UserProvider from "./components/UserProvier/UserProvier";
+import Books from "./pages/Books";
+import Detail from "./pages/Detail"
+
 
 function App() {
   return (
@@ -18,8 +21,11 @@ function App() {
         <UserProvider>
           <Application />
         </UserProvider>
+        <Books/>
+        <Detail/>
         <Jumbotron />
         <Switch>
+        <Route exact path="/books" />
           <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} />
         </Switch>
