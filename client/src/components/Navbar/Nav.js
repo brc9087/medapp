@@ -2,10 +2,19 @@
 import React from "react";
 
 
+const styles = {
+    navbar: {
+        backgroundColor: "white",
+    },
+    navbaritems: {
+        color: "black"
+    }
+}
+
 function Nav(props) {
     return (
 
-<nav className="navbar" role="navigation" aria-label="main navigation">
+<nav className="navbar" style = {styles.navbar} role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item" href="">
       <img src="/logo/steth.png" width="35" height="30"/>
@@ -18,16 +27,16 @@ function Nav(props) {
     </a>
   </div>
 
-  <div id="navbarBasicExample" className="navbar-menu">
+  <div id="navbarBasicExample"  className="navbar-menu">
     <div className="navbar-start">
-      <a className="navbar-item">
+      <a style = {styles.navbaritems} className="navbar-item">
          Symptoms
       </a>
 
-      <a className="navbar-item">
+      <a style = {styles.navbaritems} className="navbar-item">
        Doctors
       </a>
-      <a className="navbar-item">
+      <a  style = {styles.navbaritems} className="navbar-item">
        Results
       </a>
       
@@ -38,7 +47,7 @@ function Nav(props) {
       <div className="navbar-item">
         <div className="buttons">
         
-          <button className = "button is-link is-light" onClick = {props.button}>Sign out</button>
+          <a  style = {styles.navbaritems} className = "navbar-item" onClick = {props.button}>Sign out</a>
 
         </div>
       </div>
