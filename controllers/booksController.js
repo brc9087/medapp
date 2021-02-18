@@ -3,9 +3,13 @@ const db = require("../models");
 // Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
+    console.log("Requset fro find All pinged")
     db.Book
       .find(req.query)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+        console.log("Response from booksController.Findall", dbModel)
+        res.json(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {

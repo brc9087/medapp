@@ -30,7 +30,7 @@ function Nav() {
                         <a style={styles.text} className="nav-link" href="/">My symtoms</a>
                         </li>
                         <li className="nav-item" id="login">
-                        <a style={styles.text} className="nav-link" href="/">login</a>
+                        <a style={styles.text} className="nav-link" href="/login">login</a>
                         </li>
                         <li className="nav-item" id="signup">
                         <a style={styles.text} className="nav-link" href="/">signin</a>
