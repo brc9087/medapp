@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 	<script>
 		// import axios from "axios";
 
@@ -43,7 +44,7 @@
 				"url": `https://priaid-symptom-checker-v1.p.rapidapi.com/issues/${i}/info?language=en-gb`,
 				"method": "GET",
 				"headers": {
-					"x-rapidapi-key": "55a082967dmsh01d187363e4cebcp1cde3ajsn6d808025672e",
+					"x-rapidapi-key": "aec9e5a6b1mshe08b0f3857deac2p130b0ejsn6027db6f4889",
 					"x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com"
 				}
 			};
@@ -51,14 +52,20 @@
 			$.ajax(treatment).done(function (response) {
 				console.log(response);
 			}
-		)};
+			)
+		};
 
 
 		$.ajax(treatment).done(function (response) {
 			if (response[i].name) {
-			console.log(response[i]);
-		}}
-		);
+				console.log(response[i]);
+			}
+		});
+
+		
+		
+
+		
 
 
 		// const diagnosis = {
