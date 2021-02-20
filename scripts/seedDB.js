@@ -101,13 +101,6 @@ const bookSeed = [
   },
 
   {
-    category: "respiratory",
-    name: "flu",
-    description: "a condition",
-    symptoms: ""
-  },
-
-  {
     category: "head",
     name: "Motion Sickness",
     description: "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
