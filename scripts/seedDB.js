@@ -27,60 +27,57 @@ const bookSeed = [
   {
     category: "respiratory",
     name: "bacterial pneumonia",
-    description: "a condition",
-    treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    description: "Bacterial pneumonia is a lung infection caused by bacteria. Pneumococcal bacteria are the most common cause, but pneumonia also may be caused by other bacteria.",
+    treatment: "You need to take antibiotics to treat bacterial pneumonia. Your doctor also may suggest that you take a cough suppressant. In some cases, you may need to be treated in the hospital.",
+    symptoms: "The symptoms of bacterial pneumonia can vary from person to person. Common symptoms include cough, shortness of breath, fever, chills, headache, muscle aches, and fatigue."
   },
   {
+    category: "respiratory",
+    name: "coronavirus",
+    description: "A coronavirus is a kind of common virus that causes an infection in your nose, sinuses, or upper throat. Most coronaviruses aren't dangerous.",
+    treatment: "There’s no specific treatment for COVID-19. People who get a mild case need care to ease their symptoms, like rest, fluids, and fever control. Take over-the-counter medicine for a sore throat, body aches, and fever. But don't give aspirin to children or teens younger than 19.",
+    symptoms: "coughing, fever, shortness of breath, fatigue, headache, loss of smell or taste"
+  },
+
+  {
+    category: "chest pain",
+    name: "rib fracture",
+    description: "Broken ribs are a common injury. A blow to the chest -- during a car accident, a fall, or a football game -- may break a rib.",
+    treatment: "rest, Over-the-counter or prescription medicines to reduce pain and swelling, Icing the area for 10 minutes at a time ",
+    symptoms: "A broken rib causes a sore, swollen spot on your chest. The pain may be mild or intense -- some people mistake it for a heart attack. The pain will be worse when breathing deeply, coughing or sneezing, and bending or twisting your body."
+  },
+  {
+    category: "chest pain",
+    name: "heart burn/ GERD",
+    description: "Heartburn happens when stomach acid backs up into your esophagus, irritating the lining of the esophagus. ",
+    treatment: "Treatment for heartburn and GERD usually begins with over-the-counter antacids and medications to help reduce stomach acid. You also may want to avoid the foods and drinks that make your symptoms worse. If these treatments don't relieve symptoms, you may need prescription medications, surgery, or other procedures.",
+    symptoms: "The most common symptoms of heartburn and GERD are a burning feeling in the chest, throat, or mouth, nausea after eating, and a feeling that food is trapped low in your throat."
+  },
+  {
+    category: "chest pain",
+    name: "pulmonary embolism",
+    description: "A pulmonary embolism is a blood clot that forms in a vein, usually in the leg, travels to the lung, and lodges there. You may have shortness of breath, even while resting, or feel as if you're having a heart attack. It is an emergency, because one large pulmonary embolism or several small ones can be fatal. Blood-thinning medication is the standard treatment. Most people who are treated for pulmonary embolism survive. Those who are older, have an underlying illness, or do not get diagnosed promptly are at greater risk of dying. ",
+    treatment: "Anticoagulant medication or thrombolytic medication to dissolve the clot, Surgery to remove the clot  ",
+    symptoms: "Symptoms of pulmonary embolism may include shortness of breath or rapid breathing; chest pain, which may be worsened with deep breathing; coughing or spitting up blood; anxiety, restlessness, lightheadedness, or rapid heartbeat."
+  }, 
+  {
+    category: "chest pain",
+    name: "panic attack",
+    description: "When someone has a panic attack, that person feels a sudden, intense fear that can't be controlled. People who have panic attacks often feel like they are having a heart attack, losing control, suffocating, or dying. During the panic attack, the person also may have chest pain, nausea, shortness of breath, chills, sweating, dizziness, or a feeling of choking. Doctors don't know for certain what causes panic attacks, but it may have to do with genetics or stress.",
+    treatment: "Antidepressant medications, such as fluoxetine (Prozac), paroxetine (Paxil), sertraline (Zoloft), and venlafaxine (Effexor), Mild sedatives, such as alprazolam (Xanax) and clonazepam (Klonopin)",
+    symptoms: "Symptoms of a panic attack include a feeling of doom, shakiness, racing heartbeat, sweating, chills, chest pain, shortness of breath, nausea, faintness, and headache."
+  },
+
+  {
+    category: "respiratory",
     name: "flu",
     description: "a condition",
     treatment:
       "2 cups of bleach",
     symptoms: "flu like symptoms"
   }
-  // {
-  //   title: "Lord of the Flies",
-  //   author: "William Golding",
-  //   synopsis:
-  //     "The tale of a party of shipwrecked schoolboys, marooned on a coral island, who at first enjoy the freedom of the situation but soon divide into fearsome gangs which turn the paradise island into a nightmare of panic and death.",
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   title: "The Catcher in the Rye",
-  //   author: "J.D. Salinger",
-  //   synopsis:
-  //     "The Catcher in the Rye is a 1951 novel by J. D. Salinger. A controversial novel originally published for adults, it has since become popular with adolescent readers for its themes of teenage angst and alienation. It has been translated into almost all of the world's major languages. Around 1 million copies are sold each year with total sales of more than 65 million books. The novel's protagonist Holden Caulfield has become an icon for teenage rebellion. The novel also deals with complex issues of innocence, identity, belonging, loss, and connection.",
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   title: "The Punch Escrow",
-  //   author: "Tal M. Klein",
-  //   synopsis:
-  //     "It's the year 2147. Advancements in nanotechnology have enabled us to control aging. We’ve genetically engineered mosquitoes to feast on carbon fumes instead of blood, ending air pollution. And teleportation has become the ideal mode of transportation, offered exclusively by International Transport―the world’s most powerful corporation, in a world controlled by corporations. Joel Byram spends his days training artificial-intelligence engines to act more human and trying to salvage his deteriorating marriage. He’s pretty much an everyday twenty-second century guy with everyday problems―until he’s accidentally duplicated while teleporting. Now Joel must outsmart the shadowy organization that controls teleportation, outrun the religious sect out to destroy it, and find a way to get back to the woman he loves in a world that now has two of him.",
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   title: "Harry Potter and the Sorcerer's Stone",
-  //   author: "J.K. Rowling",
-  //   synopsis:
-  //     "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   title: "Coraline",
-  //   author: "Neil Gaiman",
-  //   synopsis:
-  //     "When Coraline steps through a door to find another house strangely similar to her own (only better), things seem marvelous. But there's another mother there, and another father, and they want her to stay and be their little girl. They want to change her and never let her go. Coraline will have to fight with all her wit and courage if she is to save herself and return to her ordinary life.",
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   title: "Code: The Hidden Language of Computer Hardware and Software",
-  //   author: "Charles Petzold",
-  //   synopsis:
-  //     "What do flashlights, the British invasion, black cats, and seesaws have to do with computers? In CODE, they show us the ingenious ways we manipulate language and invent new means of communicating with each other. And through CODE, we see how this ingenuity and our very human compulsion to communicate have driven the technological innovations of the past two centuries. Using everyday objects and familiar language systems such as Braille and Morse code, author Charles Petzold weaves an illuminating narrative for anyone who’s ever wondered about the secret inner life of computers and other smart machines. It’s a cleverly illustrated and eminently comprehensible story—and along the way, you’ll discover you’ve gained a real context for understanding today’s world of PCs, digital media, and the Internet. No matter what your level of technical savvy, CODE will charm you—and perhaps even awaken the technophile within.",
-  //   date: new Date(Date.now())
-  // },
+
+  
   // {
   //   title: "The Everything Store: Jeff Bezos and the Age of Amazon",
   //   author: "Brad Stone",
