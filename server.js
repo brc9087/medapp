@@ -19,7 +19,7 @@ app.use(routes)
 
 //Connet to mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/googlebooks',
+  process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
