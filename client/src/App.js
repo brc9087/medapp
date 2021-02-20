@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
-import Jumbotron from "../src/components/Jumbotron/index";
+import Jumbotron from "./src/component/Jumbotron/index";
 import SaveBooks from "../src/pages/savedBooksPage";
 import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
