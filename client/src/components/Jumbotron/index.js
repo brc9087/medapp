@@ -18,7 +18,7 @@ const styles = {
 function Jumbotron({ children }) {
     return (
         <div style={styles.jumbo} className="jumbotron jumbotron-fluid d-flex align-items-center">
-            <div className="container text-center">
+              <div className="container text-center">
                 {children}
             </div>
         </div>
