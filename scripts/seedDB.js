@@ -106,6 +106,29 @@ const bookSeed = [
     description: "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
     treatment: "A variety of medications, both over-the-counter and prescription, can prevent or ease motion sickness.",
     symptoms: "The primary symptom of motion sickness is nausea. Other symptoms include dizziness, vomiting, sweating, and increased salivation"
+
+  },
+  { 
+    category:"abdominal pain",
+    name:"Appendicitis",
+    descrition:"Appendicitis is a serious infection of the appendix, a small fingerlike tube located where the large and small intestine join.",
+    treatment:"Doctors can diagnose most appendicitis by taking a medical history and doing a physical exam. Blood and urine tests, X-rays, a CT scan, and ultrasound also may be done to confirm the diagnosis or rule out other causes.",
+    symptoms:"Symptoms of appendicitis include abdominal pain that may occur suddenly near the belly button and move to the lower right, nausea, vomiting, loss of appetite, low-grade fever (after other symptoms), constipation, abdominal swelling, and inability to pass gas."
+  },
+  {
+    category:"abdominal pain",
+    name:"Gas",
+    description:"Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
+    treatment:"",
+    symptoms:"In addition to burping and flatulence, you may feel bloated. You could also have pain in your belly or sides. That pain could be mistaken for something else, like a heart attack or appendicitis."
+  },
+  {
+    category:"abdominal pain",
+    name:"Diverticulitis",
+    description:"Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
+    treatment:"Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
+    symptoms:"Abdominal pain, cramping, constipation, fevers, chills, weakness, fatigue, sweating, weight loss, and nausea"
+
   },
   
   {
@@ -143,6 +166,7 @@ const bookSeed = [
     description: "A lumbar herniated disc occurs when one of the discs in your lower spine moves out of place. This causes pressure on the nerves and can cause low back pain or weakness, numbness, or tingling in the low back.",
     treatment:"A short period of rest, Anti-inflammatory medications, Pain medications, Muscle relaxers, Physical therapy, Steroid injections, Surgery",
     symptoms: "Low back pain, weakness, numbness or tingling in the low back; pain in hip, leg, or foot"
+
   }
 
 
