@@ -2,6 +2,7 @@ import React from "react";
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Jumbotron from "../src/components/Jumbotron/index";
+import Footer from "./components/Footer"
 import SaveBooks from "../src/pages/savedBooksPage";
 import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
@@ -12,16 +13,20 @@ import Detail from "./pages/Detail"
 import Login from "./pages/Login"
 import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
+import Create from "./pages/Create"
+import Nav from "./components/Nav/index"
 
 
 function App() {
   return (
     <Router>
       <div>
+        <Nav/>
         <UserProvider>
           <Application />
         </UserProvider>
         <BodyParts/>
+        <Create/>
           {/* <Books /> */}
           {/* <Detail /> */}
           {/* <Login /> */}
