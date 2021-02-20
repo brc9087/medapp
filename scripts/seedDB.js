@@ -10,35 +10,54 @@ mongoose.connect(
 
 const bookSeed = [
   {
-    category: "respiratory",
-    name: "Flu",
-    description: "Flu (often referred as influenza), is a viral infection of the nose, sinuses, throat, and respiratory tract by an influenza or parainfluenza virus. It’s seasonal, often occurring in winter, and can spread rapidly, called then flu epidemic. Swine flu and bird (avian) flu are specific strains of flu.",
+    category: "head",
+    name: "Migraine Headache",
+    description: "Migraines are a common type of headache that can cause severe pain. They can last for a few hours or a few days and may cause throbbing, sensitivity to sound or light, nausea, or vomiting. Migraines are caused by abnormal brain activity that is triggered by certain foods, stress, or other factors. Some people have an aura before a migraine, which can have symptoms that include temporary vision loss, seeing stars or flashes, or a tingling in an arm or leg. There is no cure for migraines, but medications can help reduce pain or stop migraines from occurring.",
     treatment:
-    "Even today flu can have fatal consequences for those with pre-existing conditions and requires a hospital stay with emergency medical measures. Normally it is self-limited and the body recovers by itself. A doctor may prescribe medication to help shorten the course of the flu if taken early. Bed rest and staying hydrated are usually sufficient. Medications such as Ibuprofen or Aspirin can lower a fever and relieve symptoms, but they will not shorten the course of the illness and should be used in children with caution. Flu vaccine is recommended for the following groups at risk: nursing infants, people over 60, people with compromised immune systems, and pregnant women.",
-    symptoms: "Reduced appetite,Shortness of breath,Eye redness,Sputum,Burning in the throat,Chest pain,Fever,Pain in the limbs,Sore throat,Cough,Headache,Swollen glands on the neck,Swollen glands in the armpits,Tiredness,Runny nose,Sneezing,Chills,Sweating,Stuffy nose,Cough with sputum,Stiff neck,Muscle weakness"
+    "Severe migraines are usually treated with prescription medicines called triptans, anti-nausea medicine, or sedatives. Pain-relieving medications usually work best when taken at the first sign of a migraine. Frequent migraines can sometimes be prevented by taking medications such as beta-blockers, antidepressants, antiseizure drugs, or by getting a Botox injection in the muscles of the forehead and neck.",
+    symptoms: "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
   },
   {
-    name: "flu",
-    description: "a condition",
+    category: "head",
+    name: "Medication Overuse Headache",
+    description: "When a headache strikes, most of us head for the medicine cabinet or local pharmacy and take an over-the-counter pain pill such as acetaminophen, aspirin, ibuprofen, or pain-relieving drugs with caffeine. But when you don’t follow the instructions on the bottle or from your doctor, these medicines could give you a rebound headache. When the pain reliever wears off, your body may have a withdrawal reaction, prompting you to take more medicine, which only leads to another headache. And so the cycle continues until you start to have daily headaches with more severe pain more often.",
     treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    "Aspirin, Sinus relief medications, Acetaminophen, Nonsteroidal anti-inflammatory drugs (NSAIDs), such as ibuprofen and naproxen,   Sedatives for sleep, Codeine and prescription narcotics, Triptan drugs for migraine, such as naratriptan (Amerge), sumatriptan (Imitrex),  zolmitriptan (Zomig), and others",
+    symptoms: "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
   },
 
   {
-    name: "flu",
-    description: "a condition",
+    category: "head",
+    name: "Dry Eye syndrome",
+    description: "Dry eye syndrome happens when the eye can't make tears to coat itself or when tears aren't the right consistency and dry too fast. The eye's surface may also become swollen. Dry eye syndrome can be the result of some medicines, pregnancy, allergies, and conditions such as rheumatoid arthritis. You can develop dry eye syndrome even if you're healthy, and you're more likely to have it as you get older because you make fewer tears as you age. Dry eye syndrome can cause pain, blurred vision, redness, light sensitivity, and often makes reading unpleasant. It can be either temporary or long-term. Eyedrops or medications may ease dry eye syndrome. In severe cases, doctors may suggest surgery. Without proper care, dry eye syndrome can cause eye damage and vision loss.",
     treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    "Switching medications if a medicine you are taking is causing dry eye syndrome. Taking medications to help make more tears or reduce swelling. Taking dietary supplements such as omega-3 fatty acids. Temporarily plugging the holes where tears drain so tears stay on the eye's surface. Having surgery to close tear drainage holes permanently  ",
+    symptoms: 
+    "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
   },
   {
-    name: "flu",
-    description: "a condition",
+    category: "head",
+    name:"Motion Sickness",
+    description: 
+    "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
     treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    "A variety of medications, both over-the-counter and prescription, can prevent or ease motion sickness.",
+    symptoms: 
+    "The primary symptom of motion sickness is nausea. Other symptoms include dizziness, vomiting, sweating, and increased salivation"
+  },
+
+  {
+    category: "head",
+    name:"Cluster Headaches",
+    description: 
+    "Cluster headaches occur one to three times a day and last a few minutes to several hours. These daily headache clusters occur for several weeks and then go away for months or even years. Cluster headaches are the rarest and most severe type of headache. Men tend to get them more than women. Pain occurs behind one eye on one side of the head. The eye and nose on that side may become swollen, red, and runny. Attacks come at the same time every day and the intense pain makes it hard to sit still. Many people with cluster headaches pace restlessly or rock back and forth during an attack. Medication helps prevent headaches, lessen the pain, and shorten the duration of an attack. Cluster headaches aren't dangerous, but they make it difficult to work and do daily activities.",
+    treatment:
+    "Medications to help prevent headaches, such as beta blockers, anticonvulsants, antidepressants, calcium channel blockers, and corticosteroids. Breathing 100% oxygen at the start of a headache to lessen pain. Medications to relieve headache pain and shorten attacks, such as triptans, ergot alkaloids, and others. Surgery for some people if medications don't work.",
+    symptoms: 
+    "Sharp, burning pain on one side of the head behind one eye, eye swelling and redness, tearing, runny nose, red face"
   }
+
+
   // {
   //   title: "Lord of the Flies",
   //   author: "William Golding",
