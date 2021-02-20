@@ -10,7 +10,7 @@ const styles = {
 const Footer = () => (
 	<footer style={styles.foot} className="page-footer">
 		<div className="container-fluid text-center">
-			<h4 style={styles.foot} >Google Books</h4>
+			<h4 style={styles.foot} >Only Syms</h4>
 		</div>
 	</footer>
 );
