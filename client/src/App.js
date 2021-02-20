@@ -25,8 +25,8 @@ function App() {
         <UserProvider>
           <Application />
         </UserProvider>
-        <BodyParts/>
-        <Create/>
+        {/* <BodyParts/> */}
+        {/* <Create/> */}
           {/* <Books /> */}
           {/* <Detail /> */}
           {/* <Login /> */}
@@ -37,6 +37,12 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login />
+            </Route>
+            <Route exact path="/create">
+              <Create />
+            </Route>
+            <Route exact path="/bodyparts">
+              <BodyParts />
             </Route>
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
