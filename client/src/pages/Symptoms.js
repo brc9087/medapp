@@ -7,7 +7,7 @@ function Symptoms(){
         <div className="wrapper">
           <h1>What are your Symptoms?</h1>
           
-          <form onSubmit={handleSubmit}>
+          <form onSubmit="">
             <fieldset>
               <label>
                 <p>Syptoms</p>

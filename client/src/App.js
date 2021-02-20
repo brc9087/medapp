@@ -15,28 +15,33 @@ import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
 import Nav from "./components/Nav/index"
+import Info from "./pages/Info"
+import Symptoms from "./pages/Symptoms"
 
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav/>
+        <Nav />
         <UserProvider>
-          <Application />
-        </UserProvider>
-        {/* <BodyParts/> */}
-        {/* <Create/> */}
+          {/* <Application /> */}
+          {/* <BodyParts/> */}
+          {/* <Create/> */}
           {/* <Books /> */}
           {/* <Detail /> */}
           {/* <Login /> */}
           {/* <Jumbotron /> */}
+          {/* <Info/> */}
           <Switch>
             <Route exact path="/results">
               <Results />
             </Route>
-            <Route exact path="/login">
-              <Login />
+            <Route exact path="/">
+              <Application />
+            </Route>
+            <Route exact path="/info" component={Info}>
+              {/* <Info /> */}
             </Route>
             <Route exact path="/create">
               <Create />
@@ -44,10 +49,14 @@ function App() {
             <Route exact path="/bodyparts">
               <BodyParts />
             </Route>
+            <Route exact path="/symptoms">
+              <Symptoms />
+            </Route>
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
           </Switch>
-          <Footer />
+        </UserProvider>
+        <Footer />
       </div>
     </Router>
   );

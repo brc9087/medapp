@@ -21,16 +21,20 @@ function Nav() {
             <div id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item" id="home">
-                        <a style={styles.text} className="nav-link" href="/">Search</a>
+                        <a style={styles.text} className="nav-link" href="/info">INFO</a>
                     </li>
+
+                    <li className="nav-item" id="home">
+                        <a style={styles.text} className="nav-link" href="/symptoms">SYMPTOMS</a>
+                    </li>
+
                     <li className="nav-item" id="save">
-                        <a style={styles.text} className="nav-link" href="/results">My symptoms</a>
+                        <a style={styles.text} className="nav-link" href="/results">RESULTS</a>
                     </li>
-                    <li className="nav-item" id="login">
-                        <a style={styles.text} className="nav-link" href="/login">login</a>
-                    </li>
-                    <li className="nav-item" id="signup">
-                        <a style={styles.text} className="nav-link" href="/signin">signin</a>
+
+
+                    <li className="nav-item" id="save">
+                        <a style={styles.text} className="nav-link" href="/login">LOGIN</a>
                     </li>
 
                     <li className="nav-item" id="Create">
@@ -39,6 +43,10 @@ function Nav() {
 
                     <li className="nav-item" id="Bodyparts">
                         <a style={styles.text} className="nav-link" href="/bodyparts">BODY PARTS</a>
+                    </li>
+
+                    <li className="nav-item" id="profile">
+                        <a style={styles.text} className="nav-link" href="/profile">PROFILE</a>
                     </li>
                 </ul>
 

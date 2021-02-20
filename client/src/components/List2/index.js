@@ -11,8 +11,8 @@ const styles = {
     fontSize: "20px"
   },
 
-  container: {
-    backgroundColor: "navy"
+  listItem: {
+    position: "right"
   }
 }
 
@@ -25,5 +25,5 @@ export function List({ children }) {
 }
 
 export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+  return <li style={styles.listItem} className="list-group-item">{children}</li>;
 }
