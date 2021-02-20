@@ -53,6 +53,7 @@ const SignIn = () => {
       width: "55%",
       padding: "10px",
       textAlign: "center"
+    
     },
 
     head: {
@@ -106,9 +107,9 @@ const SignIn = () => {
           />
           </div >
           <div style = {styles.button}>
-              <button class="button is-info is-rounded" onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }}>Sign in</button>
+              <button className="button is-info is-rounded" onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }}>Sign in</button>
 
-          <p className="text-center my-3">or</p>
+          <p>or</p>
           <button
             className="button is-danger is-rounded"
             onClick={signInWithGoogle}
