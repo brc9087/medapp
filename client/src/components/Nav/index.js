@@ -1,5 +1,4 @@
 import React from "react";
-
 const styles = {
     navBar: {
         backgroundColor: "navy"
@@ -8,13 +7,11 @@ const styles = {
         color: "white",
         fontSize: "14pt",
         fontStyle: "italic"
-
     },
     text: {
         color: "pink"
     }
 }
-
 function Nav() {
     return (
         <nav style={styles.navBar} className="navbar navbar-expand-lg">
@@ -42,3 +39,4 @@ function Nav() {
     );
 }
 export default Nav;
+
