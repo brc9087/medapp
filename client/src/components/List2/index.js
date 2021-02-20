@@ -3,10 +3,23 @@ import React from "react";
 
 // This file exports both the List and ListItem components
 
+const styles = {
+  list: {
+    width: "30%",
+    border: "solid",
+    backgroundColor: "navy",
+    fontSize: "20px"
+  },
+
+  container: {
+    backgroundColor: "navy"
+  }
+}
+
 export function List({ children }) {
   return (
-    <div className="list-overflow-container">
-      <ul className="list-group">{children}</ul>
+    <div className="container">
+      <ul style={styles.list} className="list-group" >{children}</ul>
     </div>
   );
 }

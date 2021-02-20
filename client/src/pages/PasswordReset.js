@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { auth } from "../utils/firebase";
 import { Link } from "react-router-dom";
+import Input from "../components/Input/Input";
+
 
 const PasswordReset = () => {
   const [email, setEmail] = useState("");
@@ -27,9 +29,29 @@ const PasswordReset = () => {
         setError("Error resetting password");
       });
   };
+
+  const styles = {
+
+    body: {
+      position: "fixed",
+      width: "100%",
+      height: "100%",
+      backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+      padding: "80px",
+      backgroundColor: "#038989",
+      color: "white",
+      textAlign: "center",
+    },
+    button: {
+      margin: "10px",
+      padding: "10px"
+    }
+    
+    
+  }
   return (
-    <div className="mt-8">
-      <h1 className="text-xl text-center font-bold mb-3">
+    <div className="main" style={styles.body}>
+      <h1>
         Reset your Password
       </h1>
       <div className="border border-blue-300 mx-auto w-11/12 md:w-2/4 rounded py-8 px-4 md:px-8">
@@ -47,23 +69,26 @@ const PasswordReset = () => {
           <label htmlFor="userEmail" className="w-full block">
             Email:
           </label>
-          <input
+          <Input
             type="email"
             name="userEmail"
             id="userEmail"
             value={email}
             placeholder="Input your email"
             onChange={onChangeHandler}
-            className="mb-3 w-full px-1 py-2"
+          
           />
-          <button
-            className="w-full bg-blue-400 text-white py-3"
+          <div>
+          <button   style = {styles.button} className="button is-info is-rounded"
+            
             onClick={event => {
               sendResetEmail(event);
             }}
           >
             Send me a reset link
           </button>
+          </div>
+         
         </form>
 
         <Link
