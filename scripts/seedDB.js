@@ -10,6 +10,36 @@ mongoose.connect(
 
 const bookSeed = [
   {
+    category: "head",
+    name: "Migraine Headache",
+    description: "Migraines are a common type of headache that can cause severe pain. They can last for a few hours or a few days and may cause throbbing, sensitivity to sound or light, nausea, or vomiting. Migraines are caused by abnormal brain activity that is triggered by certain foods, stress, or other factors. Some people have an aura before a migraine, which can have symptoms that include temporary vision loss, seeing stars or flashes, or a tingling in an arm or leg. There is no cure for migraines, but medications can help reduce pain or stop migraines from occurring.",
+    treatment:
+    "Severe migraines are usually treated with prescription medicines called triptans, anti-nausea medicine, or sedatives. Pain-relieving medications usually work best when taken at the first sign of a migraine. Frequent migraines can sometimes be prevented by taking medications such as beta-blockers, antidepressants, antiseizure drugs, or by getting a Botox injection in the muscles of the forehead and neck.",
+    symptoms: "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
+  },
+  {
+    category: "head",
+    name: "Medication Overuse Headache",
+    description: "When a headache strikes, most of us head for the medicine cabinet or local pharmacy and take an over-the-counter pain pill such as acetaminophen, aspirin, ibuprofen, or pain-relieving drugs with caffeine. But when you don’t follow the instructions on the bottle or from your doctor, these medicines could give you a rebound headache. When the pain reliever wears off, your body may have a withdrawal reaction, prompting you to take more medicine, which only leads to another headache. And so the cycle continues until you start to have daily headaches with more severe pain more often.",
+    treatment:
+    "Aspirin, Sinus relief medications, Acetaminophen, Nonsteroidal anti-inflammatory drugs (NSAIDs), such as ibuprofen and naproxen,   Sedatives for sleep, Codeine and prescription narcotics, Triptan drugs for migraine, such as naratriptan (Amerge), sumatriptan (Imitrex),  zolmitriptan (Zomig), and others",
+    symptoms: "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
+  },
+
+  {
+    category: "head",
+    name: "Dry Eye syndrome",
+    description: "Dry eye syndrome happens when the eye can't make tears to coat itself or when tears aren't the right consistency and dry too fast. The eye's surface may also become swollen. Dry eye syndrome can be the result of some medicines, pregnancy, allergies, and conditions such as rheumatoid arthritis. You can develop dry eye syndrome even if you're healthy, and you're more likely to have it as you get older because you make fewer tears as you age. Dry eye syndrome can cause pain, blurred vision, redness, light sensitivity, and often makes reading unpleasant. It can be either temporary or long-term. Eyedrops or medications may ease dry eye syndrome. In severe cases, doctors may suggest surgery. Without proper care, dry eye syndrome can cause eye damage and vision loss.",
+    treatment:
+    "Switching medications if a medicine you are taking is causing dry eye syndrome. Taking medications to help make more tears or reduce swelling. Taking dietary supplements such as omega-3 fatty acids. Temporarily plugging the holes where tears drain so tears stay on the eye's surface. Having surgery to close tear drainage holes permanently  ",
+    symptoms: 
+    "The most common symptoms of migraine include a dull or severe headache that may be worse on one side of the head, and a throbbing, pulsating, or pounding in the head. Other symptoms may include loss of appetite, nausea and vomiting, sensitivity to sound or light, chills, sweating, numbness or tingling, and increased urination."
+  },
+  {
+    category: "head",
+    name:"Motion Sickness",
+    description: 
+    "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
     category: "respiratory",
     name: "Flu",
     description: "Flu (often referred as influenza), is a viral infection of the nose, sinuses, throat, and respiratory tract by an influenza or parainfluenza virus. It’s seasonal, often occurring in winter, and can spread rapidly, called then flu epidemic. Swine flu and bird (avian) flu are specific strains of flu.",
@@ -73,10 +103,66 @@ const bookSeed = [
     name: "flu",
     description: "a condition",
     treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    "A variety of medications, both over-the-counter and prescription, can prevent or ease motion sickness.",
+    symptoms: 
+    "The primary symptom of motion sickness is nausea. Other symptoms include dizziness, vomiting, sweating, and increased salivation"
+  },
+
+  {
+    category: "head",
+    name:"Cluster Headaches",
+    description: 
+    "Cluster headaches occur one to three times a day and last a few minutes to several hours. These daily headache clusters occur for several weeks and then go away for months or even years. Cluster headaches are the rarest and most severe type of headache. Men tend to get them more than women. Pain occurs behind one eye on one side of the head. The eye and nose on that side may become swollen, red, and runny. Attacks come at the same time every day and the intense pain makes it hard to sit still. Many people with cluster headaches pace restlessly or rock back and forth during an attack. Medication helps prevent headaches, lessen the pain, and shorten the duration of an attack. Cluster headaches aren't dangerous, but they make it difficult to work and do daily activities.",
+    treatment:
+    "Medications to help prevent headaches, such as beta blockers, anticonvulsants, antidepressants, calcium channel blockers, and corticosteroids. Breathing 100% oxygen at the start of a headache to lessen pain. Medications to relieve headache pain and shorten attacks, such as triptans, ergot alkaloids, and others. Surgery for some people if medications don't work.",
+    symptoms: 
+    "Sharp, burning pain on one side of the head behind one eye, eye swelling and redness, tearing, runny nose, red face"
   }
 
+
+
+  // {
+  //   title: "Lord of the Flies",
+  //   author: "William Golding",
+  //   synopsis:
+  //     "The tale of a party of shipwrecked schoolboys, marooned on a coral island, who at first enjoy the freedom of the situation but soon divide into fearsome gangs which turn the paradise island into a nightmare of panic and death.",
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   title: "The Catcher in the Rye",
+  //   author: "J.D. Salinger",
+  //   synopsis:
+  //     "The Catcher in the Rye is a 1951 novel by J. D. Salinger. A controversial novel originally published for adults, it has since become popular with adolescent readers for its themes of teenage angst and alienation. It has been translated into almost all of the world's major languages. Around 1 million copies are sold each year with total sales of more than 65 million books. The novel's protagonist Holden Caulfield has become an icon for teenage rebellion. The novel also deals with complex issues of innocence, identity, belonging, loss, and connection.",
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   title: "The Punch Escrow",
+  //   author: "Tal M. Klein",
+  //   synopsis:
+  //     "It's the year 2147. Advancements in nanotechnology have enabled us to control aging. We’ve genetically engineered mosquitoes to feast on carbon fumes instead of blood, ending air pollution. And teleportation has become the ideal mode of transportation, offered exclusively by International Transport―the world’s most powerful corporation, in a world controlled by corporations. Joel Byram spends his days training artificial-intelligence engines to act more human and trying to salvage his deteriorating marriage. He’s pretty much an everyday twenty-second century guy with everyday problems―until he’s accidentally duplicated while teleporting. Now Joel must outsmart the shadowy organization that controls teleportation, outrun the religious sect out to destroy it, and find a way to get back to the woman he loves in a world that now has two of him.",
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   title: "Harry Potter and the Sorcerer's Stone",
+  //   author: "J.K. Rowling",
+  //   synopsis:
+  //     "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   title: "Coraline",
+  //   author: "Neil Gaiman",
+  //   synopsis:
+  //     "When Coraline steps through a door to find another house strangely similar to her own (only better), things seem marvelous. But there's another mother there, and another father, and they want her to stay and be their little girl. They want to change her and never let her go. Coraline will have to fight with all her wit and courage if she is to save herself and return to her ordinary life.",
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   title: "Code: The Hidden Language of Computer Hardware and Software",
+  //   author: "Charles Petzold",
+  //   synopsis:
+  //     "What do flashlights, the British invasion, black cats, and seesaws have to do with computers? In CODE, they show us the ingenious ways we manipulate language and invent new means of communicating with each other. And through CODE, we see how this ingenuity and our very human compulsion to communicate have driven the technological innovations of the past two centuries. Using everyday objects and familiar language systems such as Braille and Morse code, author Charles Petzold weaves an illuminating narrative for anyone who’s ever wondered about the secret inner life of computers and other smart machines. It’s a cleverly illustrated and eminently comprehensible story—and along the way, you’ll discover you’ve gained a real context for understanding today’s world of PCs, digital media, and the Internet. No matter what your level of technical savvy, CODE will charm you—and perhaps even awaken the technophile within.",
+  //   date: new Date(Date.now())
+  // },
   
   // {
   //   title: "The Everything Store: Jeff Bezos and the Age of Amazon",
