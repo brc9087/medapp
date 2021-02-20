@@ -9,6 +9,10 @@ import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
 import Application from "./pages/Application";
 import UserProvider from "./components/UserProvier/UserProvier";
+import Books from "./pages/Books";
+import Detail from "./pages/Detail"
+import Login from "./pages/Login"
+
 
 function App() {
   return (
@@ -16,12 +20,21 @@ function App() {
       <div>
         <Nav />
         <UserProvider>
-          <Application />
-        </UserProvider>
-        <Jumbotron />
+            <Application />
+          </UserProvider>
+        {/* <Books /> */}
+        {/* <Detail /> */}
+        {/* <Login /> */}
+        {/* <Jumbotron /> */}
         <Switch>
-          <Route exact path="/" component={SearchBooks} />
-          <Route exact path="/saved" component={SaveBooks} />
+          <Route exact path="/results">
+            <Books />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          {/* <Route exact path="/" component={SearchBooks} />
+          <Route exact path="/saved" component={SaveBooks} /> */}
         </Switch>
         <Footer />
       </div>
