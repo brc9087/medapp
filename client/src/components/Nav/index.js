@@ -33,8 +33,10 @@ function Nav() {
                         <a style={styles.text} className="nav-link" href="/signin">signin</a>
                     </li>
                 </ul>
+
             </div>
         </nav>
     );
 }
 export default Nav;
+
