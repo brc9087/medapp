@@ -15,6 +15,8 @@ import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
 import Nav from "./components/Nav/index"
+import Info from "./pages/Info"
+import Symptoms from "./pages/Symptoms"
 
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
             </Route>
             <Route exact path="/bodyparts">
               <BodyParts />
+            </Route>
+            <Route exact path="/symptoms">
+              <Symptoms />
             </Route>
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
