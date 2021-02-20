@@ -13,20 +13,20 @@ const bookSeed = [
     category: "respiratory",
     name: "Flu",
     description: "Flu (often referred as influenza), is a viral infection of the nose, sinuses, throat, and respiratory tract by an influenza or parainfluenza virus. It’s seasonal, often occurring in winter, and can spread rapidly, called then flu epidemic. Swine flu and bird (avian) flu are specific strains of flu.",
-    treatment:
-    "Even today flu can have fatal consequences for those with pre-existing conditions and requires a hospital stay with emergency medical measures. Normally it is self-limited and the body recovers by itself. A doctor may prescribe medication to help shorten the course of the flu if taken early. Bed rest and staying hydrated are usually sufficient. Medications such as Ibuprofen or Aspirin can lower a fever and relieve symptoms, but they will not shorten the course of the illness and should be used in children with caution. Flu vaccine is recommended for the following groups at risk: nursing infants, people over 60, people with compromised immune systems, and pregnant women.",
+    treatment: "Even today flu can have fatal consequences for those with pre-existing conditions and requires a hospital stay with emergency medical measures. Normally it is self-limited and the body recovers by itself. A doctor may prescribe medication to help shorten the course of the flu if taken early. Bed rest and staying hydrated are usually sufficient. Medications such as Ibuprofen or Aspirin can lower a fever and relieve symptoms, but they will not shorten the course of the illness and should be used in children with caution. Flu vaccine is recommended for the following groups at risk: nursing infants, people over 60, people with compromised immune systems, and pregnant women.",
     symptoms: "Reduced appetite,Shortness of breath,Eye redness,Sputum,Burning in the throat,Chest pain,Fever,Pain in the limbs,Sore throat,Cough,Headache,Swollen glands on the neck,Swollen glands in the armpits,Tiredness,Runny nose,Sneezing,Chills,Sweating,Stuffy nose,Cough with sputum,Stiff neck,Muscle weakness"
   },
   {
-    name: "flu",
-    description: "a condition",
-    treatment:
-      "2 cups of bleach",
-    symptoms: "flu like symptoms"
+    category: "respiratory",
+    name: "asthma",
+    description: "Asthma is a lung condition that causes airways to swell and become inflamed. Asthma makes it hard to breathe.",
+    treatment: "Long-term control medications include inhaled corticosteroids, leukotriene modifiers, long-acting beta agonists, combination inhalers, omalizumab (Xolair). Quick-relief or rescue medications include short-acting bronchodilators and oral corticosteroids",
+    symptoms: " wheezing, chest tightness or pain, shortness of breath, and cough. Symptoms of a severe asthma attack may include blue lips, difficulty speaking, confusion, extreme difficulty breathing, sweating, and anxiety."
   },
 
   {
-    name: "flu",
+    category: "respiratory",
+    name: "bacterial pneumonia",
     description: "a condition",
     treatment:
       "2 cups of bleach",
