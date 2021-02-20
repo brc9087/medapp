@@ -1,9 +1,6 @@
 import React from "react";
 // import logo from "./logo.svg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/Nav/index";
-import Footer from "./components/Footer/index";
-import Jumbotron from "./src/component/Jumbotron/index";
 import SaveBooks from "../src/pages/savedBooksPage";
 import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
@@ -12,31 +9,43 @@ import UserProvider from "./components/UserProvier/UserProvier";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail"
 import Login from "./pages/Login"
+import Results from "./pages/ResultsPage"
+import BodyParts from "./pages/BodyParts"
+import Create from "./pages/Create"
+import Nav from "./components/Nav/index"
 
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Nav/>
         <UserProvider>
-            <Application />
-          </UserProvider>
-        {/* <Books /> */}
-        {/* <Detail /> */}
-        {/* <Login /> */}
-        {/* <Jumbotron /> */}
-        <Switch>
-          <Route exact path="/results">
-            <Books />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          {/* <Route exact path="/" component={SearchBooks} />
+          <Application />
+        </UserProvider>
+        {/* <BodyParts/> */}
+        {/* <Create/> */}
+          {/* <Books /> */}
+          {/* <Detail /> */}
+          {/* <Login /> */}
+          {/* <Jumbotron /> */}
+          <Switch>
+            <Route exact path="/results">
+              <Results />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/create">
+              <Create />
+            </Route>
+            <Route exact path="/bodyparts">
+              <BodyParts />
+            </Route>
+            {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
-        </Switch>
-        <Footer />
+          </Switch>
+          <Footer />
       </div>
     </Router>
   );
