@@ -75,6 +75,14 @@ function Nav() {
                     <li className="nav-item" id="signup">
                         <a style={styles.text} className="nav-link" href="/signin">signin</a>
                     </li>
+
+                    <li className="nav-item" id="Create">
+                        <a style={styles.text} className="nav-link" href="/create">CREATE DX</a>
+                    </li>
+
+                    <li className="nav-item" id="Bodyparts">
+                        <a style={styles.text} className="nav-link" href="/bodyparts">BODY PARTS</a>
+                    </li>
                 </ul>
 
             </div>
