@@ -11,6 +11,7 @@ import Application from "./pages/Application";
 import UserProvider from "./components/UserProvier/UserProvier";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail"
+import Login from "./pages/Login"
 
 
 function App() {
@@ -19,15 +20,21 @@ function App() {
       <div>
         <Nav />
         <UserProvider>
-          <Application />
-        </UserProvider>
-        <Books/>
-        <Detail/>
-        <Jumbotron />
+            <Application />
+          </UserProvider>
+        {/* <Books /> */}
+        {/* <Detail /> */}
+        {/* <Login /> */}
+        {/* <Jumbotron /> */}
         <Switch>
-        <Route exact path="/books" />
-          <Route exact path="/" component={SearchBooks} />
-          <Route exact path="/saved" component={SaveBooks} />
+          <Route exact path="/results">
+            <Books />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          {/* <Route exact path="/" component={SearchBooks} />
+          <Route exact path="/saved" component={SaveBooks} /> */}
         </Switch>
         <Footer />
       </div>
