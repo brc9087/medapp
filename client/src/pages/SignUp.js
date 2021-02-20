@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, signInWithGoogle, generateUserDocument } from "../utils/firebase";
+import Input from "../components/Input/Input";
+
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -35,51 +37,67 @@ const SignUp = () => {
     }
   };
 
+// css 
+  const styles = {
+    form:{
+      display: "inline-flexbox",
+      textAlign: "center",
+      backgroundImage: "url(" + "./logo/steth.png" + "), linear-gradient(black, teal, black)",
+      backgroundRepeat: "no-repeat",
+
+      color: "white"
+    },
+    title: {
+      fontSize: "50px",
+      textAlign: "center"
+      
+    },
+    body: {
+      
+    }
+  }
   return (
-    <div className="mt-8">
-      <h1 className="text-3xl mb-2 text-center font-bold">Sign Up</h1>
-      <div className="border border-blue-400 mx-auto w-11/12 md:w-2/4 rounded py-8 px-4 md:px-8">
+    <div style = {styles.form}>
+      <h1 style= {styles.title}>Sign Up</h1>
+     <div >
         {error !== null && (
-          <div className="py-4 bg-red-600 w-full text-white text-center mb-3">
+          <div>
             {error}
           </div>
         )}
-        <form className="">
+  
           <label htmlFor="displayName" className="block">
             Display Name:
           </label>
-          <input
+          <Input
             type="text"
-            className="my-1 p-1 w-full "
             name="displayName"
             value={displayName}
             placeholder="E.g: Faruq"
             id="displayName"
-            onChange={event => onChangeHandler(event)}
+            onChange={onChangeHandler}
           />
           <label htmlFor="userEmail" className="block">
             Email:
           </label>
-          <input
+          <Input
             type="email"
-            className="my-1 p-1 w-full"
             name="userEmail"
             value={email}
             placeholder="E.g: faruq123@gmail.com"
             id="userEmail"
-            onChange={event => onChangeHandler(event)}
+            onChange={onChangeHandler}
           />
           <label htmlFor="userPassword" className="block">
             Password:
           </label>
-          <input
+          <Input
             type="password"
-            className="mt-1 mb-3 p-1 w-full"
             name="userPassword"
             value={password}
             placeholder="Your Password"
             id="userPassword"
-            onChange={event => onChangeHandler(event)}
+            onChange={onChangeHandler}
           />
           <button
             className="bg-green-400 hover:bg-green-500 w-full py-2 text-white"
@@ -89,7 +107,7 @@ const SignUp = () => {
           >
             Sign up
           </button>
-        </form>
+    
         <p className="text-center my-3">or</p>
         <button
           onClick={() => {
@@ -109,8 +127,10 @@ const SignUp = () => {
             Sign in here
           </Link>{" "}
         </p>
+  
       </div>
     </div>
+   
   );
 };
 
