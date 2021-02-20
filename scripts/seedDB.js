@@ -119,7 +119,7 @@ const bookSeed = [
     category:"abdominal pain",
     name:"Gas",
     description:"Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
-    treatment:"",
+    treatment:"", 
     symptoms:"In addition to burping and flatulence, you may feel bloated. You could also have pain in your belly or sides. That pain could be mistaken for something else, like a heart attack or appendicitis."
   },
   {

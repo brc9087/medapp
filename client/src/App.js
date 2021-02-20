@@ -12,6 +12,8 @@ import UserProvider from "./components/UserProvier/UserProvier";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail"
 import Login from "./pages/Login"
+import Results from "./pages/ResultsPage"
+import BodyParts from "./pages/BodyParts"
 
 
 function App() {
@@ -20,23 +22,24 @@ function App() {
       <div>
         <Nav />
         <UserProvider>
-            <Application />
-          </UserProvider>
-        {/* <Books /> */}
-        {/* <Detail /> */}
-        {/* <Login /> */}
-        {/* <Jumbotron /> */}
-        <Switch>
-          <Route exact path="/results">
-            <Books />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          {/* <Route exact path="/" component={SearchBooks} />
+          <Application />
+        </UserProvider>
+        <BodyParts/>
+          {/* <Books /> */}
+          {/* <Detail /> */}
+          {/* <Login /> */}
+          {/* <Jumbotron /> */}
+          <Switch>
+            <Route exact path="/results">
+              <Results />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
-        </Switch>
-        <Footer />
+          </Switch>
+          <Footer />
       </div>
     </Router>
   );
