@@ -58,9 +58,9 @@ function Results() {
                 <ListItem key={book._id}>
                     {/* <Link to={"/books/" + book._id}> */}
                     <p><strong>Name: </strong> {book.name}</p>
-                    {/* <p><strong>Description: </strong> {book.description}</p>
+                    <p><strong>Description: </strong> {book.description}</p>
                     <p><strong>Treatment: </strong> {book.treatment}</p>
-                    <p><strong>Symptoms: </strong> {book.symptoms}</p> */}
+                    <p><strong>Symptoms: </strong> {book.symptoms}</p>
                     {/* </Link> */}
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
                 </ListItem>

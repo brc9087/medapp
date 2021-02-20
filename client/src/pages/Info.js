@@ -18,8 +18,13 @@ function Info() {
             <div>
                 <h2>What Is Your Sex</h2>
                 <form>
-                    <input type="radio" name="sex" value="male"> Male </input>
-                    <input type="radio" name="sex" value="female"> Female </input>
+                    <label htmlFor="gendermale"> Male
+                        <input type="radio" name="sex" value="male" id="gendermale"/>
+                    </label>
+
+                    <label htmlFor="gendermale"> Female
+                        <input type="radio" name="sex" value="female"/> 
+                    </label>
                 </form>
             </div>
 

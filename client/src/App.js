@@ -23,22 +23,25 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav/>
+        <Nav />
         <UserProvider>
-          <Application />
-        </UserProvider>
-        {/* <BodyParts/> */}
-        {/* <Create/> */}
+          {/* <Application /> */}
+          {/* <BodyParts/> */}
+          {/* <Create/> */}
           {/* <Books /> */}
           {/* <Detail /> */}
           {/* <Login /> */}
           {/* <Jumbotron /> */}
+          {/* <Info/> */}
           <Switch>
             <Route exact path="/results">
               <Results />
             </Route>
-            <Route exact path="/login">
-              <Login />
+            <Route exact path="/">
+              <Application />
+            </Route>
+            <Route exact path="/info" component={Info}>
+              {/* <Info /> */}
             </Route>
             <Route exact path="/create">
               <Create />
@@ -52,7 +55,8 @@ function App() {
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
           </Switch>
-          <Footer />
+        </UserProvider>
+        <Footer />
       </div>
     </Router>
   );

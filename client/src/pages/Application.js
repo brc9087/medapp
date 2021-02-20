@@ -14,11 +14,8 @@ function Application() {
 
   return (
     user ?
-      <Router exact path="/profile">
-        <ProfilePage />
-      </Router>
-
-
+          <ProfilePage />
+      
       :
       <Router>
         <Switch>

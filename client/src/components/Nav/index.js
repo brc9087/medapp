@@ -31,11 +31,10 @@ function Nav() {
                     <li className="nav-item" id="save">
                         <a style={styles.text} className="nav-link" href="/results">RESULTS</a>
                     </li>
-                    <li className="nav-item" id="login">
-                        <a style={styles.text} className="nav-link" href="/login">login</a>
-                    </li>
-                    <li className="nav-item" id="signup">
-                        <a style={styles.text} className="nav-link" href="/signin">signin</a>
+
+
+                    <li className="nav-item" id="save">
+                        <a style={styles.text} className="nav-link" href="/login">LOGIN</a>
                     </li>
 
                     <li className="nav-item" id="Create">
