@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div>
         <Nav />
-        <UserProvider>
+        {/* <UserProvider> */}
           {/* <Application /> */}
           {/* <BodyParts/> */}
           {/* <Create/> */}
@@ -55,7 +55,7 @@ function App() {
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
           </Switch>
-        </UserProvider>
+        {/* </UserProvider> */}
         <Footer />
       </div>
     </Router>
