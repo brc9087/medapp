@@ -1,13 +1,14 @@
 import React, {useState} from "react";
+import API from "../utils/API"
 
 //import API 
 
 function Create() {
     const [dxDetails, setDxDetails] = useState({ 
-        Name: null,
-        Description:null,
-        Symptoms:null,
-        Treatment:null,
+        Name: "",
+        Description:"",
+        Symptoms:"",
+        Treatment:"",
     })
 
     const onChange =(e) =>{
@@ -18,8 +19,32 @@ function Create() {
         //{key: value}
     }
 
+    const [books, setBooks] = useState([])
+
+    function loadBooks() {
+        API.getBooks()
+        .then(res => 
+            setBooks(res.data)
+            )
+            .catch(err => console.log(err));
+    }
+
     const onSubmit = async (e) =>{
         e.preventDefault();
+        API.saveBook({
+            Name: dxDetails.Name,
+            Description: dxDetails.Description,
+            Symptoms: dxDetails.Symptoms,
+            Treatment: dxDetails.Treatment
+        }).then(() => setDxDetails({
+            Name: "",
+            Description: "",
+            Symptoms: "",
+            Treatment: ""
+        }))
+        .then(() => loadBooks())
+        .catch (err => console.log(err))
+        
 
         //call for the validation
 
@@ -47,7 +72,7 @@ function Create() {
                 <input type="text" className="form-control" placeholder="Treatment" aria-label="Username" aria-describedby="basic-addon1" onChange={onChange}/>
             </div>
 
-            <button> SUBMIT </button>
+            <button onClick={onSubmit}> SUBMIT </button>
             
 
         </div>
