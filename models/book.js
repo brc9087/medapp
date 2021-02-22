@@ -12,19 +12,11 @@ const bookSchema = new Schema({
     type: String,
     required: true
   },
-  link: {
-    type: String,
-    required: true
-  },
   treatment: {
     type: String,
     required: true
   },
   symptoms: {
-    type: String,
-    required: true
-  },
-  image: {
     type: String,
     required: true
   },

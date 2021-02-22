@@ -37,14 +37,13 @@ function Create() {
             })
                 .then(res => loadBooks())
                 .catch(err => console.log(err));
-
-
+                
             //call for the validation
-
             // result = await API.Savebook(dxDetails)
-
             // with result you can do whatever
-    }
+    };
+
+
 
 
     return (

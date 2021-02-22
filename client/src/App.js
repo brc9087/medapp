@@ -22,7 +22,7 @@ function App() {
     <Router>
       <div>
         <Nav />
-        {/* <UserProvider> */}
+        <UserProvider>
           {/* <Application /> */}
           {/* <BodyParts/> */}
           {/* <Create/> */}
@@ -38,8 +38,8 @@ function App() {
             <Route exact path="/">
               <Application />
             </Route>
-            <Route exact path="/info" component={Info}>
-              {/* <Info /> */}
+            <Route exact path="/info">
+              <Info />
             </Route>
             <Route exact path="/create">
               <Create />
@@ -53,7 +53,7 @@ function App() {
             {/* <Route exact path="/" component={SearchBooks} />
           <Route exact path="/saved" component={SaveBooks} /> */}
           </Switch>
-        {/* </UserProvider> */}
+        </UserProvider>
         <Footer />
       </div>
     </Router>
