@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../utils/API"
-import { Input, FormBtn, TextArea } from "../components/Form2/index"
+// import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 //import API 
 
@@ -12,11 +12,6 @@ function Create() {
         const { placeholder, value } = e.target;
         setFormObject({ ...formObject, [placeholder]: value })
 
-
-        // const title = e.target.getAttribute("placeholder")
-        // setFormObject({ ...formObject, [title]: e.target.value })
-
-        //{key: value}
     }
 
     function loadBooks() {
@@ -36,10 +31,8 @@ function Create() {
                 treatment: formObject.treatment
             })
                 .then(res => loadBooks())
-                .catch(err => console.log(err));           
-            //call for the validation
-            // result = await API.Savebook(dxDetails)
-            // with result you can do whatever
+                .catch(err => console.log(err));
+                
     };
 
 
@@ -47,7 +40,6 @@ function Create() {
 
     return (
         <div className="container">
-            <h1> Create Diagnosis </h1>
             <div className="input-group mb-3" >
                 <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
                     onChange={onChange}
@@ -56,7 +48,11 @@ function Create() {
             </div>
 
             <div className="input-group mb-3" >
-                <input type="text" className="form-control" placeholder="description" aria-label="Username" aria-describedby="basic-addon1" onChange={onChange} />
+                <input type="text" className="form-control"  aria-label="Username" aria-describedby="basic-addon1" 
+                onChange={onChange} 
+                placeholder="description"
+                value={formObject.description}
+                />
             </div>
 
             <div className="input-group mb-3" >

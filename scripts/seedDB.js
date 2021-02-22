@@ -169,16 +169,6 @@ const bookSeed = [
 
   }
 
-
-
-
-  // {
-  //   title: "Lord of the Flies",
-  //   author: "William Golding",
-  //   synopsis:
-  //     "The tale of a party of shipwrecked schoolboys, marooned on a coral island, who at first enjoy the freedom of the situation but soon divide into fearsome gangs which turn the paradise island into a nightmare of panic and death.",
-  //   date: new Date(Date.now())
-  // },
 ];
 
 db.Book
