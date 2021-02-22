@@ -1,7 +1,7 @@
 import React from "react";
 const styles = {
-    navBar: {
-        backgroundColor: "navy"
+    navbar: {
+        backgroundColor: "white",
     },
     font: {
         color: "white",
@@ -54,5 +54,4 @@ function Nav() {
         </nav>
     );
 }
-export default Nav;
 

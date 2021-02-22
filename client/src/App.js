@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Jumbotron from "../src/components/Jumbotron/index";
 import Footer from "./components/Footer"
+import SaveBooks from "../src/pages/savedBooksPage";
+import SearchBooks from "../src/pages/searchBooksPage";
 import "./App.css";
 import Application from "./pages/Application";
 import UserProvider from "./components/UserProvier/UserProvier";
