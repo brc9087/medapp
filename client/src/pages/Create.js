@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import API from "../utils/API"
-import { Input, FormBtn, TextArea } from "../components/Form2/index"
+// import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 //import API 
 
