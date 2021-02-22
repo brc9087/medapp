@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "../../src/images/headpic.PNG";
-import rightArm from "../../src/images/rightarm.PNG";
+import rightArm from "../../src/images/RightArm.PNG";
 import heart from "../../src/images/heart.PNG";
 import lungs from "../../src/images/lung.PNG";
-import leftArm from "../../src/images/leftarm.PNG";
+import leftArm from "../../src/images/LeftArm.PNG";
 import Belly from "../../src/images/belly.PNG";
 import babylegs from "../../src/images/babylegs.PNG"
 
