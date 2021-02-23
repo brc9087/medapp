@@ -1,15 +1,15 @@
 import React from "react";
 const styles = {
     navBar: {
-        backgroundColor: "navy"
+        backgroundColor:"royalblue"  
     },
     font: {
         color: "white",
-        fontSize: "14pt",
-        fontStyle: "italic"
+        fontSize: "25px",
+        fontStyle: "romanic"
     },
     text: {
-        color: "pink"
+        color: "whitesmoke"
     }
 }
 function Nav() {

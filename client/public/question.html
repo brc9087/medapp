@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    background-color: lightblue;
+    background-image: url("https://images.pexels.com/photos/4058104/pexels-photo-4058104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    
+
+}
+
+form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        fieldset {
+            width: 100%;
+            border: 20px solid indigo-darken-4;
+        }
+        
+        #errors,
+        #errors>li {
+            list-style-type: disc;
+            padding-left: 15px;
+        }
+        
+        li.error {
+            color: red-darken-4;
+            text-indent: -15px;
+        }
+        
+        .main-container {
+            margin-bottom: 30px;
+        }
+        
+        .footer-container,
+        .main-container {
+            overflow: auto;
+            padding-bottom: 20px;
+            font-size: .8em;
+            
+           
+        }
+        
+        label {
+            color: indigo-darken-4;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        label span {
+            font-weight: normal;
+        }
+        
+
+</style>
+</head>
+<body>
+
+<h2>Great, let's get started!</h2>
+
+<form class="interview-start" action="#" method="post">
+  <fieldset>
+    <legend>Tell Me About Yourself</legend>
+    
+    <ul id="errors" style="display: none;"></ul>
+    <label for="first-name">What can I call you?</div>
+    <input type="text" name="first-name" id="first-name"placeholder="First Name" minlength=2 required></label>
+
+    <label for="age">How old are you?
+        <input type="number" name="age"required></label>
+    <label for="gender">What is your sex?</label><br>
+    <label for="male"><input type="radio" name="gender" value="male" id="male" class="with-gap" required><span>Male</span></label>
+    <label for="female"><input type="radio" name="gender" value="female" id="female" class="with-gap" required><span>Female</span></label><br>
+    <button type="submit" name="submit" id="submit-interview-start" data-clickable="submitInterviewStart" class="btn btn-large right">Continue</button>
+  </fieldset>
+</form>
+
+  </form>
+</div>
+
+</body>
+</html>
