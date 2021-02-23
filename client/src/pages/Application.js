@@ -14,7 +14,8 @@ function Application() {
 
   return (
     user ?
-      <ProfilePage />
+          <ProfilePage />
+      
       :
       <Router>
         <Switch>
