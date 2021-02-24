@@ -1,28 +1,37 @@
 import React from "react";
 import Head from "../../src/images/headpic.PNG";
-import rightArm from "../../src/images/RightArm.PNG";
+import rightArm from "../../src/images/rightarm.PNG";
 import heart from "../../src/images/heart.PNG";
 import lungs from "../../src/images/lung.PNG";
-import leftArm from "../../src/images/LeftArm.PNG";
+import leftArm from "../../src/images/leftarm.PNG";
 import Belly from "../../src/images/belly.PNG";
 import babylegs from "../../src/images/babylegs.PNG"
 
 const styles = {
     pic: {
-        height: "200px",
-        width: "200px"
+        height: "100px",
+        width: "100px"
     },
 
     babylegs: {
-        width: "100%"
+        width: "30%"
     },
 
     belly: {
-        width: "80%"
+        width: "30%"
     },
 
     heart: {
-        width: "100%"
+        width: "30%"
+        
+    },
+    leftarm: {
+        width: "30%"
+        
+    },
+    rightarm: {
+        width: "30%"
+        
     }
     
 
@@ -43,7 +52,7 @@ function BodyParts() {
             <br />
             <div class="row">
                 <div class="col">
-                    <img src={rightArm} alt="" style={styles.belly} />
+                    <img src={rightArm} alt="" style={styles.belly} id="rightarm"/>
                 </div>
                 <div class="col">
                     <img src={heart} alt="" style={styles.heart} id="heart" />
@@ -52,7 +61,7 @@ function BodyParts() {
                     <img src={lungs} alt="" style={styles.heart} id="lungs" />
                 </div>
                 <div class="col">
-                    <img src={leftArm} alt="" style={styles.belly} />
+                    <img src={leftArm} alt="" style={styles.belly} id="leftarm"/>
                 </div>
             </div>
             <br />
@@ -70,7 +79,7 @@ function BodyParts() {
                 <div class="col">
                 </div>
                 <div class="col">
-                    <img src={babylegs} alt="" style={styles.babylegs} />
+                    <img src={babylegs} alt="" style={styles.babylegs} id="babylegs" />
                 </div>
                 <div class="col">
                 </div>
