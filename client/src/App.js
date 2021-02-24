@@ -15,7 +15,7 @@ import Create from "./pages/Create"
 import Navbar from "./components/Nav/index";
 import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
-import Symptoms from "./pages/Symptoms"
+// import Symptoms from "./pages/Symptoms"
 
 
 function App() {
@@ -46,7 +46,6 @@ function App() {
               <BodyParts />
             </Route>
             <Route exact path="/symptoms">
-              <Symptoms />
             </Route>
           </Switch> 
         </UserProvider>
