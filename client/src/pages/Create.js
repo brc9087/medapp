@@ -5,7 +5,7 @@ import API from "../utils/API"
 //import API 
 
 function Create() {
-    const [books, setBooks] = useState([])
+    const [diagnosis, setDiagnosis] = useState([])
     const [formObject, setFormObject] = useState({})
 
     function onChange(e) {
@@ -19,24 +19,25 @@ function Create() {
         //{key: value}
     }
 
-    function loadBooks() {
-        API.getBooks()
+    function loadDiagnosis() {
+        API.getDiagnosis()
             .then(res =>
-                setBooks(res.data)
+                setDiagnosis(res.data)
             )
             .catch(err => console.log(err));
     }
 
     function onSubmit(e) {
         e.preventDefault();
-            API.saveBook({
+            API.saveDiagnosis({
                 name: formObject.name,
                 description: formObject.description,
                 symptoms: formObject.symptoms,
                 treatment: formObject.treatment
             })
-                .then(res => loadBooks())
-                .catch(err => console.log(err));           
+                .then(res => loadDiagnosis())
+                .catch(err => console.log(err));    
+                
             //call for the validation
             // result = await API.Savebook(dxDetails)
             // with result you can do whatever

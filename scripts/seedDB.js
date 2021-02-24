@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const diagnosisSeed = [
   {
     category: "head",
     name: "Cluster Headaches",
@@ -171,9 +171,9 @@ const bookSeed = [
 
 ];
 
-db.Book
+db.Diagnosis
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Diagnosis.collection.insertMany(diagnosisSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

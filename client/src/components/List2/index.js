@@ -5,7 +5,7 @@ import React from "react";
 
 const styles = {
   list: {
-    width: "30%",
+    width: "50%",
     border: "solid",
     backgroundColor: "navy",
     fontSize: "20px"
@@ -18,12 +18,13 @@ const styles = {
 
 export function List({ children }) {
   return (
-    <div className="container">
-      <ul style={styles.list} className="list-group" >{children}</ul>
+    <div style={styles.list}>
+      <ul className="list-group" >{children}</ul>
     </div>
   );
 }
 
 export function ListItem({ children }) {
-  return <li style={styles.listItem} className="list-group-item">{children}</li>;
+  return <li className="list-group-item">{children}</li>;
 }
+
