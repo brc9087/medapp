@@ -4,6 +4,17 @@
 1. A search page - where user can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
 2. Saved Books Page ("My Library") - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database. 
 
+# THINGS TO DO 
+1. Make API Routes / models - Brian
+3. Results Page CSS - Brian
+4. Profile Page CSS 
+5. Body Parts Page CSS - Ryan
+6. Merge symptom / Info Page + do CSS (ask 1.Age, 2. Gender, 3. Medical history, 4. Please describe your symptoms) - Dharmik
+7. Add extremities to database (ex: Knee pain, leg pain, shoulder pain)
+8. Create diagnosis CSS - Md
+
+
+
 
 
 ## Usage / Directions
