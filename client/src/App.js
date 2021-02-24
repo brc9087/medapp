@@ -12,7 +12,7 @@ import UserProvider from "./components/UserProvier/UserProvier";
 import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
-import Navbar from "./components/Nav/index";
+// import Navbar from "./components/Nav/index";
 import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
 // import Symptoms from "./pages/Symptoms"
@@ -21,20 +21,15 @@ import Info from "./pages/Info"
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
-        <Navbar/>
+      <div>        
+        <Nav />            
         <UserProvider>
-          {/* <BodyParts/> */}
-          {/* <Books /> */}
-          {/* <Detail /> */}
-          {/* <Jumbotron/> */}
           <Switch>
+          <Route exact path="/">
+              <Application />
+            </Route>
             <Route exact path="/results">
               <Results />
-            </Route>
-            <Route exact path="/">
-              <Application />
             </Route>
             <Route exact path="/info">
               <Info />
@@ -47,11 +42,13 @@ function App() {
             </Route>
             <Route exact path="/symptoms">
             </Route>
+          <Route exact path="/profile">
+          </Route>
           </Switch> 
-        </UserProvider>
-        <Footer />
+          </UserProvider>
+      <Footer />
       </div>
-    </Router>
+    </Router >
   );
 }
 
