@@ -12,9 +12,14 @@ const styles = {
         marginbottom: "5"
 }
 
+        borderStyle: "solid",
+        borderWidth: "6px",
+        borderColor: "blue",
+        backgroundColor: "white"
+    }
+
    
 }
-
 
 
 
@@ -52,6 +57,20 @@ function Info() {
                 </form>
 
             </div>
+
+            <div style={styles.card} className="card mb-2">
+          <h1>What are your Symptoms?</h1>
+          
+          <form onSubmit="">
+            <fieldset>
+              <label>
+                <p>Syptoms</p>
+                <input name="name" />
+              </label>
+            </fieldset>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
 
         </div>
     )

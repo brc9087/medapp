@@ -8,10 +8,10 @@
 1. Make API Routes / models - Brian
 3. Results Page CSS - Brian
 4. Profile Page CSS 
-5. Body Parts Page CSS
-6. Merge symptom / Info Page + do CSS (ask 1.Age, 2. Gender, 3. Medicall history, 4. Please describe your symptoms) 
+5. Body Parts Page CSS - Ryan
+6. Merge symptom / Info Page + do CSS (ask 1.Age, 2. Gender, 3. Medical history, 4. Please describe your symptoms) - Dharmik
 7. Add extremities to database (ex: Knee pain, leg pain, shoulder pain)
-8. Create diagnosis CSS 
+8. Create diagnosis CSS - Md
 
 
 
