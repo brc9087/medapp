@@ -1,3 +1,4 @@
 module.exports = {
-  Book: require("./Book")
+  Diagnosis: require("./diagnosis"),
+  Info: require("./info")
 };

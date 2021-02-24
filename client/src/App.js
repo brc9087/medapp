@@ -12,7 +12,8 @@ import UserProvider from "./components/UserProvier/UserProvier";
 import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
-import Nav from "./components/Nav/index"
+import Navbar from "./components/Nav/index";
+import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
 import Symptoms from "./pages/Symptoms"
 
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        <Navbar/>
         <UserProvider>
           {/* <BodyParts/> */}
           {/* <Books /> */}
