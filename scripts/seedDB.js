@@ -28,6 +28,14 @@ const diagnosisSeed = [
   },
   {
     category: "head",
+    name: "Motion Sickness",
+    description: "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
+    treatment: "A variety of medications, both over-the-counter and prescription, can prevent or ease motion sickness.",
+    symptoms: "The primary symptom of motion sickness is nausea. Other symptoms include dizziness, vomiting, sweating, and increased salivation"
+
+  },
+  {
+    category: "head",
     name: "Medication Overuse Headache",
     description: "When a headache strikes, most of us head for the medicine cabinet or local pharmacy and take an over-the-counter pain pill such as acetaminophen, aspirin, ibuprofen, or pain-relieving drugs with caffeine. But when you don’t follow the instructions on the bottle or from your doctor, these medicines could give you a rebound headache. When the pain reliever wears off, your body may have a withdrawal reaction, prompting you to take more medicine, which only leads to another headache. And so the cycle continues until you start to have daily headaches with more severe pain more often.",
     treatment: "Aspirin, Sinus relief medications, Acetaminophen, Nonsteroidal anti-inflammatory drugs (NSAIDs), such as ibuprofen and naproxen,   Sedatives for sleep, Codeine and prescription narcotics, Triptan drugs for migraine, such as naratriptan (Amerge), sumatriptan (Imitrex),  zolmitriptan (Zomig), and others",
@@ -101,41 +109,48 @@ const diagnosisSeed = [
   },
 
   {
-    category: "head",
-    name: "Motion Sickness",
-    description: "Motion sickness is a feeling of queasiness or nausea that occurs for some people when they are moving in a car, bus, boat, or plane. Experts think it results when sensory input about motion from the brain, the eyes, and inner ear conflict. Some people feel better if they keep their eyes focused on the horizon or on stationary objects. A variety of medications help prevent motion sickness.",
-    treatment: "A variety of medications, both over-the-counter and prescription, can prevent or ease motion sickness.",
-    symptoms: "The primary symptom of motion sickness is nausea. Other symptoms include dizziness, vomiting, sweating, and increased salivation"
-
-  },
-  { 
-    category:"abdominal pain",
-    name:"Appendicitis",
-    descrition:"Appendicitis is a serious infection of the appendix, a small fingerlike tube located where the large and small intestine join.",
-    treatment:"Doctors can diagnose most appendicitis by taking a medical history and doing a physical exam. Blood and urine tests, X-rays, a CT scan, and ultrasound also may be done to confirm the diagnosis or rule out other causes.",
-    symptoms:"Symptoms of appendicitis include abdominal pain that may occur suddenly near the belly button and move to the lower right, nausea, vomiting, loss of appetite, low-grade fever (after other symptoms), constipation, abdominal swelling, and inability to pass gas."
+    category: "abdomen",
+    name: "Appendicitis",
+    descrition: "Appendicitis is a serious infection of the appendix, a small fingerlike tube located where the large and small intestine join.",
+    treatment: "Doctors can diagnose most appendicitis by taking a medical history and doing a physical exam. Blood and urine tests, X-rays, a CT scan, and ultrasound also may be done to confirm the diagnosis or rule out other causes.",
+    symptoms: "Symptoms of appendicitis include abdominal pain that may occur suddenly near the belly button and move to the lower right, nausea, vomiting, loss of appetite, low-grade fever (after other symptoms), constipation, abdominal swelling, and inability to pass gas."
   },
   {
-    category:"abdominal pain",
-    name:"Gas",
-    description:"Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
-    treatment:"", 
-    symptoms:"In addition to burping and flatulence, you may feel bloated. You could also have pain in your belly or sides. That pain could be mistaken for something else, like a heart attack or appendicitis."
+    category: "abdomen",
+    name: "Gas",
+    description: "Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
+    treatment: "Gas problems are treated by changing your diet and by training yourself to swallow less air. There are also prescription and over-the-counter medications that can help. Changing your diet will mean getting rid of the foods that cause gas.Unfortunately, this may also result in you having fewer nutritious foods.Ask your doctor to help you build a diet that’s healthy but doesn't cause much gas",
+    symptoms: "In addition to burping and flatulence, you may feel bloated. You could also have pain in your belly or sides. That pain could be mistaken for something else, like a heart attack or appendicitis."
   },
   {
-    category:"abdominal pain",
-    name:"Diverticulitis",
-    description:"Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
-    treatment:"Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
-    symptoms:"Abdominal pain, cramping, constipation, fevers, chills, weakness, fatigue, sweating, weight loss, and nausea"
+    category: "abdomen",
+    name: "Diverticulitis",
+    description: "Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
+    treatment: "Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
+    symptoms: "Abdominal pain, cramping, constipation, fevers, chills, weakness, fatigue, sweating, weight loss, and nausea"
+  },
+  {
+    category: "abdomen",
+    name: "Gastritis",
+    description: "Gastritis is an inflammation of the stomach lining that can be caused by H. pylori bacteria, NSAIDs and or alcohol, and can be aggravated by spicy foods, stress, and excess acid. Gastritis causes stomach upset, irritation, and pain that can last just minutes or for hours. In some people, gastritis becomes a chronic problem.",
+    treatment: "Minor gastritis can usually be treated at home with antacids and acid-suppressing medicine available over the counter. If your symptoms are severe or last more than a day or two, see your doctor right away. Avoiding alcohol and tobacco ",
+    symptoms: "Gastritis symptoms include upper abdominal pain and cramping; diarrhea (loose stools) with or without blood or mucus; low-grade fever; nausea and vomiting; loss of appetite; and black, tarry stools, which may be a sign of internal bleeding"
+  },
+
+  {
+    category: "abdomen",
+    name: "Diverticulitis",
+    description: "Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
+    treatment: "Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
+    symptoms: "Abdominal pain, cramping, constipation, fevers, chills, weakness, fatigue, sweating, weight loss, and nausea"
 
   },
-  
+
   {
     category: "Spinal",
     name: "Hyperparathyroidism",
     description: "Hyperparathyroidism is a disorder of the parathyroid glands that makes them secrete too much parathyroid hormone (PTH). PTH helps maintain a balance of calcium and phosphorus in the body.",
-    treatment:"Surgery is the main treatment for hyperparathyroidism. It removes the enlarged gland or glands. Some doctors also prescribe medication called calcimimetics that turn off the secretion of PTH.",
+    treatment: "Surgery is the main treatment for hyperparathyroidism. It removes the enlarged gland or glands. Some doctors also prescribe medication called calcimimetics that turn off the secretion of PTH.",
     description: "Vague symptoms of hyperparathyroidism include fatigue, weakness, depression, and aches and pain. More severe symptoms include confusion, memory problems, increased thirst, increased urination, bone and joint pain, multiple fractures, high blood pressure, or pain from kidney stones.",
     symptoms: "Vague symptoms of hyperparathyroidism include fatigue, weakness, depression, and aches and pain."
   },
@@ -143,28 +158,28 @@ const diagnosisSeed = [
     category: "Spinal",
     name: "Vertebral Compression Fracture",
     description: "A vertebral compression fracture occurs when one of the vertebrae in the spine is broken. A vertebral compression fracture can be caused by a severe injury to the spine, such as a car accident, sports injury, or fall.",
-    treatment:"backbrace, pain medications, physical therapy.",
+    treatment: "backbrace, pain medications, physical therapy.",
     symptoms: "Pain in the lower, middle, or upper back; weakness; numbness or tingling"
   },
   {
     category: "Spinal",
     name: "Rheumatoid Arthritis",
     description: "Rheumatoid arthritis is an autoimmune disease that causes your own body to attack your joints, which causes pain, swelling, and joint damage.",
-    treatment:"backbrace, pain medications, physical therapy, SURGERY.",
+    treatment: "backbrace, pain medications, physical therapy, SURGERY.",
     symptoms: "Symptoms of RA include joint pain, swelling, fever, fatigue, swollen glands, weight loss, morning stiffness, and red hands."
   },
   {
     category: "Spinal",
     name: "Ankylosing Spondylitis",
     description: "Ankylosing spondylitis is a long-lasting spinal condition in which the joints between the bones of the spine become inflamed. Over time, this causes the bones to fuse together, making your spine less flexible.",
-    treatment:"Nonsteroidal anti-inflammatory drugs, Corticosteroids, Tumor necrosis factor (TNF) blockers, Physical therapy, Surgery",
+    treatment: "Nonsteroidal anti-inflammatory drugs, Corticosteroids, Tumor necrosis factor (TNF) blockers, Physical therapy, Surgery",
     symptoms: "The major symptoms are low back pain or stiffness and fatigue; less common symptoms include eye inflammation, hip pain, heel pain, swelling in other joints, loss of appetite, weight loss, mild fever."
   },
   {
     category: "Spinal",
     name: "Lumbar (Low-Back) Herniated Disc",
     description: "A lumbar herniated disc occurs when one of the discs in your lower spine moves out of place. This causes pressure on the nerves and can cause low back pain or weakness, numbness, or tingling in the low back.",
-    treatment:"A short period of rest, Anti-inflammatory medications, Pain medications, Muscle relaxers, Physical therapy, Steroid injections, Surgery",
+    treatment: "A short period of rest, Anti-inflammatory medications, Pain medications, Muscle relaxers, Physical therapy, Steroid injections, Surgery",
     symptoms: "Low back pain, weakness, numbness or tingling in the low back; pain in hip, leg, or foot"
 
   }
