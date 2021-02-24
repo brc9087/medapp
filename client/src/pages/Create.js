@@ -35,8 +35,10 @@ function Create() {
                 symptoms: formObject.symptoms,
                 treatment: formObject.treatment
             })
-                .then(res => loadDiagnosis())
-                .catch(err => console.log(err));    
+                .then(res => loadDiagnosis(), location.reload())
+                .catch(err => console.log(err));
+
+
                 
             //call for the validation
             // result = await API.Savebook(dxDetails)
@@ -70,7 +72,7 @@ function Create() {
 
             <button 
             onClick={onSubmit}>
-                SUMBIT
+                SUBMIT
             </button>
 
 
