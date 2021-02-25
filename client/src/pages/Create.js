@@ -33,7 +33,7 @@ function Create() {
                 name: formObject.name,
                 description: formObject.description,
                 symptoms: formObject.symptoms,
-                treatment: formObject.treatment
+                treatment : formObject.treatment
             })
                 .then(res => loadDiagnosis(), location.reload())
                 .catch(err => console.log(err));
@@ -42,7 +42,7 @@ function Create() {
                 
             //call for the validation
             // result = await API.Savebook(dxDetails)
-            // with result you can do whatever
+            // with result youcan do whatever
     };
 
 
