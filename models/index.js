@@ -1,4 +1,5 @@
 module.exports = {
   Diagnosis: require("./diagnosis"),
-  Bio: require("./bio")
+  Bio: require("./bio"),
+  Newdx: require("./newdx")
 };
