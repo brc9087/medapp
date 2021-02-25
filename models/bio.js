@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const bioSchema = new Schema({
 
   age: {
-    type: Number,
+    type: String,
     required: true
   },
   gender: {

@@ -25,13 +25,17 @@ const styles = {
 
 function Info() {
     // Set State
-    const [bio, setBio] = useState([])
-    const [formObject, setFormObject] = useState({})
+    // const [bio, setBio] = useState([])
+    const [bioObject, setbioObject] = useState({})
+
+    function onChange(e) {
+        const { placeholder, value } = e.target;
+        setbioObject({ ...bioObject, [placeholder]: value })
+    }
 
     useEffect(() => {
         loadBio()
-    },
-        [])
+    }, [])
 
     function loadBio() {
         API.getBios()
@@ -41,26 +45,26 @@ function Info() {
     };
 
     function deleteBio() {
-        API.deleteBio(id) 
-        .then(res => loadBio())
-        .catch(err => console.log(err))
+        API.deleteBio(id)
+            .then(res => loadBio())
+            .catch(err => console.log(err))
     }
 
-    function handleInputChange(event) {
-        const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value })
-    }
+    // function handleInputChange(event) {
+    //     const { name, value } = event.target;
+    //     setbioObject({ ...bioObject, [name]: value })
+    // }
 
     function handleFormSubmit(event) {
         event.preventDefault();
         API.saveBio({
-            age: formObject.age,
-            gender: formObject.gender,
-            medhistory: formObject.medhistory,
-            symptoms: formObject.symptoms
+            age: bioObject.age,
+            gender: bioObject.gender,
+            medhistory: bioObject.medhistory,
+            symptoms: bioObject.symptoms
         })
-        .then(res => loadBio())
-        .catch(err => console.log(err))
+            .then(res => loadBio(), location.reload())
+            .catch(err => console.log(err))
     }
 
 
@@ -68,52 +72,71 @@ function Info() {
 
     return (
         <div className="container">
-            <div style={styles.card} className="card mb-2">
-                <h1> Info </h1>
+            <div>
+                <div style={styles.card} className="card mb-2">
+                    <h1> Info </h1>
+                </div>
 
 
+                <div>
+                    <div style={styles.card} className="card mb-2">
+                        <h2>What Is Your age</h2>
+                        <form id="Sex">
+                            <input
+                                onChange={onChange}
+                                placeholder="age"
+                                className="form-control form-control-lg"
+                                type="text"
+                                name="Sex" />
 
-                <h2>What Is Your Age</h2>
+                        </form>
+                    </div>
+                </div>
 
-                <form id="Age">
-                    <input className="form-control form-control-lg" type="text" name="Age" />
-                    <button type="submit" className="btn btn-danger danger">Submit</button>
-                </form>
+
+                <div style={styles.card} className="card mb-2">
+                    <h2>What Is Your Sex</h2>
+                    <form id="Sex">
+                        <input
+                            onChange={onChange}
+                            placeholder="gender"
+                            className="form-control form-control-lg"
+                            type="text"
+                            name="Sex" />
+                    </form>
+                </div>
+
+                <div style={styles.card} className="card mb-2">
+                    <h1>Do you have medical history</h1>
+                    <form id="Symptoms">
+                        <input
+                            onChange={onChange}
+                            placeholder="medhistory"
+                            className="form-control form-control-lg"
+                            type="text"
+                            name="Symptoms" />
+                    </form>
+                </div>
+
+
+                <div style={styles.card} className="card mb-2">
+                    <h1>What are your symptoms</h1>
+                    <form id="Symptoms">
+                        <input
+                            onChange={onChange}
+                            placeholder="symptoms"
+                            className="form-control form-control-lg"
+                            type="text"
+                            name="Symptoms" />
+                    </form>
+                </div>
+
+                <button
+                    onClick={handleFormSubmit}
+                    type="submit"
+                    className="btn btn-danger danger">
+                    Submit</button>
             </div>
-
-
-            <div style={styles.card} className="card mb-2">
-                <h2>What Is Your Sex</h2>
-                <form id="Sex">
-                    <input className="form-control form-control-lg" type="text" name="Sex" />
-                    <button type="submit" className="btn btn-danger danger">Submit</button>
-                </form>
-            </div>
-
-            <div style={styles.card} className="card mb-2">
-                <h1>What are your Symptoms?</h1>
-
-                <form id="Symptoms">
-                    <input className="form-control form-control-lg" type="text" name="Symptoms" />
-                    <button type="submit" className="btn btn-danger danger">Submit</button>
-                </form>
-
-            </div>
-
-            <div style={styles.card} className="card mb-2">
-                <h1>What are your Symptoms?</h1>
-
-                <form onSubmit="">
-                    <fieldset>
-                        <label>
-                            <p>Syptoms</p>
-                            <input name="name" />
-                        </label>
-                    </fieldset>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-
         </div>
     )
 };
