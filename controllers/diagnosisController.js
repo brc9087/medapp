@@ -1,13 +1,13 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the diagnosisController
 module.exports = {
   findAll: function(req, res) {
     console.log("Requset fro find All pinged")
     db.Diagnosis
       .find(req.query)
       .then(dbModel => {
-        console.log("Response from booksController.Findall", dbModel)
+        console.log("Response from diagnosisController.Findall", dbModel)
         res.json(dbModel)
       })
       .catch(err => res.status(422).json(err));

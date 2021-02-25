@@ -18,21 +18,21 @@ export default {
     return axios.post("/api/diagnosis", dxData);
   },
 
-//INFO ROUTE
-  getInfos: function () {
-    return axios.get("/api/info");
+//BIO ROUTE
+  getBios: function () {
+    return axios.get("/api/bio");
   },
   // Gets the book with the given id
-  getInfoId: function (id) {
-    return axios.get("/api/info/" + id);
+  getBioId: function (id) {
+    return axios.get("/api/bio/" + id);
   },
   // Deletes the book with the given id
-  deleteInfo: function (id) {
-    return axios.delete("/api/info/" + id);
+  deleteBio: function (id) {
+    return axios.delete("/api/bio/" + id);
   },
   // Saves a book to the database
-  saveInfo: function (infoData) {
-    return axios.post("/api/info", infoData);
+  saveBio: function (bioData) {
+    return axios.post("/api/bio", bioData);
   },
 };
 
