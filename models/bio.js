@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const infoSchema = new Schema({
+const bioSchema = new Schema({
 
   age: {
     type: Number,
@@ -24,6 +24,6 @@ const infoSchema = new Schema({
 
 
 
-const Info = mongoose.model("Info", infoSchema);
+const Bio = mongoose.model("Bio", bioSchema);
 
-module.exports = Info;
+module.exports = Bio;
