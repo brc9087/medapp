@@ -46,6 +46,8 @@ function Create() {
 
 
     return (
+        
+
         <div className="container">
             <h1> Create Diagnosis </h1>
             <div className="input-group mb-3" >

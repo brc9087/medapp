@@ -1,8 +1,8 @@
 import React from "react";
 
 const styles = {
-    navbar: {
-        backgroundColor: "white",
+    navBar: {
+        backgroundColor: "blue",
     },
     font: {
         color: "white",
@@ -10,7 +10,7 @@ const styles = {
         fontStyle: "italic"
     },
     text: {
-        color: "pink"
+        color: "white"
     }
 }
 function Nav() {
