@@ -34,5 +34,24 @@ export default {
   saveBio: function (bioData) {
     return axios.post("/api/bio", bioData);
   },
+
+
+
+  //NEW DIAGNOSIS ROUTES
+  getnewdx: function () {
+    return axios.get("/api/new");
+  },
+  // Gets the book with the given id
+  getnewdxId: function (id) {
+    return axios.get("/api/new/" + id);
+  },
+  // Deletes the book with the given id
+  deletenewdx: function (id) {
+    return axios.delete("/api/new/" + id);
+  },
+  // Saves a book to the database
+  savenewdx: function (dxData) {
+    return axios.post("/api/new", dxData);
+  },
 };
 
