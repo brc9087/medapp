@@ -1,3 +1,5 @@
 module.exports = {
-  Book: require("./Book")
+  Diagnosis: require("./diagnosis"),
+  Bio: require("./bio"),
+  Newdx: require("./newdx")
 };

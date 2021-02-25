@@ -12,27 +12,24 @@ import UserProvider from "./components/UserProvier/UserProvier";
 import Results from "./pages/ResultsPage"
 import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
-import Nav from "./components/Nav/index"
+// import Navbar from "./components/Nav/index";
+import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
-import Symptoms from "./pages/Symptoms"
+// import Symptoms from "./pages/Symptoms"
 
 
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
+      <div>        
+        <Nav />            
         <UserProvider>
-          {/* <BodyParts/> */}
-          {/* <Books /> */}
-          {/* <Detail /> */}
-          {/* <Jumbotron/> */}
           <Switch>
+          <Route exact path="/">
+              <Application />
+            </Route>
             <Route exact path="/results">
               <Results />
-            </Route>
-            <Route exact path="/">
-              <Application />
             </Route>
             <Route exact path="/info">
               <Info />
@@ -44,13 +41,14 @@ function App() {
               <BodyParts />
             </Route>
             <Route exact path="/symptoms">
-              <Symptoms />
             </Route>
+          <Route exact path="/profile">
+          </Route>
           </Switch> 
-        </UserProvider>
-        <Footer />
+          </UserProvider>
+      <Footer />
       </div>
-    </Router>
+    </Router >
   );
 }
 

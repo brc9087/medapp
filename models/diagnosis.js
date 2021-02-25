@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const bookSchema = new Schema({
+const diagnosisSchema = new Schema({
 
   name: {
     type: String,
@@ -24,6 +24,6 @@ const bookSchema = new Schema({
 
 
 
-const Book = mongoose.model("Book", bookSchema);
+const Diagnosis = mongoose.model("Diagnosis", diagnosisSchema);
 
-module.exports = Book;
+module.exports = Diagnosis;

@@ -19,7 +19,7 @@ app.use(routes)
 
 //Connet to mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist',
+  process.env.MONGODB_URI || 'mongodb://localhost/onlysymps',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
