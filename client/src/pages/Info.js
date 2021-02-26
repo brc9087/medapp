@@ -4,7 +4,7 @@ import API from "../utils/API";
 const styles = {
     body: {
         position: "relative",
-        margin: "0",
+        margin: "auto",
         float: "auto",
         width: "100%",
         height: "200%",
@@ -86,8 +86,9 @@ function Info() {
 
 
     return (
-        <div className="container">
-            <div className="main" style={styles.body}>
+        <div style={styles.body}>
+        <div className="container" style={styles.body}>
+            <div className="main" >
                 <body>
                     <div style={styles.card} className="card mb-2">
                         <h1> Info </h1>
@@ -160,6 +161,7 @@ function Info() {
                     </div>
             </body>
         </div>
+            </div>
             </div>
     )
 };
