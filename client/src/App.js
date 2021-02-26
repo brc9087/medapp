@@ -43,7 +43,9 @@ function App() {
             <Route exact path="/symptoms">
             </Route>
           <Route exact path="/profile">
+          <Application />
           </Route>
+          
           </Switch> 
           </UserProvider>
       <Footer />
