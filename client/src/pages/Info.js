@@ -139,7 +139,7 @@ function Info() {
             </div>
         </div>
     )
-};
+    }
 
 
 
