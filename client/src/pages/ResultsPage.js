@@ -19,6 +19,10 @@ function Results() {
     loadDiagnosis()
   }, [])
 
+  useEffect(() => {
+    loadBio()
+  }, [])
+
   // Loads all books and sets them to books
   function loadDiagnosis() {
     API.getDiagnosis()
@@ -44,6 +48,12 @@ function Results() {
   function deleteDiagnosis(id) {
     API.deleteDiagnosis(id)
       .then(res => loadDiagnosis())
+      .catch(err => console.log(err));
+  }
+
+  function deleteBio(id) {
+    API.deleteBio(id)
+      .then(res => loadBio())
       .catch(err => console.log(err));
   }
 
@@ -73,20 +83,22 @@ function Results() {
     <Container fluid>
       <Row>
         <Col size="md-6">
-          {diagnosis.map(diag => (
-            <ListItem key={diag._id}>
-              {/* <Link to={"/diags/" + diag._id}> */}
-              <h3><strong>Name:</strong></h3><p>{diag.name}</p>
-              {/* <h3><strong>Name:</strong></h3><p>{diag.name}</p>
+          {diagnosis.map(diag => {
+            if (diag.category === "head") {
+              return (
+              <ListItem key={diag._id}>
+                {/* <Link to={"/diags/" + diag._id}> */}
+                <h2><strong>Name:</strong></h2><h3>{diag.name}</h3>
+                {/* <h3><strong>Name:</strong></h3><p>{diag.name}</p>
                 <p><strong>Name: </strong> {diag.name}</p> */}
-              {/* <p><strong>Description: </strong> {diag.description}</p>
+                {/* <p><strong>Description: </strong> {diag.description}</p>
                     <p><strong>Treatment: </strong> {diag.treatment}</p>
                     <p><strong>Symptoms: </strong> {diag.symptoms}</p> */}
-              {/* </Link> */}
-              <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
-            </ListItem>
-
-          ))}
+                {/* </Link> */}
+                <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
+              </ListItem>
+              )}
+          })}
 
         </Col>
 
@@ -100,18 +112,20 @@ function Results() {
               <h4><strong>Treatment:</strong></h4><p>{diag.treatment}</p>
               <h4><strong>Symptoms:</strong></h4><p>{diag.symptoms}</p>
               {/* </Link> */}
-              <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
+              <DeleteBtn onClick={() => deleteBio(diag._id)} />
             </ListItem>
           ))}
         </Col>
 
+
+        {/* BIO PRINT  */}
         <Col size="md-6 sm-12">
           {bio.map(bio => (
             <ListItem key={bio._id}>
               {/* <Link to={"/bios/" + bio._id}> */}
-              <h4><strong>Name:</strong></h4><p>{bio.name}</p>
-              <h4><strong>Description:</strong></h4><p>{bio.description}</p>
-              <h4><strong>Treatment:</strong></h4><p>{bio.treatment}</p>
+              <h4><strong>Age:</strong></h4><p>{bio.age}</p>
+              <h4><strong>Gender:</strong></h4><p>{bio.gender}</p>
+              <h4><strong>Medical History:</strong></h4><p>{bio.medhistory}</p>
               <h4><strong>Symptoms:</strong></h4><p>{bio.symptoms}</p>
               {/* </Link> */}
               <DeleteBtn onClick={() => deleteDiagnosis(bio._id)} />
