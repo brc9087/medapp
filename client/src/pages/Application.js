@@ -13,8 +13,9 @@ function Application() {
   const user = useContext(UserContext);
 
   return (
-        user ?
-        <ProfilePage />
+    user ?
+          <ProfilePage />
+      
       :
       <Router>
         <Switch>

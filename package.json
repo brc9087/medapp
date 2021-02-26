@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "seed": "node scripts/seedDB.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "bulma": "^0.9.2",
     "express": "^4.16.3",
     "firebase": "^8.2.7",
     "if-env": "^1.0.4",

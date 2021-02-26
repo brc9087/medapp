@@ -1,28 +1,57 @@
-import axios from "axios"
+import axios from "axios";
 
 export default {
-    // Get book from google search 
-    getGoogleSearchBooks: function(query) {
-        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query)
-    },
+//DIAGNOSIS ROUTES
+  getDiagnosis: function () {
+    return axios.get("/api/diagnosis");
+  },
+  // Gets the book with the given id
+  getDiagnosisId: function (id) {
+    return axios.get("/api/diagnosis/" + id);
+  },
+  // Deletes the book with the given id
+  deleteDiagnosis: function (id) {
+    return axios.delete("/api/diagnosis/" + id);
+  },
+  // Saves a book to the database
+  saveDiagnosis: function (dxData) {
+    return axios.post("/api/diagnosis", dxData);
+  },
 
-    // Gets all books
-    getBooks: function () {
-        return axios.get("/api/books");
-    },
+//BIO ROUTE
+  getBios: function () {
+    return axios.get("/api/bio");
+  },
+  // Gets the book with the given id
+  getBioId: function (id) {
+    return axios.get("/api/bio/" + id);
+  },
+  // Deletes the book with the given id
+  deleteBio: function (id) {
+    return axios.delete("/api/bio/" + id);
+  },
+  // Saves a book to the database
+  saveBio: function (bioData) {
+    return axios.post("/api/bio", bioData);
+  },
 
-    // Gets the book with the given id
-    getBook: function (id) {
-        return axios.get("/api/books/" + id);
-    },
 
-    // Saves a book to the database
-    saveBook: function (savedBooks) {
-        return axios.post("/api/books", savedBooks);
-    },
 
-    // Deletes the book with the given id
-    deleteBook: function (id) {
-        return axios.delete("/api/books/" + id);
-    }
-}
+  //NEW DIAGNOSIS ROUTES
+  getnewdx: function () {
+    return axios.get("/api/new");
+  },
+  // Gets the book with the given id
+  getnewdxId: function (id) {
+    return axios.get("/api/new/" + id);
+  },
+  // Deletes the book with the given id
+  deletenewdx: function (id) {
+    return axios.delete("/api/new/" + id);
+  },
+  // Saves a book to the database
+  savenewdx: function (dxData) {
+    return axios.post("/api/new", dxData);
+  },
+};
+

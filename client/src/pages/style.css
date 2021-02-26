@@ -1,0 +1,7 @@
+.container: {
+    borderStyle: "solid",
+    borderWidth: "1px",
+    borderColor: "purple",
+    marginBottom: "330rem",
+    backgroundColor: "white"
+}
