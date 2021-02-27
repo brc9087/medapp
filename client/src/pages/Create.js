@@ -53,56 +53,106 @@ function Create() {
 
 
 
+    const styles = {
+        card: {
+            border: "30px",
+            borderstyle: "solid",
+            backgroundColor:"blue",
+            padding: "20px",
+            width: "1000px",
+            height: "80px",
+            borderStyle: "solid",
+            borderWidth: "6px",
+            borderColor: "white",
+            backgroundColor: "lightblue"
+            
+
+        }
+
+
+    }
+      
+    
     return (
+
         
-
-        <div className="container">
-            <h1> Create Diagnosis </h1>
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
-                    onChange={onChange}
-                    placeholder="name" />
+            <div style={styles.body}>
+                <div className="container" style={styles.body} >
+                    <div>
+                        <div style={styles.card} className="card mb-2">
+                            <h1> CREATE DIAGNOSIS </h1>
+                        </div>
+                    </div>
+              <div>
+                <div className="input-group mb-3" style={styles.body} >
+                    <div style={styles.card} className="card mb-2">
+                        <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
+                            onChange={onChange}
+                            placeholder="name" />
+                    </div>
+            
             </div>
-
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="description"
-                    onChange={onChange}
-                />
             </div>
+     
+          
+                <div className="input-group mb-3" >
+                   <div style={styles.card} className="card mb-2">
+                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                        placeholder="description"
+                        onChange={onChange} />
+                 </div>
+                </div>
+            
+                    <div>
+                        <div className="input-group mb-3">
+                            <div style={styles.card} className="card mb-2">
+                                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                                    placeholder="symptoms"
+                                    onChange={onChange} />
+                            </div>
+                        </div>
 
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="symptoms"
-                    onChange={onChange} />
-            </div>
 
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="treatment"
-                    onChange={onChange} />
-            </div>
+                        <div>
+                            <div className="input-group mb-3">
+                                <div style={styles.card} className="card mb-2">
+                                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                                        placeholder="treatment"
+                                        onChange={onChange} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <button
-                onClick={onSubmit}>
-                SUBMIT
+                    <button
+                        onClick={onSubmit}>
+                        submit
             </button>
 
-            <Col size="md-6 sm-12">
-                {newDx.map(newDx => (
-                    <ListItem key={newDx._id}>
-                        {/* <Link to={"/newDxs/" + newDx._id}> */}
-                        <h4><strong>Name:</strong></h4><p>{newDx.name}</p>
-                        <h4><strong>Description:</strong></h4><p>{newDx.description}</p>
-                        <h4><strong>Treatment:</strong></h4><p>{newDx.treatment}</p>
-                        <h4><strong>Symptoms:</strong></h4><p>{newDx.symptoms}</p>
-                        {/* </Link> */}
-                        {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
-                    </ListItem>
-                ))}
-            </Col>
+
+                    <Col size="md-6 sm-12" style={styles.body} >
+
+                        {newDx.map(newDx => (
+                            <ListItem key={newDx._id}>
+                                {/* <Link to={"/newDxs/" + newDx._id}> */}
+                                <h4><strong>Name:</strong></h4><p>{newDx.name}</p>
+                                <h4><strong>Description:</strong></h4><p>{newDx.description}</p>
+                                <h4><strong>Treatment:</strong></h4><p>{newDx.treatment}</p>
+                                <h4><strong>Symptoms:</strong></h4><p>{newDx.symptoms}</p>
+                                {/* </Link> */}
+                                {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
+                            </ListItem>
+                        ))}
+                    </Col>
 
         </div>
+        </div>
+    
+    
+
+
+
+
 
     )
 };
