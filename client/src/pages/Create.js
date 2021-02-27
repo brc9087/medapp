@@ -72,10 +72,20 @@ function Create() {
             backgroundColor: "lightblue"
             
 
-        }
+        },
+        body: {
+        
+            width: "100%",
+            height: "100%",
+            backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+            backgroundColor: "blue",
+            color: "white",
+    
+          }
+        
+        
 
-
-    }
+    }      
       
     
     return (
@@ -152,6 +162,8 @@ function Create() {
 
         </div>
         </div>
+        
+    
     
     
 
