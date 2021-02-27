@@ -175,6 +175,8 @@ const diagnosisSeed = [
     treatment: "Nonsteroidal anti-inflammatory drugs, Corticosteroids, Tumor necrosis factor (TNF) blockers, Physical therapy, Surgery",
     symptoms: "The major symptoms are low back pain or stiffness and fatigue; less common symptoms include eye inflammation, hip pain, heel pain, swelling in other joints, loss of appetite, weight loss, mild fever."
   },
+  
+  
   {
     category: "musculoskeletal",
     name: "Lumbar (Low-Back) Herniated Disc",
@@ -182,6 +184,102 @@ const diagnosisSeed = [
     treatment: "A short period of rest, Anti-inflammatory medications, Pain medications, Muscle relaxers, Physical therapy, Steroid injections, Surgery",
     symptoms: "Low back pain, weakness, numbness or tingling in the low back; pain in hip, leg, or foot"
 
+  },
+
+  {
+    category: "musculoskeletal",
+    name: "Lumbar Spinal Stenosis",
+    description: "Lumbar spinal stenosis occurs when the spinal canal in your lower back becomes narrowed. This creates pressure on your spine and can cause pain, weakness, or numbness in your lower back, buttocks, legs, and feet. It is a common condition as people age, and it is most often caused by arthritis in the spine.",
+    treatment: "Nonsteroidal anti-inflammatory medications, such as ibuprofen (Advil, Motrin) or naproxen (Aleve), prescription pain relievers, corticosteroid injections, physical therapy, surgery", 
+    symptoms: "Pain, weakness, or numbness in your lower back, buttocks, legs, and feet."
+  },
+
+  {
+    category: "musculoskeletal",
+    name: "Lumbar Strain and Lumbar Sprain",
+    description: "Lumbar strains and sprains are the most common causes of lower back pain. People may get them from picking up something heavy, industrial work, or sports that require lifting, pushing, or twisting. Lumbar strains develop when the muscles stretch too far or tear. Lumbar sprains are rips in the ligaments, the tough bands of tissue that connect the bones. Practically, the distinction between strains and sprains doesn't matter very much. The treatment including medications that help with pain while the muscles or ligaments heal is the same for either condition. Most people recover within a few weeks.",
+    treatment: "Nonsteroidal anti-inflammatory drugs, Corticosteroids, Tumor necrosis factor (TNF) blockers, Physical therapy, Surgery",
+    symptoms: "Bed rest for a short time, no more than 3 days, NSAIDs, such as ibuprofen, ketoprofen, and naproxen, for pain and swelling, ice packs, physical therapy, ultrasound, stretching, heat, muscle relaxants"
+  },
+
+  {
+    category: "musculoskeletal",
+    name: "Kideny Stones",
+    description: "Kidney stones are hard deposits made from minerals such as calcium or waste products such as uric acid. They start small, but they can grow bigger as more minerals stick to them. Some kidney stones often pass on their own without treatment. Other stones that are painful or that get stuck in your urinary tract sometimes need to be removed with surgery.",
+    treatment: "Shock wave lithotripsy, Ureteroscopy, Percutaneous nephrolithotomy or percutaneous nephrolithotripsy, Open surgery",
+    symptoms: "Pain in the back or side part of the body, pain can be severe, sharp, or sudden in the abdomen, pain can occur during urination, blood in urine or frequent urination, nausea, vomiting, sweating"
+  },
+
+  {
+    category: "respiratory",
+    name: "Bronchiolitis",
+    description: "Bronchiolitis is a common lung infection in children that can be caused by several different viruses. The viruses that cause bronchiolitis are spread from person to person through coughing and sneezing. Bronchiolitis usually occurs in children under age 2, especially in infants 3 months to 6 months old. It begins like a cold, but then can cause difficulty breathing, a fast heartbeat, wheezing, fever, or bluish-colored skin.",
+    treatment: "Offering your child plenty of fluids, Using a cool-mist vaporizer in your child's bedroom, Making sure your child gets plenty of rest, Using acetaminophen to reduce your child's fever; DON'T use aspirin, because in children and teens, it is associated with a rare but serious illness called Reyes syndrome, IV fluids, Oxygen therapy",
+    symptoms: "The symptoms of bronchiolitis can include a runny nose, cough, fever, difficulty breathing, a fast heartbeat, wheezing, or bluish-colored skin."
+  },
+
+  {
+    category: "genitalia",
+    name: "Genital warts",
+    description: "Genital warts are a type of sexually transmitted disease (STD) that causes wart-like growths on the penis, scrotum, thighs, groin area, and around the anus. In rare cases, they can also be spread to the mouth and throat. This STD is caused by more than 40 types of the human papilloma virus (HPV), which spreads through sexual contact. HPV can be spread even if the infected person does not have symptoms. Warts develop when your body can't fight the infection and may occur months or even years after you were infected. Warts can be removed with medications, by burning or freezing them off, with laser treatments, and by different types of surgery. However, removing warts does not cure HPV, and warts may reappear. A vaccination can protect boys and young men from HPV infections that cause genital warts.",
+    treatment: "Prescription creams, either applied at home or by the doctor, Cryotherapy, or freezing off warts with liquid nitrogen, Electrocautery, or burning off warts, Surgically removing warts, Laser removal",
+    symptoms: "Genital warts may be small or large, raised or flat bumps or groups of bumps, or they may look like cauliflower. They can grow on the penis, scrotum, thighs, groin area, and in and around the anus, and they may cause itching."
+  },
+
+  {
+    category: "genitalia",
+    name: "Hemorrhoids",
+    description: "Hemorrhoids are swollen veins in the rectum or anus. They can be inside the lower rectum or on the skin around the anus. Both types of hemorrhoids can cause pain, itching, bleeding, and irritation. The most common causes of hemorrhoids are straining during bowel movements, constipation, and pregnancy. Most hemorrhoid symptoms usually get better within a few days.",
+    treatment: "Treatments include creams and suppositories to relieve symptoms, procedures to shrink or remove hemorrhoids, and in severe cases, surgery to remove hemorrhoids.",
+    symptoms: "Hemorrhoids can cause anal pain, bleeding, and itching. They can also cause a hard lump near the anus."
+  },
+
+  {
+    category: "genitalia",
+    name: "Gonorrhea",
+    description: "Gonorrhea is one of the most common sexually transmitted diseases (STDs). It is caused by gonorrhea bacteria and spreads through vaginal, oral, or anal sex. Your sex partner may pass it to you even if he/she doesn't have symptoms. You cannot catch gonorrhea from casual contact such as by shaking hands or from a toilet seat. The most common symptoms for men are painful urination and a white, yellow, or green discharge from the tip of the penis. The symptoms for women are different. Antibiotics can cure the disease in both men and women. But untreated, gonorrhea can lead to complications such as infertility.",
+    treatment: "You need prescription antibiotics, although it is becoming more difficult to treat gonorrhea because of the increase of drug-resistant strains of the bacteria. It's important to take all of the medication as directed, or the infection may return. Do not have sex while taking antibiotics, because you can still spread the disease. Be sure all sexual partners are also treated.",
+    symptoms: "Common symptoms of gonorrhea in males include painful urination and white, yellow, or green discharge from the tip of the penis. You may also have fever, swollen or painful testicles, rectal discharge or bleeding, anal itching, rectal soreness, painful bowel movements, abdominal pain, sore throat, joint pain, fatigue, or rash."
+  },
+
+  {
+    category: "genitalia",
+    name: "syphilis",
+    description: "Syphilis is a sexually transmitted infection that can cause serious health problems if it is not treated. Syphilis is divided into stages (primary, secondary, latent, and tertiary). There are different signs and symptoms associated with each stage.",
+    treatment: "Yes, syphilis can be cured with the right antibiotics from your health care provider. However, treatment might not undo any damage that the infection has already done.",
+    symptoms: "painless ulcers, sores, vaginal discharge, or wart-like growths on genitals"
+  },
+
+  {
+    category: "genitalia",
+    name: "Genital herpes",
+    description: "A common sexually transmitted infection marked by genital pain and sores. Caused by the herpes simplex virus, the disease can affect both men and women.",
+    treatment: "Eating more fiber, Drinking more water, Topical muscle relaxants or painkillers, Medications to soften the stool, Sitz baths -- soaking the pelvis in water, Botox injections into the muscles, Minor surgery",
+    symptoms: "Medications can be used to manage outbreaks"
+  },
+  {
+    category: "genitalia",
+    name: "chlamydia",
+    description: "Many who have chlamydia don't develop symptoms, but they can still infect others through sexual contact. Symptoms may include genital pain and discharge from the vagina or penis.",
+    treatment: "Antibiotic therapy for the affected patient and the patient's sexual partners is recommended. Screening for other common sexually transmitted infections should also be performed.",
+    symptoms: "Pain, itching, and small sores appear first. They form ulcers and scabs"
+  },
+  
+
+  {
+    category: "genitalia",
+    name: "HIV/AIDS",
+    description: "HIV causes AIDS and interferes with the body's ability to fight infections.",
+    treatment: "No cure exists for AIDS, but strict adherence to anti-retroviral therapy (ART) can dramatically slow the disease's progress, prevent secondary infections and complications, and prolong life.",
+    symptoms: "Pain in the abdomen, can occur while swallowing, cough can be dry, whole body fatigue, fever, loss of appetite, malaise, night sweats, or sweating"
+  },
+
+  {
+    category: "genitalia",
+    name: "Human papillomavirus infection",
+    description: "An infection that causes warts in various parts of the body, depending on the strain. Human papillomavirus (HPV) is the most common sexually transmitted infection (STI).",
+    treatment: "There's no cure for the virus and warts may go away on their own. Treatment focuses on removing the warts. A vaccine that prevents the HPV strains most likely to cause genital warts and cervical cancer is recommended for boys and girls.",
+    symptoms: "Symptoms may include warts on the genitals or surrounding skin."
   }
 
 ];
