@@ -1,40 +1,48 @@
-# Google Books React
+# OnlySyms : MedApp:
 
-* This is a React-based Google Books Search App. Applications has 2 pages that contain the following:
-1. A search page - where user can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
-2. Saved Books Page ("My Library") - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database. 
+* This app is a React-based Symptoms App. Its made with the funtionality of MERN. The application has 6 pages that contain thefollwing:
 
-# THINGS TO DO 
-1. Make API Routes / models - Brian
-3. Results Page CSS - Brian
-4. Profile Page CSS 
-5. Body Parts Page CSS - Ryan
-6. Merge symptom / Info Page + do CSS (ask 1.Age, 2. Gender, 3. Medical history, 4. Please describe your symptoms) - Dharmik
-7. Add extremities to database (ex: Knee pain, leg pain, shoulder pain)
-8. Create diagnosis CSS - Md
+1. The Login page - The user will be able to login in or signup to signin to enter the        application . The user also able to login with the google account ...
 
+2. The Info Page: After Login- in the Info page the user can put some info as Name, Sex, Medical history and Symptoms and submit it . The Information will be add into the Mongo Database and save obiously. 
 
+3. The profile Page : A profile will be created in profile page for the user .
 
+4. The Result Page: The user can check the result of the symptoms in Result page directly. The user will be able to see their results and save it instatly .
 
+5. The Create Diagnosis Page : The user will be able to create diagnosis for him/herself and save for future references.. 
 
 ## Usage / Directions
-* Click the link to start reading BookWorms! ==> https://fast-hollows-10985.herokuapp.com/
+* Click the link to start reading BookWorms! ==> https://.herokuapp.com/
 
-## HOME PAGE
-* ![](./client/src/images/homepage.PNG )
+## LOGIN PAGE:
+* ![](./client/src/images/l.loginpage.jpg )
 
 <br>
 
-## SEARCH PAGE
+## INFO PAGE:
 * ![](./client/src/images/search.PNG)
 
 <br>
     
     
-## SAVED BOOKS 
+## PROFILE PAGE:
+*  ![](./client/src/images/l.profilepage)
+
+<br>
+ 
+    
+## RESULT PAGE:
 *  ![](./client/src/images/savedbooks.PNG)
 
 <br>
+
+    
+## CREATE DIAGNOSIS PAGE:
+*  ![](./client/src/images/l.creatdiagnosis.jpg)
+
+<br>
+
 
 ## Tools Used / Dependancies
 --
@@ -42,6 +50,7 @@
 * react-router-dom
 * Third Party Hooks
 * Axios
+* Bu-ma CSS [NewPackage]
 * Mongo DB
 * Mongoose
 * Express
@@ -51,5 +60,5 @@
 * Heroku
 
 ## Links
-* APP: https://fast-hollows-10985.herokuapp.com/
-* REPO: https://github.com/brc9087/googlebooksreact
+* APP: https://herokuapp.com/
+* REPO: https://github.com/brc9087/medapp
