@@ -9,85 +9,104 @@ import babylegs from "../../src/images/babylegs.PNG"
 
 const styles = {
     pic: {
-        height: "100px",
-        width: "100px"
+        width: "100%",
+        position: "relative",
+        objectPosition: "10%"
     },
 
-    babylegs: {
-        width: "30%"
+    head: {
+        width: "100%",
+        height: "80%"
+
     },
 
-    belly: {
-        width: "30%"
-    },
-
-    heart: {
-        width: "30%"
-        
-    },
-    leftarm: {
-        width: "30%"
-        
-    },
-    rightarm: {
-        width: "30%"
-        
+    div: {
+        // backgroundColor: "#038989",
+        border: "solid 200px",
+        borderColor: "#038989"
     }
-    
+
 
 }
 
 function BodyParts() {
     return (
-        <div className="container">
-            <div class="row">
-                <div class="col">
+        <div style={styles.div} >
+            <div className="container">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h2>HEAD</h2>
+                        <img src={Head} alt="" style={styles.head} id="head" />
+                    </div>
+                    <div class="col">
+                    </div>
                 </div>
-                <div class="col">
-                    <img src={Head} alt="" style={styles.belly} id="head" />
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <img
+                            name="musculoskeletal"
+                            src={rightArm} alt=""
+                            style={styles.head} />
+                    </div>
+
+                    <div class="col">
+                        <h2> CARDIAC</h2>
+                        <img 
+                        name="cardiac"
+                        src={heart} alt="" 
+                        style={styles.pic}/>
+                    </div>
+
+                    <div class="col">
+                        <h2> RESPIRATORY </h2>
+                        <img 
+                        name="respiratory"
+                        src={lungs} alt="" 
+                        style={styles.pic} />
+                    </div>
+
+                    <div class="col">
+                        <img
+                            name="musculoskeletal"
+                            src={leftArm}
+                            alt=""
+                            style={styles.head} />
+                    </div>
                 </div>
-                <div class="col">
+                <br />
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h2> ABDOMINAL </h2>
+                        <img 
+                        name="abdominal"
+                        src={Belly} alt="" 
+                        style={styles.head}/>
+                    </div>
+                    <div class="col">
+                    </div>
                 </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col">
-                    <img src={rightArm} alt="" style={styles.belly} id="rightarm"/>
-                </div>
-                <div class="col">
-                    <img src={heart} alt="" style={styles.heart} id="heart" />
-                </div>
-                <div class="col">
-                    <img src={lungs} alt="" style={styles.heart} id="lungs" />
-                </div>
-                <div class="col">
-                    <img src={leftArm} alt="" style={styles.belly} id="leftarm"/>
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col">
-                </div>
-                <div class="col">
-                    <img src={Belly} alt="" style={styles.belly} id="abdomen"/>
-                </div>
-                <div class="col">
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col">
-                </div>
-                <div class="col">
-                    <img src={babylegs} alt="" style={styles.babylegs} id="babylegs" />
-                </div>
-                <div class="col">
+                <br />
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h2>MUSCULOSKELETAL</h2>
+                        <img 
+                        name="musculoskeletal"
+                        src={babylegs} alt="" 
+                        style={styles.head}/>
+                    </div>
+                    <div class="col">
+                    </div>
                 </div>
             </div>
         </div>
     )
 };
-
-
 
 export default BodyParts;

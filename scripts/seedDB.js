@@ -80,28 +80,28 @@ const diagnosisSeed = [
   },
 
   {
-    category: "chest pain",
+    category: "cardiac",
     name: "rib fracture",
     description: "Broken ribs are a common injury. A blow to the chest -- during a car accident, a fall, or a football game -- may break a rib.",
     treatment: "rest, Over-the-counter or prescription medicines to reduce pain and swelling, Icing the area for 10 minutes at a time ",
     symptoms: "A broken rib causes a sore, swollen spot on your chest. The pain may be mild or intense -- some people mistake it for a heart attack. The pain will be worse when breathing deeply, coughing or sneezing, and bending or twisting your body."
   },
   {
-    category: "chest pain",
+    category: "cardiac",
     name: "heart burn/ GERD",
     description: "Heartburn happens when stomach acid backs up into your esophagus, irritating the lining of the esophagus. ",
     treatment: "Treatment for heartburn and GERD usually begins with over-the-counter antacids and medications to help reduce stomach acid. You also may want to avoid the foods and drinks that make your symptoms worse. If these treatments don't relieve symptoms, you may need prescription medications, surgery, or other procedures.",
     symptoms: "The most common symptoms of heartburn and GERD are a burning feeling in the chest, throat, or mouth, nausea after eating, and a feeling that food is trapped low in your throat."
   },
   {
-    category: "chest pain",
+    category: "cardiac",
     name: "pulmonary embolism",
     description: "A pulmonary embolism is a blood clot that forms in a vein, usually in the leg, travels to the lung, and lodges there. You may have shortness of breath, even while resting, or feel as if you're having a heart attack. It is an emergency, because one large pulmonary embolism or several small ones can be fatal. Blood-thinning medication is the standard treatment. Most people who are treated for pulmonary embolism survive. Those who are older, have an underlying illness, or do not get diagnosed promptly are at greater risk of dying. ",
     treatment: "Anticoagulant medication or thrombolytic medication to dissolve the clot, Surgery to remove the clot  ",
     symptoms: "Symptoms of pulmonary embolism may include shortness of breath or rapid breathing; chest pain, which may be worsened with deep breathing; coughing or spitting up blood; anxiety, restlessness, lightheadedness, or rapid heartbeat."
   },
   {
-    category: "chest pain",
+    category: "cardiac",
     name: "panic attack",
     description: "When someone has a panic attack, that person feels a sudden, intense fear that can't be controlled. People who have panic attacks often feel like they are having a heart attack, losing control, suffocating, or dying. During the panic attack, the person also may have chest pain, nausea, shortness of breath, chills, sweating, dizziness, or a feeling of choking. Doctors don't know for certain what causes panic attacks, but it may have to do with genetics or stress.",
     treatment: "Antidepressant medications, such as fluoxetine (Prozac), paroxetine (Paxil), sertraline (Zoloft), and venlafaxine (Effexor), Mild sedatives, such as alprazolam (Xanax) and clonazepam (Klonopin)",
@@ -109,28 +109,28 @@ const diagnosisSeed = [
   },
 
   {
-    category: "abdomen",
+    category: "abdominal",
     name: "Appendicitis",
     descrition: "Appendicitis is a serious infection of the appendix, a small fingerlike tube located where the large and small intestine join.",
     treatment: "Doctors can diagnose most appendicitis by taking a medical history and doing a physical exam. Blood and urine tests, X-rays, a CT scan, and ultrasound also may be done to confirm the diagnosis or rule out other causes.",
     symptoms: "Symptoms of appendicitis include abdominal pain that may occur suddenly near the belly button and move to the lower right, nausea, vomiting, loss of appetite, low-grade fever (after other symptoms), constipation, abdominal swelling, and inability to pass gas."
   },
   {
-    category: "abdomen",
+    category: "abdominal",
     name: "Gas",
     description: "Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
     treatment: "Gas problems are treated by changing your diet and by training yourself to swallow less air. There are also prescription and over-the-counter medications that can help. Changing your diet will mean getting rid of the foods that cause gas.Unfortunately, this may also result in you having fewer nutritious foods.Ask your doctor to help you build a diet that’s healthy but doesn't cause much gas",
     symptoms: "In addition to burping and flatulence, you may feel bloated. You could also have pain in your belly or sides. That pain could be mistaken for something else, like a heart attack or appendicitis."
   },
   {
-    category: "abdomen",
+    category: "abdominal",
     name: "Diverticulitis",
     description: "Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
     treatment: "Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
     symptoms: "Abdominal pain, cramping, constipation, fevers, chills, weakness, fatigue, sweating, weight loss, and nausea"
   },
   {
-    category: "abdomen",
+    category: "abdominal",
     name: "Gastritis",
     description: "Gastritis is an inflammation of the stomach lining that can be caused by H. pylori bacteria, NSAIDs and or alcohol, and can be aggravated by spicy foods, stress, and excess acid. Gastritis causes stomach upset, irritation, and pain that can last just minutes or for hours. In some people, gastritis becomes a chronic problem.",
     treatment: "Minor gastritis can usually be treated at home with antacids and acid-suppressing medicine available over the counter. If your symptoms are severe or last more than a day or two, see your doctor right away. Avoiding alcohol and tobacco ",
@@ -138,7 +138,7 @@ const diagnosisSeed = [
   },
 
   {
-    category: "abdomen",
+    category: "abdominal",
     name: "Diverticulitis",
     description: "Diverticula are small pouches that bulge out from weak spots in colon walls. Over time, pressure and strain from passing hard stools causes these weak areas. The condition is common in people over age 40. ",
     treatment: "Liquid diet during attacks,Antibiotics,Surgery, for severe cases ,High-fiber diet once the infection has gone",
@@ -147,7 +147,7 @@ const diagnosisSeed = [
   },
 
   {
-    category: "Spinal",
+    category: "musculoskeletal",
     name: "Hyperparathyroidism",
     description: "Hyperparathyroidism is a disorder of the parathyroid glands that makes them secrete too much parathyroid hormone (PTH). PTH helps maintain a balance of calcium and phosphorus in the body.",
     treatment: "Surgery is the main treatment for hyperparathyroidism. It removes the enlarged gland or glands. Some doctors also prescribe medication called calcimimetics that turn off the secretion of PTH.",
@@ -155,28 +155,28 @@ const diagnosisSeed = [
     symptoms: "Vague symptoms of hyperparathyroidism include fatigue, weakness, depression, and aches and pain."
   },
   {
-    category: "Spinal",
+    category: "musculoskeletal",
     name: "Vertebral Compression Fracture",
     description: "A vertebral compression fracture occurs when one of the vertebrae in the spine is broken. A vertebral compression fracture can be caused by a severe injury to the spine, such as a car accident, sports injury, or fall.",
     treatment: "backbrace, pain medications, physical therapy.",
     symptoms: "Pain in the lower, middle, or upper back; weakness; numbness or tingling"
   },
   {
-    category: "Spinal",
+    category: "musculoskeletal",
     name: "Rheumatoid Arthritis",
     description: "Rheumatoid arthritis is an autoimmune disease that causes your own body to attack your joints, which causes pain, swelling, and joint damage.",
     treatment: "backbrace, pain medications, physical therapy, SURGERY.",
     symptoms: "Symptoms of RA include joint pain, swelling, fever, fatigue, swollen glands, weight loss, morning stiffness, and red hands."
   },
   {
-    category: "Spinal",
+    category: "musculoskeletal",
     name: "Ankylosing Spondylitis",
     description: "Ankylosing spondylitis is a long-lasting spinal condition in which the joints between the bones of the spine become inflamed. Over time, this causes the bones to fuse together, making your spine less flexible.",
     treatment: "Nonsteroidal anti-inflammatory drugs, Corticosteroids, Tumor necrosis factor (TNF) blockers, Physical therapy, Surgery",
     symptoms: "The major symptoms are low back pain or stiffness and fatigue; less common symptoms include eye inflammation, hip pain, heel pain, swelling in other joints, loss of appetite, weight loss, mild fever."
   },
   {
-    category: "Spinal",
+    category: "musculoskeletal",
     name: "Lumbar (Low-Back) Herniated Disc",
     description: "A lumbar herniated disc occurs when one of the discs in your lower spine moves out of place. This causes pressure on the nerves and can cause low back pain or weakness, numbness, or tingling in the low back.",
     treatment: "A short period of rest, Anti-inflammatory medications, Pain medications, Muscle relaxers, Physical therapy, Steroid injections, Surgery",
