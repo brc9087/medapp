@@ -77,9 +77,19 @@ function Results() {
         .catch(err => console.log(err));
     }
   };
-
+const styles = {
+  body: {
+    postion: "fixed",
+      width: "100%",
+      height: "100%",
+      backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+      padding: "100px",
+      textAlign: "center",
+    },
+}
   return (
     // {books.length ? (
+      < div style={styles.body}>
     <Container fluid>
       <Row>
         <Col size="md-6">
@@ -136,6 +146,7 @@ function Results() {
 
       </Row>
     </Container>
+    </div>
 
   )
 

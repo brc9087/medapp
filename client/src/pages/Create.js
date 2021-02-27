@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API"
 import { Container, Row, Col } from "../components/Grid/index";
 import { List, ListItem } from "../components/List2/index";
+import Input from "../components/Input/Input";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 
@@ -51,43 +52,69 @@ function Create() {
     };
 
 
+const styles= {
 
+    body: {
+        postion: "fixed",
+          width: "100%",
+          height: "100%",
+          backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+          padding: "100px",
+          textAlign: "center",
+        },
+        header: {
+            color: "white"
+        },
+        card: {
+            border: "25px",
+            borderstyle: "solid",
+            padding: "40px",
+            backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
+            marginbottom: "5px",
+            color: "white",
+            borderStyle: "solid",
+            borderWidth: "6px",
+            borderColor: "white",
+        
+        },
+        input: {
+            marginBottom: "20px",
+            textAlign: "center"
+        }
+}
 
     return (
         
 
-        <div className="container">
-            <h1> Create Diagnosis </h1>
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
+        <div style={styles.body}>
+            <div style = {styles.card}>
+            <h1 style={styles.header}> Create Diagnosis </h1>
+            <div >
+                <h5>Name</h5>
+                <Input style = {styles.input} type="text" aria-label="Username" aria-describedby="basic-addon1 "
                     onChange={onChange}
                     placeholder="name" />
-            </div>
-
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+            <h5>Description</h5>
+                <Input  style = {styles.input}type="text"  aria-label="Username" aria-describedby="basic-addon1"
                     placeholder="description"
                     onChange={onChange}
                 />
-            </div>
-
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+          <h5>Symptoms</h5>
+                <Input  style = {styles.input} type="text"  aria-label="Username" aria-describedby="basic-addon1"
                     placeholder="symptoms"
                     onChange={onChange} />
-            </div>
-
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+           <h5>Treatment</h5>
+                <Input  style = {styles.input} type="text"  aria-label="Username" aria-describedby="basic-addon1"
                     placeholder="treatment"
                     onChange={onChange} />
             </div>
 
             <button
+             className="button is-info is-rounded"
                 onClick={onSubmit}>
-                SUBMIT
+                Submit
             </button>
-
+</div>
             <Col size="md-6 sm-12">
                 {newDx.map(newDx => (
                     <ListItem key={newDx._id}>
