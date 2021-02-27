@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer"
 import "./App.css";
@@ -12,6 +12,8 @@ import Info from "./pages/Info"
 
 
 function App() {
+  const [sharedInfo, setSharedInfo] = useState({results: null})
+
   return (
     <Router>
       <div>        
@@ -22,7 +24,7 @@ function App() {
               <Application />
             </Route>
             <Route exact path="/results">
-              <Results />
+              <Results sharedInfo={sharedInfo} setSharedInfo={setSharedInfo} />
             </Route>
             <Route exact path="/info">
               <Info />
@@ -31,7 +33,7 @@ function App() {
               <Create />
             </Route>
             <Route exact path="/bodyparts">
-              <BodyParts />
+              <BodyParts sharedInfo={sharedInfo} setSharedInfo={setSharedInfo}/>
             </Route>
             <Route exact path="/symptoms">
             </Route>

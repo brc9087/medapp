@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "../../src/images/headpic.PNG";
 import rightArm from "../../src/images/rightarm.PNG";
 import heart from "../../src/images/heart.PNG";
@@ -6,6 +6,8 @@ import lungs from "../../src/images/lung.PNG";
 import leftArm from "../../src/images/leftarm.PNG";
 import Belly from "../../src/images/belly.PNG";
 import babylegs from "../../src/images/babylegs.PNG"
+import { Link, useParams } from "react-router-dom";
+
 
 const styles = {
     pic: {
@@ -29,16 +31,43 @@ const styles = {
 
 }
 
-function BodyParts() {
+function BodyParts({sharedInfo, setSharedInfo}) {
+
+    const [ category, setCategory ] = useState([])
+    const [ formObject, setFormObject ] = useState({
+        category: "",
+    })
+
+
+    function handleInputChange(e) {
+        const { name, value } = e.target;
+        setFormObject({...formObject, [name]: value})
+    }
+
+    function click(e) {
+        e.preventDefault()
+        const userImg = e.target.getAttribute('name')
+        console.log("userImg", userImg)
+        setSharedInfo({...sharedInfo, results:userImg})
+        location.replace("./results")
+    }
+
     return (
         <div style={styles.div} >
+            {sharedInfo.results? <div>{sharedInfo.results}</div>:""}
             <div className="container">
                 <div class="row">
                     <div class="col">
                     </div>
                     <div class="col">
                         <h2>HEAD</h2>
-                        <img src={Head} alt="" style={styles.head} id="head" />
+                        <img 
+                        name="head"
+                        src={Head} alt="" 
+                        style={styles.head} 
+                        id="head" 
+                        onClick={click}/>
+
                     </div>
                     <div class="col">
                     </div>
@@ -105,6 +134,7 @@ function BodyParts() {
                     </div>
                 </div>
             </div>
+            <Link to ="/results"><h1> NEXT STEP</h1> </Link>
         </div>
     )
 };

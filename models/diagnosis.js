@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 const diagnosisSchema = new Schema({
 
+  category: {
+    type: String
+  },
   name: {
     type: String,
     required: true

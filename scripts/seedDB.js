@@ -107,6 +107,20 @@ const diagnosisSeed = [
     treatment: "Antidepressant medications, such as fluoxetine (Prozac), paroxetine (Paxil), sertraline (Zoloft), and venlafaxine (Effexor), Mild sedatives, such as alprazolam (Xanax) and clonazepam (Klonopin)",
     symptoms: "Symptoms of a panic attack include a feeling of doom, shakiness, racing heartbeat, sweating, chills, chest pain, shortness of breath, nausea, faintness, and headache."
   },
+  {
+    category: "cardiac",
+    name: "Costochondritis",
+    description: "Costochondritis occurs when the cartilage connecting the ribs to the breastbone becomes inflamed. Pain affects one or both sides of the breastbone. Injury, a viral infection, or strain from coughing can trigger the condition. Diseases such as arthritis and fibromyalgia also may cause costochondritis. Usually, there is no clear cause. While harmless, the condition often is mistaken for a heart attack. Costochondritis affects women more than men and usually goes away on its own within a few days or weeks.",
+    treatment: "Costochondritis treatment includes: Applying heat or ice, Anti-inflammatory medications, Avoiding activities that make pain worse, Cortisone injections for severe pain",
+    symptoms: "Costochondritis symptoms include sharp pain in the front of the chest. The pain may migrate to the back or abdomen and can be mistaken for a heart attack. Pain usually affects the second to fifth rib joints, particularly ribs three and four, and gets worse with movement and breathing deeply. If rib swelling occurs along with pain, then it's a different but similar condition called Tietze's syndrome."
+  },
+  {
+    category: "cardiac",
+    name: "Heart Attack",
+    description: "A heart attack happens when something blocks the blood flow to your heart so it can’t get the oxygen it needs. More than a million Americans have heart attacks each year. Heart attacks are also called myocardial infarctions (MI). Myo means muscle, cardial refers to the heart, and infarction means death of tissue because of a lack of blood supply. This tissue death can cause lasting damage to your heart muscle..",
+    treatment: "Treatment begins right away, sometimes in the ambulance or emergency room. Drug therapy aims to break up or prevent blood clots, stop platelets from collecting and sticking to the plaque, stabilize the plaque, and prevent more ischemia. Take these medications as soon as possible (within 1 or 2 hours from the start of your heart attack, if possible) to limit heart damage. Cardiac catheterization. In addition to making a picture of your arteries, cardiac cath can be used for procedures (such as angiography or stent) to open narrowed or blocked arteries. Bypass surgery. You might have bypass surgery in the days after a heart attack to restore the blood supply to your heart.",
+    symptoms: "Discomfort, pressure, heaviness, tightness, squeezing, or pain in your chest or arm or below your breastbone, Discomfort that goes into your back, jaw, throat, or arm, Fullness, indigestion, or a choking feeling (it may feel like heartburn), Sweating, upset stomach, vomiting, or dizziness, Severe weakness, anxiety, fatigue, or shortness of breath, Fast or uneven heartbeat"
+  },
 
   {
     category: "abdominal",
@@ -115,7 +129,7 @@ const diagnosisSeed = [
     treatment: "Doctors can diagnose most appendicitis by taking a medical history and doing a physical exam. Blood and urine tests, X-rays, a CT scan, and ultrasound also may be done to confirm the diagnosis or rule out other causes.",
     symptoms: "Symptoms of appendicitis include abdominal pain that may occur suddenly near the belly button and move to the lower right, nausea, vomiting, loss of appetite, low-grade fever (after other symptoms), constipation, abdominal swelling, and inability to pass gas."
   },
-  {
+  { 
     category: "abdominal",
     name: "Gas",
     description: "Gas is a normal result of the foods you eat. As your digestive system does its thing, it makes gas.",
@@ -132,7 +146,7 @@ const diagnosisSeed = [
   {
     category: "abdominal",
     name: "Gastritis",
-    description: "Gastritis is an inflammation of the stomach lining that can be caused by H. pylori bacteria, NSAIDs and or alcohol, and can be aggravated by spicy foods, stress, and excess acid. Gastritis causes stomach upset, irritation, and pain that can last just minutes or for hours. In some people, gastritis becomes a chronic problem.",
+    description: "Gastritis isan inflammation of the stomach lining that can be caused by H. pylori bacteria, NSAIDs and or alcohol, and can be aggravated by spicy foods, stress, and excess acid. Gastritis causes stomach upset, irritation, and pain that can last just minutes or for hours. In some people, gastritis becomes a chronic problem.",
     treatment: "Minor gastritis can usually be treated at home with antacids and acid-suppressing medicine available over the counter. If your symptoms are severe or last more than a day or two, see your doctor right away. Avoiding alcohol and tobacco ",
     symptoms: "Gastritis symptoms include upper abdominal pain and cramping; diarrhea (loose stools) with or without blood or mucus; low-grade fever; nausea and vomiting; loss of appetite; and black, tarry stools, which may be a sign of internal bleeding"
   },

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
+import { Link, useParams } from "react-router-dom";
 
 
 const styles = {
@@ -16,25 +17,25 @@ const styles = {
         borderStyle: "solid",
         borderWidth: "6px",
         borderColor: "white",
-    
+
     },
 
     body: {
         postion: "fixed",
-          width: "100%",
-          height: "100%",
-          backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
-          padding: "100px",
-          textAlign: "center",
-        },
-      question: {
-          padding: "10px",
-          textAlign: "center"
-      },
-      input: {
-          marginBottom: "20px",
-          textAlign: "center"
-      }
+        width: "100%",
+        height: "100%",
+        backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+        padding: "100px",
+        textAlign: "center",
+    },
+    question: {
+        padding: "10px",
+        textAlign: "center"
+    },
+    input: {
+        marginBottom: "20px",
+        textAlign: "center"
+    }
 
 
 
@@ -82,7 +83,7 @@ function Info() {
             medhistory: bioObject.medhistory,
             symptoms: bioObject.symptoms
         })
-            .then(res => loadBio(), location.reload())
+            .then(res => loadBio(), location.assign("./bodyparts"))
             .catch(err => console.log(err))
     }
 
@@ -93,60 +94,58 @@ function Info() {
         <>
             <Header Logo="/logo/logo.png" />
 
-        <div style = {styles.body}>
-            <div style = {styles.card}>
+            <div style={styles.body}>
+                <div style={styles.card}>
 
-                <p> Please answer the following</p>
+                    <p> Please answer the following</p>
 
-                <h2>Age:</h2>
-                <form style = {styles.question}>
-                    <Input style = {styles.input}
-                        onChange={onChange}
-                        placeholder="Age"
-                        type="text"
-                        name="Sex" />
+                    <h2>Age:</h2>
+                    <form style={styles.question}>
+                        <Input style={styles.input}
+                            onChange={onChange}
+                            placeholder="Age"
+                            type="text"
+                            name="Sex" />
 
-             
+                        <h2>Sex:</h2>
 
-                <h2>Sex:</h2>
-              
-                <Input style = {styles.input}
-                        onChange={onChange}
-                        placeholder="Gender"
-                        type="text"
-                        name="Sex" />
-                
-                <h2>Medical History:</h2>
-               
-                <Input style = {styles.input}
-                        onChange={onChange}
-                        placeholder="ex: Diabetes"
-                        type="text"
-                        name="Symptoms" />
-               
-                <h2>What are your symptoms</h2>
-                
-                <Input style = {styles.input}
-                        onChange={onChange}
-                        placeholder="ex: chest pains, nausea"
-                        type="text"
-                        name="Symptoms" />
-                </form>
-           
+                        <Input style={styles.input}
+                            onChange={onChange}
+                            placeholder="Gender"
+                            type="text"
+                            name="Sex" />
 
-            <button
-                onClick={handleFormSubmit}
-                type="submit"
-                className="button is-info is-rounded">
-                Submit</button>
- </div>
-        </div>
+                        <h2>Medical History:</h2>
+
+                        <Input style={styles.input}
+                            onChange={onChange}
+                            placeholder="ex: Diabetes"
+                            type="text"
+                            name="Symptoms" />
+
+                        <h2>What are your symptoms</h2>
+
+                        <Input style={styles.input}
+                            onChange={onChange}
+                            placeholder="ex: chest pains, nausea"
+                            type="text"
+                            name="Symptoms" />
+                    </form>
+
+
+                    <button
+                        onClick={handleFormSubmit}
+                        type="submit"
+                        className="button is-info is-rounded">
+                        Submit
+                        </button>
+                        <Link to ="/bodyparts"><h1> NEXT STEP</h1> </Link>
+
+                </div>
+            </div>
         </>
 
     )
 };
-
-
-
 
 export default Info;

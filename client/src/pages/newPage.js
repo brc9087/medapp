@@ -102,7 +102,8 @@ const styles= {
                 <h5>Name</h5>
                 <Input style = {styles.input} type="text" aria-label="Username" aria-describedby="basic-addon1 "
                     onChange={onChange}
-                    placeholder="name" />
+                    placeholder="name"
+                    value={newDx.name} />
             <h5>Description</h5>
                 <Input  style = {styles.input}type="text"  aria-label="Username" aria-describedby="basic-addon1"
                     placeholder="description"
@@ -134,3 +135,4 @@ const styles= {
 };
 
 export default Create;
+

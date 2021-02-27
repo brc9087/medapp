@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-//DIAGNOSIS ROUTES
+  //DIAGNOSIS ROUTES
   getDiagnosis: function () {
     return axios.get("/api/diagnosis");
   },
@@ -18,7 +18,7 @@ export default {
     return axios.post("/api/diagnosis", dxData);
   },
 
-//BIO ROUTE
+  //BIO ROUTE
   getBios: function () {
     return axios.get("/api/bio");
   },
@@ -52,6 +52,11 @@ export default {
   // Saves a book to the database
   savenewdx: function (dxData) {
     return axios.post("/api/new", dxData);
+  },
+
+  //Put Request
+  editNewDiagnosis: function (id, diagnosisData) {
+    return axios.put("/api/new/" + id, diagnosisData)
   },
 };
 

@@ -1,4 +1,4 @@
-import { List, ListItem } from "../components/List2/index";
+import { List, ListItem, ListItemResults } from "../components/List2/index";
 import { Container, Row, Col } from "../components/Grid/index"
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
@@ -11,37 +11,46 @@ const styles = {
   }
 }
 
-function Results() {
+function Results({sharedInfo, setSharedInfo}) {
 
   // Setting our component's initial state
   const [diagnosis, setDiagnosis] = useState([])
-  const [formObject, setFormObject] = useState({})
+  // const [formObject, setFormObject] = useState({})
 
   const [bio, setBio] = useState([])
-  const [formObject2, setFormObject2] = useState({})
+  // const [formObject2, setFormObject2] = useState({})
+
+  const [newDx, setNewDx] = useState([])
+
+  const [ description, setDescription ] = useState({})
 
   // Load all diags and store them with setdiags
   useEffect(() => {
-    loadDiagnosis()
-  }, [])
-
-  useEffect(() => {
+    loadDiagnosis();
     loadBio()
+    loadNewDx()
   }, [])
 
   // Loads all books and sets them to books
   function loadDiagnosis() {
     API.getDiagnosis()
-      .then(res =>
-        setDiagnosis(res.data)
-      )
+      .then(res =>{
+        if(!sharedInfo.results) setDiagnosis(res.data)
+        else {
+          setDiagonsis(res.data.filter(dia => sharedInfo.results=== dia.category))
+        }
+      })
       .catch(err => console.log(err));
   };
 
-  useEffect(() => {
-    loadBio()
-  },
-    [])
+  //Loads New made up diagnosis
+  function loadNewDx() {
+    API.getnewdx()
+      .then(res =>
+        setNewDx(res.data))
+      .catch(err => console.log(err))
+  }
+
 
   function loadBio() {
     API.getBios()
@@ -63,35 +72,50 @@ function Results() {
       .catch(err => console.log(err));
   }
 
+  function editDiagnosis(id) {
+    API.editDiagnosis(id, diagnosisData.id)
+    .catch(err => console.log(err))
+
+  }
+
   // Handles updating component state when the user types into the input field
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value })
-  };
+  // function handleInputChange(event) {
+  //   const { name, value } = event.target;
+  //   setFormObject({ ...formObject, [name]: value })
+  // };
+
+
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    if (formObject.title && formObject.author) {
-      API.saveDiagnosis({
-        name: formObject.name,
-        description: formObject.description,
-        symptoms: formObject.symptoms
-      })
-        .then(res => loadDiagnosis())
-        .catch(err => console.log(err));
-    }
-  };
+  // function handleFormSubmit(event) {
+  //   event.preventDefault();
+  //   if (formObject.title && formObject.author) {
+  //     API.saveDiagnosis({
+  //       name: formObject.name,
+  //       description: formObject.description,
+  //       symptoms: formObject.symptoms
+  //     })
+  //       .then(res => loadDiagnosis())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
+
+  function click(e) {
+    e.preventDefault();
+
+    
+  }
 
   return (
     // {books.length ? (
     <div style={styles.div}>
       <Container fluid>
+        <h1 style={{textAlign: "center"}}>RESULTS{sharedInfo.results? ` FOR ${sharedInfo.results}`: ""}</h1>
         <Row>
           <Col size="md-6">
             {diagnosis.map(diag => {
-              if (diag.category === "head") {
+              // if (diag.category === "head") {
                 return (
                   <ListItem key={diag._id}>
                     {/* <Link to={"/diags/" + diag._id}> */}
@@ -105,7 +129,7 @@ function Results() {
                     <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
                   </ListItem>
                 )
-              }
+              // }
             })}
 
           </Col>
@@ -113,35 +137,34 @@ function Results() {
 
           <Col size="md-6 sm-12">
             {diagnosis.map(diag => (
-              <ListItem key={diag._id}>
+              <ListItemResults key={diag._id}>
                 {/* <Link to={"/diags/" + diag._id}> */}
                 <h4><strong>Name:</strong></h4><p>{diag.name}</p>
                 <h4><strong>Description:</strong></h4><p>{diag.description}</p>
-                <h4><strong>Treatment:</strong></h4><p>{diag.treatment}</p>
-                <h4><strong>Symptoms:</strong></h4><p>{diag.symptoms}</p>
+                {/* <h4><strong>Treatment:</strong></h4><p>{diag.treatment}</p>
+                <h4><strong>Symptoms:</strong></h4><p>{diag.symptoms}</p> */}
                 {/* </Link> */}
                 <DeleteBtn onClick={() => deleteBio(diag._id)} />
-              </ListItem>
+              </ListItemResults>
             ))}
           </Col>
 
 
-          {/* BIO PRINT  */}
+          {/* NEW Dx PRINT  */}
           <Col size="md-6 sm-12">
-            {bio.map(bio => (
-              <ListItem key={bio._id}>
-                {/* <Link to={"/bios/" + bio._id}> */}
-                <h4><strong>Age:</strong></h4><p>{bio.age}</p>
-                <h4><strong>Gender:</strong></h4><p>{bio.gender}</p>
-                <h4><strong>Medical History:</strong></h4><p>{bio.medhistory}</p>
-                <h4><strong>Symptoms:</strong></h4><p>{bio.symptoms}</p>
+            <h1>You Definately have </h1>
+            {newDx.map(newDx => (
+              <ListItem key={newDx._id}>
+                {/* <Link to={"/newDxs/" + newDx._id}> */}
+                <h4 ><strong>Name:</strong></h4><p>{newDx.name}</p>
+                <h4><strong>Description:</strong></h4><p>{newDx.description}</p>
+                <h4><strong>Treatment:</strong></h4><p>{newDx.treatment}</p>
+                <h4><strong>Symptoms:</strong></h4><p>{newDx.symptoms}</p>
                 {/* </Link> */}
-                <DeleteBtn onClick={() => deleteBio(bio._id)} />
+                {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
               </ListItem>
             ))}
           </Col>
-
-
         </Row>
       </Container>
     </div>
@@ -149,6 +172,4 @@ function Results() {
   )
 
 }
-
-
 export default Results;
