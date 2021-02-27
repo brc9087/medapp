@@ -16,6 +16,10 @@ const styles = {
         borderWidth: "6px",
         borderColor: "blue",
         backgroundColor: "white"
+    },
+
+    div: {
+        backgroundColor: "#038989"
     }
 
 
@@ -71,6 +75,7 @@ function Info() {
 
 
     return (
+        <div style={styles.div}>
         <div className="container">
             <div>
                 <div style={styles.card} className="card mb-2">
@@ -95,7 +100,7 @@ function Info() {
 
 
                 <div style={styles.card} className="card mb-2">
-                    <h2>What Is Your Sex</h2>
+                    <h2>What Is Your Gender</h2>
                     <form id="Sex">
                         <input
                             onChange={onChange}
@@ -107,7 +112,7 @@ function Info() {
                 </div>
 
                 <div style={styles.card} className="card mb-2">
-                    <h1>Do you have medical history</h1>
+                    <h1>Do you have any Medical History</h1>
                     <form id="Symptoms">
                         <input
                             onChange={onChange}
@@ -137,6 +142,7 @@ function Info() {
                     className="btn btn-danger danger">
                     Submit</button>
             </div>
+        </div>
         </div>
     )
     }

@@ -4,6 +4,12 @@ import { Container, Row, Col } from "../components/Grid/index";
 import { List, ListItem } from "../components/List2/index";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
+const styles = {
+    div: {
+        backgroundColor: "#038989"
+    }
+}
+
 
 function Create() {
     const [newDx, setnewDx] = useState([])
@@ -49,7 +55,6 @@ function Create() {
         // result = await API.Savebook(dxDetails)
         // with result youcan do whatever
     };
-
 
 
 
@@ -154,7 +159,9 @@ function Create() {
 
 
 
+
     )
+
 };
 
 export default Create;
