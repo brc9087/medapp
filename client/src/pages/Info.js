@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
-import Input from "../components/Input/Input"
+import Input from "../components/Input/Input";
+import Header from "../components/Header/Header";
+
 
 const styles = {
 
@@ -87,6 +89,9 @@ function Info() {
 
 
     return (
+        <>
+            <Header Logo="/logo/logo.png" />
+
         <div style = {styles.body}>
             <div style = {styles.card}>
 
@@ -135,6 +140,7 @@ function Info() {
                 Submit</button>
  </div>
         </div>
+        </>
     )
 };
 

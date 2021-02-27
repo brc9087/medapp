@@ -3,6 +3,7 @@ import API from "../utils/API"
 import { Container, Row, Col } from "../components/Grid/index";
 import { List, ListItem } from "../components/List2/index";
 import Input from "../components/Input/Input";
+import Header from "../components/Header/Header";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 
@@ -84,7 +85,9 @@ const styles= {
 }
 
     return (
-        
+        <>
+            <Header Logo="/logo/logo.png" />
+
 
         <div style={styles.body}>
             <div style = {styles.card}>
@@ -130,6 +133,7 @@ const styles= {
             </Col>
 
         </div>
+        </>
 
     )
 };

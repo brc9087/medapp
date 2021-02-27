@@ -6,6 +6,8 @@ import lungs from "../../src/images/lung.PNG";
 import leftArm from "../../src/images/leftarm.PNG";
 import Belly from "../../src/images/belly.PNG";
 import babylegs from "../../src/images/babylegs.PNG"
+import Header from "../components/Header/Header";
+
 
 const styles = {
 
@@ -35,6 +37,9 @@ const styles = {
 
 function BodyParts() {
     return (
+        <>
+            <Header Logo="/logo/logo.png" />
+
         <div style = {styles.body}>
 
 <div class="columns is-gapless is-multiline is-mobile" style={styles.parts}>
@@ -82,6 +87,7 @@ function BodyParts() {
 
 </div>
 </div>
+</>
 
     )
 };

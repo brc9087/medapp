@@ -39,9 +39,7 @@ const ProfilePage = () => {
   return (
     <>
     <Header Logo="/logo/logo.png" />
-    <Nav 
-    name = {displayName + "'s"}
-    button= {() => { auth.signOut() }} />
+
 
     <div className = "main"  style={styles.body}>
       <div >

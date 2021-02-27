@@ -3,6 +3,8 @@ import { Container, Row, Col } from "../components/Grid/index"
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 import React, { useState, useEffect } from "react";
+import Header from "../components/Header/Header";
+
 
 
 function Results() {
@@ -89,6 +91,8 @@ const styles = {
 }
   return (
     // {books.length ? (
+      <>
+      <Header Logo="/logo/logo.png" />
       < div style={styles.body}>
     <Container fluid>
       <Row>
@@ -147,7 +151,7 @@ const styles = {
       </Row>
     </Container>
     </div>
-
+</>
   )
 
 }
