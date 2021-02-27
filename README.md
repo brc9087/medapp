@@ -27,13 +27,13 @@
     
     
 ## PROFILE PAGE:
-*  ![](./client/src/images/l.profilepage)
+*  ![](./client/src/images/l.profilepage.jpg)
 
 <br>
  
     
 ## RESULT PAGE:
-*  ![](./client/src/images/savedbooks.PNG)
+*  ![](./client/src/images/)
 
 <br>
 
