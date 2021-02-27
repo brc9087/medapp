@@ -1,4 +1,6 @@
 import React from "react";
+import {auth} from "../../utils/firebase";
+
 const styles = {
   navbar: {
     backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
@@ -53,7 +55,7 @@ function Nav(props) {
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
-            <a style={styles.navbaritems} className="navbar-item" onClick={props.button}>Sign out</a>
+            <a style={styles.navbaritems} className="navbar-item" onClick = {() => {auth.signOut()}}>Sign out</a>
           </div>
         </div>
       </div>
