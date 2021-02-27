@@ -4,6 +4,12 @@ import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 import React, { useState, useEffect } from "react";
 
+const styles = {
+  div: {
+    backgroundColor: "#038989",
+    color: "white"
+  }
+}
 
 function Results() {
 
@@ -80,62 +86,65 @@ function Results() {
 
   return (
     // {books.length ? (
-    <Container fluid>
-      <Row>
-        <Col size="md-6">
-          {diagnosis.map(diag => {
-            if (diag.category === "head") {
-              return (
-              <ListItem key={diag._id}>
-                {/* <Link to={"/diags/" + diag._id}> */}
-                <h2><strong>Name:</strong></h2><h3>{diag.name}</h3>
-                {/* <h3><strong>Name:</strong></h3><p>{diag.name}</p>
+    <div style={styles.div}>
+      <Container fluid>
+        <Row>
+          <Col size="md-6">
+            {diagnosis.map(diag => {
+              if (diag.category === "head") {
+                return (
+                  <ListItem key={diag._id}>
+                    {/* <Link to={"/diags/" + diag._id}> */}
+                    <h2><strong>Name:</strong></h2><h3>{diag.name}</h3>
+                    {/* <h3><strong>Name:</strong></h3><p>{diag.name}</p>
                 <p><strong>Name: </strong> {diag.name}</p> */}
-                {/* <p><strong>Description: </strong> {diag.description}</p>
+                    {/* <p><strong>Description: </strong> {diag.description}</p>
                     <p><strong>Treatment: </strong> {diag.treatment}</p>
                     <p><strong>Symptoms: </strong> {diag.symptoms}</p> */}
+                    {/* </Link> */}
+                    <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
+                  </ListItem>
+                )
+              }
+            })}
+
+          </Col>
+
+
+          <Col size="md-6 sm-12">
+            {diagnosis.map(diag => (
+              <ListItem key={diag._id}>
+                {/* <Link to={"/diags/" + diag._id}> */}
+                <h4><strong>Name:</strong></h4><p>{diag.name}</p>
+                <h4><strong>Description:</strong></h4><p>{diag.description}</p>
+                <h4><strong>Treatment:</strong></h4><p>{diag.treatment}</p>
+                <h4><strong>Symptoms:</strong></h4><p>{diag.symptoms}</p>
                 {/* </Link> */}
-                <DeleteBtn onClick={() => deleteDiagnosis(diag._id)} />
+                <DeleteBtn onClick={() => deleteBio(diag._id)} />
               </ListItem>
-              )}
-          })}
-
-        </Col>
+            ))}
+          </Col>
 
 
-        <Col size="md-6 sm-12">
-          {diagnosis.map(diag => (
-            <ListItem key={diag._id}>
-              {/* <Link to={"/diags/" + diag._id}> */}
-              <h4><strong>Name:</strong></h4><p>{diag.name}</p>
-              <h4><strong>Description:</strong></h4><p>{diag.description}</p>
-              <h4><strong>Treatment:</strong></h4><p>{diag.treatment}</p>
-              <h4><strong>Symptoms:</strong></h4><p>{diag.symptoms}</p>
-              {/* </Link> */}
-              <DeleteBtn onClick={() => deleteBio(diag._id)} />
-            </ListItem>
-          ))}
-        </Col>
+          {/* BIO PRINT  */}
+          <Col size="md-6 sm-12">
+            {bio.map(bio => (
+              <ListItem key={bio._id}>
+                {/* <Link to={"/bios/" + bio._id}> */}
+                <h4><strong>Age:</strong></h4><p>{bio.age}</p>
+                <h4><strong>Gender:</strong></h4><p>{bio.gender}</p>
+                <h4><strong>Medical History:</strong></h4><p>{bio.medhistory}</p>
+                <h4><strong>Symptoms:</strong></h4><p>{bio.symptoms}</p>
+                {/* </Link> */}
+                <DeleteBtn onClick={() => deleteBio(bio._id)} />
+              </ListItem>
+            ))}
+          </Col>
 
 
-        {/* BIO PRINT  */}
-        <Col size="md-6 sm-12">
-          {bio.map(bio => (
-            <ListItem key={bio._id}>
-              {/* <Link to={"/bios/" + bio._id}> */}
-              <h4><strong>Age:</strong></h4><p>{bio.age}</p>
-              <h4><strong>Gender:</strong></h4><p>{bio.gender}</p>
-              <h4><strong>Medical History:</strong></h4><p>{bio.medhistory}</p>
-              <h4><strong>Symptoms:</strong></h4><p>{bio.symptoms}</p>
-              {/* </Link> */}
-              <DeleteBtn onClick={() => deleteDiagnosis(bio._id)} />
-            </ListItem>
-          ))}
-        </Col>
-
-
-      </Row>
-    </Container>
+        </Row>
+      </Container>
+    </div>
 
   )
 

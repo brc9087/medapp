@@ -4,6 +4,12 @@ import { Container, Row, Col } from "../components/Grid/index";
 import { List, ListItem } from "../components/List2/index";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
+const styles = {
+    div: {
+        backgroundColor: "#038989"
+    }
+}
+
 
 function Create() {
     const [newDx, setnewDx] = useState([])
@@ -54,57 +60,59 @@ function Create() {
 
 
     return (
-        
+        <div style={styles.div}>
 
-        <div className="container">
-            <h1> Create Diagnosis </h1>
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
-                    onChange={onChange}
-                    placeholder="name" />
-            </div>
 
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="description"
-                    onChange={onChange}
-                />
-            </div>
+            <div className="container">
+                <h1> Create Diagnosis </h1>
+                <div className="input-group mb-3" >
+                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1 "
+                        onChange={onChange}
+                        placeholder="name" />
+                </div>
 
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="symptoms"
-                    onChange={onChange} />
-            </div>
+                <div className="input-group mb-3" >
+                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                        placeholder="description"
+                        onChange={onChange}
+                    />
+                </div>
 
-            <div className="input-group mb-3" >
-                <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
-                    placeholder="treatment"
-                    onChange={onChange} />
-            </div>
+                <div className="input-group mb-3" >
+                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                        placeholder="symptoms"
+                        onChange={onChange} />
+                </div>
 
-            <button
-                onClick={onSubmit}>
-                SUBMIT
+                <div className="input-group mb-3" >
+                    <input type="text" className="form-control" aria-label="Username" aria-describedby="basic-addon1"
+                        placeholder="treatment"
+                        onChange={onChange} />
+                </div>
+
+                <button
+                    onClick={onSubmit}>
+                    SUBMIT
             </button>
 
-            <Col size="md-6 sm-12">
-                {newDx.map(newDx => (
-                    <ListItem key={newDx._id}>
-                        {/* <Link to={"/newDxs/" + newDx._id}> */}
-                        <h4><strong>Name:</strong></h4><p>{newDx.name}</p>
-                        <h4><strong>Description:</strong></h4><p>{newDx.description}</p>
-                        <h4><strong>Treatment:</strong></h4><p>{newDx.treatment}</p>
-                        <h4><strong>Symptoms:</strong></h4><p>{newDx.symptoms}</p>
-                        {/* </Link> */}
-                        {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
-                    </ListItem>
-                ))}
-            </Col>
+                <Col size="md-6 sm-12">
+                    {newDx.map(newDx => (
+                        <ListItem key={newDx._id}>
+                            {/* <Link to={"/newDxs/" + newDx._id}> */}
+                            <h4><strong>Name:</strong></h4><p>{newDx.name}</p>
+                            <h4><strong>Description:</strong></h4><p>{newDx.description}</p>
+                            <h4><strong>Treatment:</strong></h4><p>{newDx.treatment}</p>
+                            <h4><strong>Symptoms:</strong></h4><p>{newDx.symptoms}</p>
+                            {/* </Link> */}
+                            {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
+                        </ListItem>
+                    ))}
+                </Col>
 
+            </div>
         </div>
-
     )
+
 };
 
 export default Create;

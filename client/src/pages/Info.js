@@ -16,6 +16,10 @@ const styles = {
         borderWidth: "6px",
         borderColor: "blue",
         backgroundColor: "white"
+    },
+
+    div: {
+        backgroundColor: "#038989"
     }
 
 
@@ -71,6 +75,7 @@ function Info() {
 
 
     return (
+        <div style={styles.div}>
         <div className="container">
             <div>
                 <div style={styles.card} className="card mb-2">
@@ -137,6 +142,7 @@ function Info() {
                     className="btn btn-danger danger">
                     Submit</button>
             </div>
+        </div>
         </div>
     )
     }
