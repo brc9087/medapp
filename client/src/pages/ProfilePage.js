@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Nav from "../components/Navbar/Nav";
 import Header from "../components/Header/Header";
-
 import UserContext from "../utils/UserContext";
 
 import {auth} from "../utils/firebase";
@@ -9,6 +8,19 @@ const ProfilePage = () => {
 
   const user = useContext(UserContext);
   const {photoURL, displayName, email} = user;
+
+  const [bio, setBio] = useState([])
+
+  useEffect(() => {
+    loadBio()
+  }, [])
+
+  function loadBio() {
+    API.getBios()
+      .then(res =>
+        setBio(res.data))
+      .catch(err => console.log(err))
+  };
 
   const styles = {
     body: {
@@ -39,9 +51,9 @@ const ProfilePage = () => {
   return (
     <>
     <Header Logo="/logo/logo.png" />
-    <Nav 
+    {/* <Nav 
     name = {displayName + "'s"}
-    button= {() => { auth.signOut() }} />
+    button= {() => { auth.signOut() }} /> */}
 
     <div className = "main"  style={styles.body}>
       <div >
@@ -52,7 +64,7 @@ const ProfilePage = () => {
 
           <div className="tile is-parent" style = {styles.tiles}>
             <article className="tile is-child notification " style = {styles.parent}>
-            <h1 className="greeting"> Hope you feel better soon {displayName}!</h1>
+            <h1 className="greeting"> {displayName}'s Profile Page</h1>
               <div className="content">
 
 
