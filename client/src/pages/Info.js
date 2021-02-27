@@ -1,26 +1,41 @@
 import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
+import Input from "../components/Input/Input";
+import Header from "../components/Header/Header";
+
 
 const styles = {
 
     card: {
         border: "25px",
         borderstyle: "solid",
-        background: "white",
-        padding: "20px",
-        width: "1000px",
-        height: "150px",
+        padding: "40px",
+        backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
         marginbottom: "5px",
-
+        color: "white",
         borderStyle: "solid",
         borderWidth: "6px",
-        borderColor: "blue",
-        backgroundColor: "white"
+        borderColor: "white",
+    
     },
 
-    div: {
-        backgroundColor: "#038989"
-    }
+    body: {
+        postion: "fixed",
+          width: "100%",
+          height: "100%",
+          backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+          padding: "100px",
+          textAlign: "center",
+        },
+      question: {
+          padding: "10px",
+          textAlign: "center"
+      },
+      input: {
+          marginBottom: "20px",
+          textAlign: "center"
+      }
+
 
 
 }
@@ -75,77 +90,61 @@ function Info() {
 
 
     return (
-        <div style={styles.div}>
-        <div className="container">
-            <div>
-                <div style={styles.card} className="card mb-2">
-                    <h1> Info </h1>
-                </div>
+        <>
+            <Header Logo="/logo/logo.png" />
 
+        <div style = {styles.body}>
+            <div style = {styles.card}>
 
-                <div>
-                    <div style={styles.card} className="card mb-2">
-                        <h2>What Is Your age</h2>
-                        <form id="Sex">
-                            <input
-                                onChange={onChange}
-                                placeholder="age"
-                                className="form-control form-control-lg"
-                                type="text"
-                                name="Sex" />
+                <p> Please answer the following</p>
 
-                        </form>
-                    </div>
-                </div>
+                <h2>Age:</h2>
+                <form style = {styles.question}>
+                    <Input style = {styles.input}
+                        onChange={onChange}
+                        placeholder="Age"
+                        type="text"
+                        name="Sex" />
 
+             
 
-                <div style={styles.card} className="card mb-2">
-                    <h2>What Is Your Gender</h2>
-                    <form id="Sex">
-                        <input
-                            onChange={onChange}
-                            placeholder="gender"
-                            className="form-control form-control-lg"
-                            type="text"
-                            name="Sex" />
-                    </form>
-                </div>
+                <h2>Sex:</h2>
+              
+                <Input style = {styles.input}
+                        onChange={onChange}
+                        placeholder="Gender"
+                        type="text"
+                        name="Sex" />
+                
+                <h2>Medical History:</h2>
+               
+                <Input style = {styles.input}
+                        onChange={onChange}
+                        placeholder="ex: Diabetes"
+                        type="text"
+                        name="Symptoms" />
+               
+                <h2>What are your symptoms</h2>
+                
+                <Input style = {styles.input}
+                        onChange={onChange}
+                        placeholder="ex: chest pains, nausea"
+                        type="text"
+                        name="Symptoms" />
+                </form>
+           
 
-                <div style={styles.card} className="card mb-2">
-                    <h1>Do you have any Medical History</h1>
-                    <form id="Symptoms">
-                        <input
-                            onChange={onChange}
-                            placeholder="medhistory"
-                            className="form-control form-control-lg"
-                            type="text"
-                            name="Symptoms" />
-                    </form>
-                </div>
-
-
-                <div style={styles.card} className="card mb-2">
-                    <h1>What are your symptoms</h1>
-                    <form id="Symptoms">
-                        <input
-                            onChange={onChange}
-                            placeholder="symptoms"
-                            className="form-control form-control-lg"
-                            type="text"
-                            name="Symptoms" />
-                    </form>
-                </div>
-
-                <button
-                    onClick={handleFormSubmit}
-                    type="submit"
-                    className="btn btn-danger danger">
-                    Submit</button>
-            </div>
+            <button
+                onClick={handleFormSubmit}
+                type="submit"
+                className="button is-info is-rounded">
+                Submit</button>
+ </div>
         </div>
-        </div>
+        </>
+
     )
-    }
+};
 
 
 
