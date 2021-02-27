@@ -6,6 +6,12 @@ import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
+const styles = {
+    div: {
+        backgroundColor: "#038989"
+    }
+}
+
 
 function Create() {
     const [newDx, setnewDx] = useState([])
@@ -136,6 +142,7 @@ const styles= {
         </>
 
     )
+
 };
 
 export default Create;

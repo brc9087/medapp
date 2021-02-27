@@ -37,6 +37,7 @@ const styles = {
       }
 
 
+
 }
 
 
@@ -141,6 +142,7 @@ function Info() {
  </div>
         </div>
         </>
+
     )
 };
 
