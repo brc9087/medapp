@@ -1,8 +1,8 @@
 # OnlySyms : MedApp:
 
-* This app is a React-based Symptoms App. Its made with the funtionality of MERN. The application has 6 pages that contain thefollwing:
+* This app is a React-based Symptoms App. Its made with the funtionality of MERN. The application has 5 pages that contains the follwing:
 
-* 1. The Login page - The user will be able to login in or signup to signin to enter the        application . The user also able to login with the google account ...
+* 1. The Login page(Auth) - The user will be able to login in or signup to signin to enter the application . The user also able to login with the google account ...
 
 * 2. The Info Page: After Login- in the Info page the user can put some info as Name, Sex, Medical history and Symptoms and submit it . The Information will be add into the Mongo Database and save obiously. 
 
@@ -10,7 +10,7 @@
 
 * 4. The Result Page: The user can check the result of the symptoms in Result page directly. The user will be able to see their results and save it instatly .
 
-* 5. The Create Diagnosis Page : The user will be able to create diagnosis for him/herself and save for future references.. 
+* 5. The Create Diagnosis Page(Crud) : The user will be able to create diagnosis for him/herself and save for future references.. 
 
 ## Usage / Directions
 * Click the link to check! ==> https://.herokuapp.com/
