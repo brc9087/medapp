@@ -33,55 +33,63 @@ const styles = {
 
 function BodyParts({sharedInfo, setSharedInfo}) {
 
-    const [ category, setCategory ] = useState([])
-    const [ formObject, setFormObject ] = useState({
-        category: "",
-    })
+    // const [sharedInfo, setSharedInfo ] = useState([])
+
+    // const [ category, setCategory ] = useState([]);
+    // const [ formObject, setFormObject ] = useState({
+    //     category: "",
+    // })
 
 
     function handleInputChange(e) {
-        const { name, value } = e.target;
-        setFormObject({...formObject, [name]: value})
+        // const { name, value } = e.target;
+        const value = e.target.getAttribute('name')
+        setSharedInfo({...sharedInfo, value})
+        // location.reload()
+        // location.replace("./results")
     }
 
     function click(e) {
         e.preventDefault()
         const userImg = e.target.getAttribute('name')
         console.log("userImg", userImg)
-        setSharedInfo({...sharedInfo, results:userImg})
+        setSharedInfo({...sharedInfo, userImg:userImg});
         location.replace("./results")
+        // location.reload()
     }
+
+
 
     return (
         <div style={styles.div} >
-            {sharedInfo.results? <div>{sharedInfo.results}</div>:""}
+            {/* {sharedInfo.results? <div>{sharedInfo.results}</div>:""} */}
             <div className="container">
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <h2>HEAD</h2>
                         <img 
                         name="head"
                         src={Head} alt="" 
                         style={styles.head} 
                         id="head" 
-                        onClick={click}/>
+                        onClick={handleInputChange}/>
 
                     </div>
-                    <div class="col">
+                    <div className="col">
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                         <img
                             name="musculoskeletal"
                             src={rightArm} alt=""
                             style={styles.head} />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <h2> CARDIAC</h2>
                         <img 
                         name="cardiac"
@@ -89,7 +97,7 @@ function BodyParts({sharedInfo, setSharedInfo}) {
                         style={styles.pic}/>
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <h2> RESPIRATORY </h2>
                         <img 
                         name="respiratory"
@@ -97,7 +105,7 @@ function BodyParts({sharedInfo, setSharedInfo}) {
                         style={styles.pic} />
                     </div>
 
-                    <div class="col">
+                    <div className="col">
                         <img
                             name="musculoskeletal"
                             src={leftArm}
@@ -106,31 +114,31 @@ function BodyParts({sharedInfo, setSharedInfo}) {
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <h2> ABDOMINAL </h2>
                         <img 
                         name="abdominal"
                         src={Belly} alt="" 
                         style={styles.head}/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <h2>MUSCULOSKELETAL</h2>
                         <img 
                         name="musculoskeletal"
                         src={babylegs} alt="" 
                         style={styles.head}/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                     </div>
                 </div>
             </div>

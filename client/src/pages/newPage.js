@@ -40,23 +40,30 @@ function Create() {
             .catch(err => console.log(err));
     }
 
-    function onSubmit(e) {
-        e.preventDefault();
-        API.savenewdx({
-            name: newDxObject.name,
-            description: newDxObject.description,
-            symptoms: newDxObject.symptoms,
-            treatment: newDxObject.treatment
-        })
-            .then(res => loadNewdx(), location.reload())
-            .catch(err => console.log(err));
+    // const update() {
+    //     API.editNewDiagnosis({
+    //         name: 
+    //     })
+    // }
+
+    // function onSubmit(e) {
+    //     e.preventDefault();
+    //     API.editNewDiagnosis({id, diagnosisData
+
+    //         // name: newDxObject.name,
+    //         // description: newDxObject.description,
+    //         // symptoms: newDxObject.symptoms,
+    //         // treatment: newDxObject.treatment
+    //     })
+    //         .then(res => loadNewdx(), location.reload())
+    //         .catch(err => console.log(err));
 
 
 
-        //call for the validation
-        // result = await API.Savebook(dxDetails)
-        // with result youcan do whatever
-    };
+    //     //call for the validation
+    //     // result = await API.Savebook(dxDetails)
+    //     // with result youcan do whatever
+    // };
 
 
 const styles= {
@@ -99,11 +106,12 @@ const styles= {
             <div style = {styles.card}>
             <h1 style={styles.header}> Create Diagnosis </h1>
             <div >
-                <h5>Name</h5>
+                <h5>Name </h5>
                 <Input style = {styles.input} type="text" aria-label="Username" aria-describedby="basic-addon1 "
                     onChange={onChange}
                     placeholder="name"
-                    value={newDx.name} />
+                    // value={newDxObject.name}
+                     />
             <h5>Description</h5>
                 <Input  style = {styles.input}type="text"  aria-label="Username" aria-describedby="basic-addon1"
                     placeholder="description"
@@ -121,7 +129,8 @@ const styles= {
 
             <button
              className="button is-info is-rounded"
-                onClick={onSubmit}>
+                // onClick={onSubmit}
+                >
                 Submit
             </button>
 </div>

@@ -9,10 +9,11 @@ import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
 import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
+import NewPage from "./pages/newPage"
 
 
 function App() {
-  const [sharedInfo, setSharedInfo] = useState({results: null})
+  const [sharedInfo, setSharedInfo] = useState({})
 
   return (
     <Router>
@@ -31,6 +32,7 @@ function App() {
             </Route>
             <Route exact path="/create">
               <Create />
+              <NewPage/>
             </Route>
             <Route exact path="/bodyparts">
               <BodyParts sharedInfo={sharedInfo} setSharedInfo={setSharedInfo}/>

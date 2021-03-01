@@ -37,7 +37,7 @@ function Results({sharedInfo, setSharedInfo}) {
       .then(res =>{
         if(!sharedInfo.results) setDiagnosis(res.data)
         else {
-          setDiagonsis(res.data.filter(dia => sharedInfo.results=== dia.category))
+          setSharedInfo(res.data.filter(diagnosis => sharedInfo.results === diagnosis.category))
         }
       })
       .catch(err => console.log(err));
@@ -111,7 +111,9 @@ function Results({sharedInfo, setSharedInfo}) {
     // {books.length ? (
     <div style={styles.div}>
       <Container fluid>
-        <h1 style={{textAlign: "center"}}>RESULTS{sharedInfo.results? ` FOR ${sharedInfo.results}`: ""}</h1>
+        <h1 style={{textAlign: "center"}}>RESULTS
+        {sharedInfo.results? ` FOR ${sharedInfo.results}`: ""}
+        </h1>
         <Row>
           <Col size="md-6">
             {diagnosis.map(diag => {
