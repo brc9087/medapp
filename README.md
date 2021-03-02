@@ -50,7 +50,7 @@
 * react-router-dom
 * Third Party Hooks
 * Axios
-* Bu-ma CSS [NewPackage]
+* Bulma CSS [NewPackage]
 * Mongo DB
 * Mongoose
 * Express
