@@ -16,7 +16,7 @@ function Nav(props) {
     <nav className="navbar" style={styles.navbar} role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
-          <img src="/logo/steth.png" width="35" height="30" />
+          <img src="/logo/logo.png" width="120" height="120" />
         </a>
    
       </div>

@@ -10,7 +10,7 @@ const styles = {
 const Footer = () => (
 	<footer style={styles.foot} className="page-footer">
 		<div className="container-fluid text-center">
-			<h4 style={styles.foot}>Only Syms</h4>
+		<small style={styles.foot}>OnlySymps (2021) &copy; copyright reserved</small>
 		</div>
 	</footer>
 );
