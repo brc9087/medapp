@@ -42,6 +42,8 @@
 *  ![](./client/src/images/l.creatediagnosis.jpg)
 
 <br>
+## Walk Through the Video
+![video of the generate process]()
 
 
 ## Tools Used / Dependancies
