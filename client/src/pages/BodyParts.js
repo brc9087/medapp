@@ -31,32 +31,46 @@ const styles = {
 
 }
 
-function BodyParts({sharedInfo, setSharedInfo}) {
+function BodyParts({
+    // sharedInfo, setSharedInfo
+}) {
 
-    // const [sharedInfo, setSharedInfo ] = useState([])
+    const [sharedInfo, setSharedInfo ] = useState([])
 
     // const [ category, setCategory ] = useState([]);
     // const [ formObject, setFormObject ] = useState({
     //     category: "",
     // })
+    
+    //     useEffect(() => { 
+    //         const value ="dasfdsf"
+    //     localStorage.setItem("value", value)
+    //     console.log("works")
+    // })
+    
+
 
 
     function handleInputChange(e) {
+        e.preventDefault()
         // const { name, value } = e.target;
-        const value = e.target.getAttribute('name')
-        setSharedInfo({...sharedInfo, value})
+        // const value = e.target.getAttribute("name")
+        const loco = localStorage.setItem("value", JSON.stringify(sharedInfo))
+        // console.log("something")
+        setSharedInfo(e.target.getAttribute("name"))
+        
         // location.reload()
-        // location.replace("./results")
+        // location.replace("./results")    
     }
 
-    function click(e) {
-        e.preventDefault()
-        const userImg = e.target.getAttribute('name')
-        console.log("userImg", userImg)
-        setSharedInfo({...sharedInfo, userImg:userImg});
-        location.replace("./results")
-        // location.reload()
-    }
+    // function click(e) {
+    //     e.preventDefault()
+    //     const userImg = e.target.getAttribute("name")
+    //     console.log("userImg", userImg)
+    //     setSharedInfo({...sharedInfo, userImg:userImg});
+    //     location.replace("./results")
+    //     // location.reload()
+    // }
 
 
 
@@ -86,7 +100,9 @@ function BodyParts({sharedInfo, setSharedInfo}) {
                         <img
                             name="musculoskeletal"
                             src={rightArm} alt=""
-                            style={styles.head} />
+                            style={styles.head}
+                            onClick={handleInputChange}
+                            />
                     </div>
 
                     <div className="col">

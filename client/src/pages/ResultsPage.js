@@ -11,7 +11,7 @@ const styles = {
   }
 }
 
-function Results({sharedInfo, setSharedInfo}) {
+function Results({}) {
 
   // Setting our component's initial state
   const [diagnosis, setDiagnosis] = useState([])
@@ -22,7 +22,7 @@ function Results({sharedInfo, setSharedInfo}) {
 
   const [newDx, setNewDx] = useState([])
 
-  const [ description, setDescription ] = useState({})
+  // const [ description, setDescription ] = useState({})
 
   // Load all diags and store them with setdiags
   useEffect(() => {
@@ -34,14 +34,23 @@ function Results({sharedInfo, setSharedInfo}) {
   // Loads all books and sets them to books
   function loadDiagnosis() {
     API.getDiagnosis()
-      .then(res =>{
-        if(!sharedInfo.results) setDiagnosis(res.data)
-        else {
-          setSharedInfo(res.data.filter(diagnosis => sharedInfo.results === diagnosis.category))
-        }
-      })
+      .then(res =>
+        setDiagnosis(res.data)
+      )
       .catch(err => console.log(err));
   };
+  // function loadDiagnosis() {
+    
+  //   API.getDiagnosis()
+  //     .then(res =>{
+        
+  //       // if(!sharedInfo.results) setDiagnosis(res.data)
+  //       // else {
+  //         setDiagonsis(res.data))
+  //     //   }
+  //     // })
+  //     .catch(err => console.log(err));
+  // };
 
   //Loads New made up diagnosis
   function loadNewDx() {
@@ -78,28 +87,6 @@ function Results({sharedInfo, setSharedInfo}) {
 
   }
 
-  // Handles updating component state when the user types into the input field
-  // function handleInputChange(event) {
-  //   const { name, value } = event.target;
-  //   setFormObject({ ...formObject, [name]: value })
-  // };
-
-
-
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
-  // function handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   if (formObject.title && formObject.author) {
-  //     API.saveDiagnosis({
-  //       name: formObject.name,
-  //       description: formObject.description,
-  //       symptoms: formObject.symptoms
-  //     })
-  //       .then(res => loadDiagnosis())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
 
   function click(e) {
     e.preventDefault();
@@ -112,7 +99,7 @@ function Results({sharedInfo, setSharedInfo}) {
     <div style={styles.div}>
       <Container fluid>
         <h1 style={{textAlign: "center"}}>RESULTS
-        {sharedInfo.results? ` FOR ${sharedInfo.results}`: ""}
+        {/* {sharedInfo.results? ` FOR ${sharedInfo.results}`: ""} */}
         </h1>
         <Row>
           <Col size="md-6">

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer"
 import "./App.css";
@@ -9,11 +9,10 @@ import BodyParts from "./pages/BodyParts"
 import Create from "./pages/Create"
 import Nav from "./components/Navbar/Nav"
 import Info from "./pages/Info"
-import NewPage from "./pages/newPage"
 
 
 function App() {
-  const [sharedInfo, setSharedInfo] = useState({})
+  // const [sharedInfo, setSharedInfo] = useState({})
 
   return (
     <Router>
@@ -25,17 +24,16 @@ function App() {
               <Application />
             </Route>
             <Route exact path="/results">
-              <Results sharedInfo={sharedInfo} setSharedInfo={setSharedInfo} />
+              <Results />
             </Route>
             <Route exact path="/info">
               <Info />
             </Route>
             <Route exact path="/create">
               <Create />
-              <NewPage/>
             </Route>
             <Route exact path="/bodyparts">
-              <BodyParts sharedInfo={sharedInfo} setSharedInfo={setSharedInfo}/>
+              <BodyParts/>
             </Route>
             <Route exact path="/symptoms">
             </Route>

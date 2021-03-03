@@ -4,6 +4,7 @@ import { Container, Row, Col } from "../components/Grid/index";
 import { List, ListItem } from "../components/List2/index";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
+import DeleteBtn from "../components/DeleteBtn";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 const styles = {
@@ -32,6 +33,12 @@ function Create() {
 
         //{key: value}
     }
+
+    function deletenewdx(id) {
+        API.deletenewdx(id)
+          .then(res => loadDiagnosis())
+          .catch(err => console.log(err));
+      }
 
     useEffect(() => {
         loadNewdx()
@@ -70,7 +77,8 @@ function Create() {
 
         if (updateBtnMsg.btnMsg === "Update") {
             setUpdateBtnMsg({ btnMsg: "Save" })
-        } else {
+        } 
+        else {
             setUpdateBtnMsg({ btnMsg: "Update" })
 
             const index = e.target.getAttribute('data-index')
@@ -173,8 +181,10 @@ function Create() {
 
 
             </div>
+        
             <Col size="md-6 sm-12">
                 <h1>You Definately have </h1>
+                
                 {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
                     <ListItem key={newDx._id}>
                         {/* <Link to={"/newDxs/" + newDx._id}> */}
@@ -189,6 +199,7 @@ function Create() {
                             className="button us-info is-rounded" id={newDx._id} data-index={index} onClick={changeUpdateBtnMsg}>
 
                             {updateBtnMsg.btnMsg} </button>
+                            <DeleteBtn onClick={() => deletenewdx(newDx._id)} />
                     </ListItem>
                 )) : <div></div>}
             </Col>

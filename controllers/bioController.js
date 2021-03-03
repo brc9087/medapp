@@ -3,7 +3,7 @@ const db = require("../models");
 // Defining methods for the bioController
 module.exports = {
   findAll: function(req, res) {
-    console.log("Requset fro find All pinged")
+    console.log("Requset for find All pinged")
     db.Bio
       .find(req.query)
       .then(dbModel => {

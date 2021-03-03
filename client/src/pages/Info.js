@@ -2,7 +2,7 @@ import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
-import { Link, useParams } from "react-router-dom";
+// import { Link, useParams } from "react-router-dom";
 
 
 const styles = {
@@ -36,9 +36,6 @@ const styles = {
         marginBottom: "20px",
         textAlign: "center"
     }
-
-
-
 }
 
 
@@ -60,7 +57,7 @@ function Info() {
     function loadBio() {
         API.getBios()
             .then(res =>
-                setBio(res.data))
+                setbioObject(res.data))
             .catch(err => console.log(err))
     };
 
@@ -76,6 +73,7 @@ function Info() {
     // }
 
     function handleFormSubmit(event) {
+        console.log(bioObject)
         event.preventDefault();
         API.saveBio({
             age: bioObject.age,
@@ -83,7 +81,9 @@ function Info() {
             medhistory: bioObject.medhistory,
             symptoms: bioObject.symptoms
         })
-            .then(res => loadBio(), location.assign("./bodyparts"))
+            .then(res => loadBio(), 
+            // location.assign("./bodyparts")
+            )
             .catch(err => console.log(err))
     }
 
@@ -103,7 +103,7 @@ function Info() {
                     <form style={styles.question}>
                         <Input style={styles.input}
                             onChange={onChange}
-                            placeholder="Age"
+                            placeholder="age"
                             type="text"
                             name="Sex" />
 
@@ -111,7 +111,7 @@ function Info() {
 
                         <Input style={styles.input}
                             onChange={onChange}
-                            placeholder="Gender"
+                            placeholder="gender"
                             type="text"
                             name="Sex" />
 
@@ -119,7 +119,7 @@ function Info() {
 
                         <Input style={styles.input}
                             onChange={onChange}
-                            placeholder="ex: Diabetes"
+                            placeholder="medhistory"
                             type="text"
                             name="Symptoms" />
 
@@ -127,7 +127,7 @@ function Info() {
 
                         <Input style={styles.input}
                             onChange={onChange}
-                            placeholder="ex: chest pains, nausea"
+                            placeholder="symptoms"
                             type="text"
                             name="Symptoms" />
                     </form>
@@ -139,12 +139,11 @@ function Info() {
                         className="button is-info is-rounded">
                         Submit
                         </button>
-                        <Link to ="/bodyparts"><h1> NEXT STEP</h1> </Link>
+                        {/* <Link to ="/bodyparts"><h1> NEXT STEP</h1> </Link> */}
 
                 </div>
             </div>
         </>
-
     )
 };
 
