@@ -157,8 +157,12 @@ function Create() {
     return (
 
         <>
+
+        
             <div style={styles.logo}>
-            <Header Logo="/logo/logo.png" />
+                
+            <Header Logo="/logo/logo.png" alt = "logo" class="center"/>
+
             </div>
             
             <div style={styles.body}>
