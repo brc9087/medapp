@@ -25,7 +25,7 @@ const styles = {
     div: {
         // backgroundColor: "#038989",
         border: "solid 200px",
-        borderColor: "#038989"
+       backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
     }
 
 
