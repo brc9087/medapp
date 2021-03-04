@@ -117,6 +117,13 @@ function Create() {
 
     const styles = {
 
+        logo: {
+            height: "20%",
+            width: "20%",
+            float: "right"
+
+        },
+
         body: {
             postion: "fixed",
             width: "100%",
@@ -127,6 +134,7 @@ function Create() {
         },
         header: {
             color: "white"
+            
         },
         card: {
             border: "25px",
@@ -147,8 +155,12 @@ function Create() {
     }
     // console.log('currentDx', currentDX)
     return (
+
         <>
+            <div style={styles.logo}>
             <Header Logo="/logo/logo.png" />
+            </div>
+            
             <div style={styles.body}>
                 <div style={styles.card}>
                     <h1 style={styles.header}> Create Diagnosis </h1>
@@ -183,7 +195,7 @@ function Create() {
             </div>
         
             <Col size="md-6 sm-12">
-                <h1>You Definately have </h1>
+                <h1>You Definitely Have </h1>
                 
                 {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
                     <ListItem key={newDx._id}>
