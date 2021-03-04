@@ -199,7 +199,7 @@ function Create() {
             </div>
         
             <Col size="md-6 sm-12">
-                <h1>You Definitely Have </h1>
+               
                 
                 {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
                     <ListItem key={newDx._id}>
