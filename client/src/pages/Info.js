@@ -6,6 +6,13 @@ import Header from "../components/Header/Header";
 
 const styles = {
 
+    logo: {
+        height: "20%",
+        width: "20%",
+        float: "right"
+
+    },
+
     card: {
         border: "25px",
         borderstyle: "solid",
@@ -91,7 +98,11 @@ function Info() {
 
     return (
         <>
-            <Header Logo="/logo/logo.png" />
+           <div style={styles.logo}>
+                
+                <Header Logo="/logo/logo.png" alt = "logo" class="center"/>
+    
+                </div>
 
             <div style={styles.body}>
                 <div style={styles.card}>
