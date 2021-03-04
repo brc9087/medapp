@@ -107,7 +107,7 @@ const SignIn = () => {
           />
           </div >
           <div style = {styles.button}>
-              <button className="button is-info is-rounded" onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }}>Sign in</button>
+              <button className="button is-info is-rounded" onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password), location.replace("./info") }}>Sign in</button>
 
           <p>or</p>
           <button
