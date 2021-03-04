@@ -32,32 +32,10 @@ const styles = {
 }
 
 function BodyParts() {
-
-    // const [sharedInfo, setSharedInfo ] = useState([])
-
-    // const [ category, setCategory ] = useState([]);
-    // const [ formObject, setFormObject ] = useState({
-    //     category: "",
-    // })
-    
-    //     useEffect(() => { 
-    //         const value ="dasfdsf"
-    //     localStorage.setItem("value", value)
-    //     console.log("works")
-    // })
-    
-
-
-
+    // on click user stores body part 
     function handleInputChange(e) {
         e.preventDefault()
-        // const { name, value } = e.target;
-        // const value = e.target.getAttribute("name")
-        // const loco = 
         localStorage.setItem("value", e.target.getAttribute("name"))
-        // console.log("something")
-        // setSharedInfo(e.target.getAttribute("name"))
-        
         // location.reload()
         location.replace("./results")    
     }

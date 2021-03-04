@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API"
 import { Container, Row, Col } from "../components/Grid/index";
-import { List, ListItem } from "../components/List2/index";
+import { List, ListItem2 } from "../components/List2/index";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
 import DeleteBtn from "../components/DeleteBtn";
@@ -36,9 +36,9 @@ function Create() {
 
     function deletenewdx(id) {
         API.deletenewdx(id)
-          .then(res => loadDiagnosis())
-          .catch(err => console.log(err));
-      }
+            .then(res => loadDiagnosis(), location.reload())
+            .catch(err => console.log(err));
+    }
 
     useEffect(() => {
         loadNewdx()
@@ -64,12 +64,6 @@ function Create() {
         })
             .then(res => loadNewdx(), location.reload())
             .catch(err => console.log(err));
-
-
-
-        //call for the validation
-        // result = await API.Savebook(dxDetails)
-        // with result youcan do whatever
     };
 
     function changeUpdateBtnMsg(e) {
@@ -77,7 +71,7 @@ function Create() {
 
         if (updateBtnMsg.btnMsg === "Update") {
             setUpdateBtnMsg({ btnMsg: "Save" })
-        } 
+        }
         else {
             setUpdateBtnMsg({ btnMsg: "Update" })
 
@@ -92,8 +86,6 @@ function Create() {
     function onChangeDiagnosis(e) {
         const index = e.target.getAttribute('data-index')
         const keyName = e.target.getAttribute('data-type')
-        // console.log('index', index)
-        // console.log('keyName', keyName)
         const newArr = currentDX.diagnosis
         const obj = newArr[index]
         const newObj = { ...obj, [keyName]: e.target.value }
@@ -102,21 +94,11 @@ function Create() {
         newArr.splice(index, 1, newObj)
 
         setCurrentDx({ ...currentDX, diagnosis: newArr })
-        // console.log("dxId", dxId)
-        // setnewDxObject({ ...newDxObject, [placeholder]: value })
 
 
     }
-    // function update() {
-    //     e.preventDefault();
-    //     API.editNewDiagnosis({
-
-    //     })
-    // }
-
 
     const styles = {
-
         body: {
             postion: "fixed",
             width: "100%",
@@ -145,9 +127,8 @@ function Create() {
             textAlign: "center"
         }
     }
-    // console.log('currentDx', currentDX)
     return (
-        <>
+        <div>
             <Header Logo="/logo/logo.png" />
             <div style={styles.body}>
                 <div style={styles.card}>
@@ -181,32 +162,49 @@ function Create() {
 
 
             </div>
-        
-            <Col size="md-6 sm-12">
-                <h1>You Definately have </h1>
-                
-                {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
-                    <ListItem key={newDx._id}>
-                        {/* <Link to={"/newDxs/" + newDx._id}> */}
-                        <h4 ><strong>Name:</strong></h4><input type="text" disabled={currentDX.isEdit} value={newDx.name || "N/A"} data-index={index} data-type={"name"} onChange={onChangeDiagnosis} />
-                        <h4><strong>Description:</strong></h4><input type="text" disabled={currentDX.isEdit} value={newDx.description} data-index={index} data-type={"description"} onChange={onChangeDiagnosis} />
-                        <h4><strong>Treatment:</strong></h4><input type="text" disabled={currentDX.isEdit} value={newDx.treatment} data-index={index} data-type={"treatment"} onChange={onChangeDiagnosis} />
-                        <h4><strong>Symptoms:</strong></h4><input type="text" disabled={currentDX.isEdit} value={newDx.symptoms} data-index={index} data-type={"symptoms"} onChange={onChangeDiagnosis} />
-                        {/* </Link> */}
-                        {/* <DeleteBtn onClick={() => deleteDiagnosis(newDx._id)} /> */}
-                        <button
-                            // onClick={update}
-                            className="button us-info is-rounded" id={newDx._id} data-index={index} onClick={changeUpdateBtnMsg}>
+            <div className="container">
+                    <div className="row md" size="md-6 sm-12">
+                        <h1>Doctors Diagnoses</h1>
+                        {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
+                            <ListItem2 key={newDx._id}>
+                                {/* <Link to={"/newDxs/" + newDx._id}> */}
+                                <h4 ><strong>Name:</strong></h4><input 
+                                type="text" 
+                                disabled={currentDX.isEdit} 
+                                value={newDx.name || "N/A"} 
+                                data-index={index} data-type={"name"} 
+                                onChange={onChangeDiagnosis}/>
+                                <h4><strong>Description:</strong></h4><input 
+                                type="text" 
+                                disabled={currentDX.isEdit} 
+                                value={newDx.description} 
+                                data-index={index} data-type={"description"} 
+                                onChange={onChangeDiagnosis} />
+                                <h4><strong>Treatment:</strong></h4><input 
+                                type="text" 
+                                disabled={currentDX.isEdit} 
+                                value={newDx.treatment} 
+                                data-index={index} data-type={"treatment"} 
+                                onChange={onChangeDiagnosis} />
+                                <h4><strong>Symptoms:</strong></h4><input 
+                                type="text" 
+                                disabled={currentDX.isEdit} 
+                                value={newDx.symptoms} 
+                                data-index={index} 
+                                data-type={"symptoms"} 
+                                onChange={onChangeDiagnosis} />
+                                <div>
+                                <button
+                                    className="button us-info is-rounded" id={newDx._id} data-index={index} onClick={changeUpdateBtnMsg}>
+                                    {updateBtnMsg.btnMsg} </button>
+                                <DeleteBtn onClick={() => deletenewdx(newDx._id)} />
+                                </div>
+                            </ListItem2>
+                        )) : <div></div>}
+                    </div>
+            </div>
 
-                            {updateBtnMsg.btnMsg} </button>
-                            <DeleteBtn onClick={() => deletenewdx(newDx._id)} />
-                    </ListItem>
-                )) : <div></div>}
-            </Col>
-
-
-        </>
-
+        </div>
     )
 
 };
