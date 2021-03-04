@@ -31,11 +31,9 @@ const styles = {
 
 }
 
-function BodyParts({
-    // sharedInfo, setSharedInfo
-}) {
+function BodyParts() {
 
-    const [sharedInfo, setSharedInfo ] = useState([])
+    // const [sharedInfo, setSharedInfo ] = useState([])
 
     // const [ category, setCategory ] = useState([]);
     // const [ formObject, setFormObject ] = useState({
@@ -55,24 +53,14 @@ function BodyParts({
         e.preventDefault()
         // const { name, value } = e.target;
         // const value = e.target.getAttribute("name")
-        const loco = localStorage.setItem("value", JSON.stringify(sharedInfo))
+        // const loco = 
+        localStorage.setItem("value", e.target.getAttribute("name"))
         // console.log("something")
-        setSharedInfo(e.target.getAttribute("name"))
+        // setSharedInfo(e.target.getAttribute("name"))
         
         // location.reload()
-        // location.replace("./results")    
+        location.replace("./results")    
     }
-
-    // function click(e) {
-    //     e.preventDefault()
-    //     const userImg = e.target.getAttribute("name")
-    //     console.log("userImg", userImg)
-    //     setSharedInfo({...sharedInfo, userImg:userImg});
-    //     location.replace("./results")
-    //     // location.reload()
-    // }
-
-
 
     return (
         <div style={styles.div} >
@@ -110,7 +98,8 @@ function BodyParts({
                         <img 
                         name="cardiac"
                         src={heart} alt="" 
-                        style={styles.pic}/>
+                        style={styles.pic}
+                        onClick={handleInputChange}/>
                     </div>
 
                     <div className="col">
@@ -118,7 +107,8 @@ function BodyParts({
                         <img 
                         name="respiratory"
                         src={lungs} alt="" 
-                        style={styles.pic} />
+                        style={styles.pic} 
+                        onClick={handleInputChange}/>
                     </div>
 
                     <div className="col">
@@ -126,7 +116,8 @@ function BodyParts({
                             name="musculoskeletal"
                             src={leftArm}
                             alt=""
-                            style={styles.head} />
+                            style={styles.head} 
+                            onClick={handleInputChange}/>
                     </div>
                 </div>
                 <br />
@@ -138,7 +129,8 @@ function BodyParts({
                         <img 
                         name="abdominal"
                         src={Belly} alt="" 
-                        style={styles.head}/>
+                        style={styles.head}
+                        onClick={handleInputChange}/>
                     </div>
                     <div className="col">
                     </div>
@@ -152,13 +144,13 @@ function BodyParts({
                         <img 
                         name="musculoskeletal"
                         src={babylegs} alt="" 
-                        style={styles.head}/>
+                        style={styles.head}
+                        onClick={handleInputChange}/>
                     </div>
                     <div className="col">
                     </div>
                 </div>
             </div>
-            <Link to ="/results"><h1> NEXT STEP</h1> </Link>
         </div>
     )
 };

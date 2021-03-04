@@ -2,7 +2,6 @@ import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
-// import { Link, useParams } from "react-router-dom";
 
 
 const styles = {
@@ -82,7 +81,7 @@ function Info() {
             symptoms: bioObject.symptoms
         })
             .then(res => loadBio(), 
-            // location.assign("./bodyparts")
+            location.assign("./bodyparts")
             )
             .catch(err => console.log(err))
     }
@@ -139,7 +138,6 @@ function Info() {
                         className="button is-info is-rounded">
                         Submit
                         </button>
-                        {/* <Link to ="/bodyparts"><h1> NEXT STEP</h1> </Link> */}
 
                 </div>
             </div>
