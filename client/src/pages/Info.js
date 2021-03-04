@@ -2,7 +2,9 @@ import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
-// import { Link, useParams } from "react-router-dom";
+
+import { Link, useParams } from "react-router-dom";
+import Progressbar from "../components/Progress/Progressbar";
 
 
 const styles = {
@@ -35,6 +37,16 @@ const styles = {
     input: {
         marginBottom: "20px",
         textAlign: "center"
+    },
+
+    button: {
+        padding: '10px',
+    
+    },
+    link: {
+        color: 'white',
+        padding: '10px',
+        fontWeight: 'bold'
     }
 }
 
@@ -95,6 +107,7 @@ function Info() {
             <Header Logo="/logo/logo.png" />
 
             <div style={styles.body}>
+                <Progressbar/>
                 <div style={styles.card}>
 
                     <p> Please answer the following</p>
@@ -132,14 +145,13 @@ function Info() {
                             name="Symptoms" />
                     </form>
 
-
-                    <button
+                    <button style = {styles.button}
                         onClick={handleFormSubmit}
                         type="submit"
                         className="button is-info is-rounded">
-                        Submit
+                      <Link to ="/bodyparts" style = {styles.link} >Next</Link>
+
                         </button>
-                        {/* <Link to ="/bodyparts"><h1> NEXT STEP</h1> </Link> */}
 
                 </div>
             </div>

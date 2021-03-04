@@ -7,9 +7,33 @@ import leftArm from "../../src/images/leftarm.PNG";
 import Belly from "../../src/images/belly.PNG";
 import babylegs from "../../src/images/babylegs.PNG"
 import { Link, useParams } from "react-router-dom";
+import Progressbar from "../components/Progress/Progressbar";
+import Header from '../components/Header/Header'
 
 
 const styles = {
+    body: {
+        postion: "fixed",
+        width: "100%",
+        height: "100%",
+        backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+        padding: "80px",
+        backgroundColor: "#038989",
+        color: "white",
+        textAlign: "center",
+    },
+  
+        button: {
+            padding: '10px',
+        
+        },
+    
+    link: {
+        color: 'white',
+        padding: '10px',
+        margin: 'auto',
+        fontWeight: 'bold'
+    },
     pic: {
         width: "100%",
         position: "relative",
@@ -24,8 +48,16 @@ const styles = {
 
     div: {
         // backgroundColor: "#038989",
-        border: "solid 200px",
-        borderColor: "#038989"
+        border: "25px",
+        borderstyle: "solid",
+        padding: "40px",
+        backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
+        marginbottom: "5px",
+        color: "white",
+        borderStyle: "solid",
+        borderWidth: "6px",
+        borderColor: "white",
+
     }
 
 
@@ -75,7 +107,14 @@ function BodyParts({
 
 
     return (
+    <>
+    <Header Logo="/logo/logo.png" />
+        <div className = "body" style= {styles.body}>
+                        
+
+        <Progressbar/>
         <div style={styles.div} >
+            
             {/* {sharedInfo.results? <div>{sharedInfo.results}</div>:""} */}
             <div className="container">
                 <div className="row">
@@ -158,8 +197,15 @@ function BodyParts({
                     </div>
                 </div>
             </div>
-            <Link to ="/results"><h1> NEXT STEP</h1> </Link>
+            <button style = {styles.button}
+                        type="submit"
+                        className="button is-info is-rounded">
+            <Link to ="/results"><p style={styles.link}>Next</p></Link>
+
+                        </button>
         </div>
+        </div>
+        </>
     )
 };
 

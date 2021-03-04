@@ -2,12 +2,21 @@ import { List, ListItem, ListItemResults } from "../components/List2/index";
 import { Container, Row, Col } from "../components/Grid/index"
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
+import Header from "../components/Header/Header";
+
 import React, { useState, useEffect } from "react";
 
 const styles = {
   div: {
-    backgroundColor: "#038989",
-    color: "white"
+ 
+      postion: "fixed",
+      width: "100%",
+      height: "100%",
+      backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+      padding: "80px",
+      backgroundColor: "#038989",
+      color: "white",
+      textAlign: "center",
   }
 }
 
@@ -96,6 +105,8 @@ function Results({}) {
 
   return (
     // {books.length ? (
+      <>
+  <Header Logo="/logo/logo.png" />
     <div style={styles.div}>
       <Container fluid>
         <h1 style={{textAlign: "center"}}>RESULTS
@@ -141,7 +152,7 @@ function Results({}) {
 
           {/* NEW Dx PRINT  */}
           <Col size="md-6 sm-12">
-            <h1>You Definately have </h1>
+            <h1>You Definitely have </h1>
             {newDx.map(newDx => (
               <ListItem key={newDx._id}>
                 {/* <Link to={"/newDxs/" + newDx._id}> */}
@@ -157,8 +168,40 @@ function Results({}) {
         </Row>
       </Container>
     </div>
+    </>
 
   )
 
 }
 export default Results;
+
+
+// brian! if you see this before i explain it, this is just what i was trying for 
+// the map to print data out on. 
+
+// return (
+//   // {books.length ? (
+//   <>
+//     <Header Logo="/logo/logo.png" />
+
+//     <div style={styles.body}>  
+//       <div>
+//   {diagnosis.map(diag => {
+//     <Card 
+//     name = {diag.name}
+//     description = {diag.description}/>
+//     })}
+//       </div>
+//       <div>
+//       {newDx.map(newDx => (
+//         <Card 
+//         name = {newDx.name}
+//         description = {newDx.description}/>
+// ))}
+//       </div>
+//     </div>
+//   </>
+
+// )
+
+// }

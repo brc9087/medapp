@@ -5,6 +5,7 @@ import { List, ListItem } from "../components/List2/index";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
 import DeleteBtn from "../components/DeleteBtn";
+
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 const styles = {
@@ -150,6 +151,7 @@ function Create() {
         <>
             <Header Logo="/logo/logo.png" />
             <div style={styles.body}>
+
                 <div style={styles.card}>
                     <h1 style={styles.header}> Create Diagnosis </h1>
                     <div >
@@ -180,10 +182,10 @@ function Create() {
                 </div>
 
 
-            </div>
+            
         
             <Col size="md-6 sm-12">
-                <h1>You Definately have </h1>
+                <h1>You Definitely have </h1>
                 
                 {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
                     <ListItem key={newDx._id}>
@@ -203,7 +205,7 @@ function Create() {
                     </ListItem>
                 )) : <div></div>}
             </Col>
-
+</div>
 
         </>
 

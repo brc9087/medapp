@@ -1,0 +1,40 @@
+.container {
+    width: 50%;
+    padding: 5px;
+}
+
+
+
+.collapsible {
+    background-image: linear-gradient(#7bbeea, #adc4cf);
+
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgb(69, 122, 152);
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    font-size: 25px;
+    border-radius: 5px;
+    
+
+    
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: rgb(31, 101, 150);
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 25px;
+    display: none;
+    overflow: hidden;
+    background-image: linear-gradient(#ffffff,#efefef);
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 15px;
+  }
