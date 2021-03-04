@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 
 const styles = {
   div: {
-    backgroundColor: "#038989",
+    backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
     color: "white"
   }
 }
@@ -141,7 +141,7 @@ function Results({}) {
 
           {/* NEW Dx PRINT  */}
           <Col size="md-6 sm-12">
-            <h1>You Definately have </h1>
+            <h1>You Definitely have </h1>
             {newDx.map(newDx => (
               <ListItem key={newDx._id}>
                 {/* <Link to={"/newDxs/" + newDx._id}> */}
