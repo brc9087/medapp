@@ -34,10 +34,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ https://islam4049.github.io/onlysyms"
+    "url": "git+ https://github.com/brc9087/medapp"
   },
   "bugs": {
-    "url": " https://islam4049.github.io/onlysyms/issues"
+    "url": " https://github.com/brc9087/medapp/issues"
   },
-  "homepage": " https://islam4049.github.io/onlysyms/#readme"
+  "homepage": "https://github.com/brc9087/medapp/#readme"
+  
 }
