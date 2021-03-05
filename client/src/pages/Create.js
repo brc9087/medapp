@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API"
 import { Container, Row, Col } from "../components/Grid/index";
-import { List, ListItem2 } from "../components/List2/index";
+import { ListItem, ListItem2 } from "../components/List2/index";
 import Input from "../components/Input/Input";
 import Header from "../components/Header/Header";
 import DeleteBtn from "../components/DeleteBtn";
@@ -125,6 +125,13 @@ function Create() {
         input: {
             marginBottom: "20px",
             textAlign: "center"
+        },
+        doc: {
+            textAlign: "center",
+            color: "white"
+        },
+        docdiv: {
+            top: "10px"
         }
     }
     return (
@@ -159,34 +166,34 @@ function Create() {
                         Submit
             </button>
                 </div>
+                {<br/>}
+                {<br/>}
 
-
-            </div>
-            <div className="container">
-                    <div className="row md" size="md-6 sm-12">
-                        <h1>Doctors Diagnoses</h1>
+                <div className="container">
+                    <div style={styles.docdiv}>
+                        <h1 style={styles.doc} >Doctors Diagnoses</h1>
                         {currentDX.diagnosis ? currentDX.diagnosis.map((newDx, index) => (
-                            <ListItem2 key={newDx._id}>
+                            <ListItem key={newDx._id}>
                                 {/* <Link to={"/newDxs/" + newDx._id}> */}
-                                <h4 ><strong>Name:</strong></h4><input 
+                                <h4 ><strong style={{color: "white"}}>Name:</strong></h4><input 
                                 type="text" 
                                 disabled={currentDX.isEdit} 
                                 value={newDx.name || "N/A"} 
                                 data-index={index} data-type={"name"} 
                                 onChange={onChangeDiagnosis}/>
-                                <h4><strong>Description:</strong></h4><input 
+                                <h4><strong style={{color: "white"}}>Description:</strong></h4><input 
                                 type="text" 
                                 disabled={currentDX.isEdit} 
                                 value={newDx.description} 
                                 data-index={index} data-type={"description"} 
                                 onChange={onChangeDiagnosis} />
-                                <h4><strong>Treatment:</strong></h4><input 
+                                <h4><strong style={{color: "white"}}>Treatment:</strong></h4><input 
                                 type="text" 
                                 disabled={currentDX.isEdit} 
                                 value={newDx.treatment} 
                                 data-index={index} data-type={"treatment"} 
                                 onChange={onChangeDiagnosis} />
-                                <h4><strong>Symptoms:</strong></h4><input 
+                                <h4><strong style={{color: "white"}}>Symptoms:</strong></h4><input 
                                 type="text" 
                                 disabled={currentDX.isEdit} 
                                 value={newDx.symptoms} 
@@ -199,9 +206,11 @@ function Create() {
                                     {updateBtnMsg.btnMsg} </button>
                                 <DeleteBtn onClick={() => deletenewdx(newDx._id)} />
                                 </div>
-                            </ListItem2>
+                            </ListItem>
                         )) : <div></div>}
                     </div>
+            </div>
+
             </div>
 
         </div>
