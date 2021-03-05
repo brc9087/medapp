@@ -4,13 +4,10 @@
   "description": "Mern Demo",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "seed": "node scripts/seedDB.js"
   },
   "author": "",
@@ -34,6 +31,5 @@
   },
   "bugs": {
     "url": "https://github.com/brc9087/medapp/issues"
-  },
-  "homepage": "https://github.com/brc9087/medapp#readme"
+  }
 }
