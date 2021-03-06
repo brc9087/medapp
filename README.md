@@ -12,6 +12,10 @@
 
 * 5. The Create Diagnosis Page(Crud) : The user will be able to create diagnosis for him/herself and save for future references.. 
 
+
+![OnlySymps Video Process](https://drive.google.com/file/d/1DQ4SuyRMgcEBGdNR22YxjV79Kk5Y8cpp/view?usp=sharing)
+
+
 ## Usage / Directions
 * Click the link to check! ==> https://.herokuapp.com/
 
@@ -42,8 +46,6 @@
 *  ![](./client/src/images/l.creatediagnosis.jpg)
 
 <br>
-## Walk Through the Video
-![video of the generate process](https://drive.google.com/file/d/1DQ4SuyRMgcEBGdNR22YxjV79Kk5Y8cpp/view?usp=sharing)
 
 
 ## Tools Used / Dependancies
