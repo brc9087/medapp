@@ -43,7 +43,7 @@
 
 <br>
 ## Walk Through the Video
-![video of the generate process]()
+![video of the generate process](https://drive.google.com/file/d/1DQ4SuyRMgcEBGdNR22YxjV79Kk5Y8cpp/view?usp=sharing)
 
 
 ## Tools Used / Dependancies
