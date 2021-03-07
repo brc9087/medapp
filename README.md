@@ -18,7 +18,7 @@
 
 
 ## Usage / Directions
-* Click the link to check! ==> https://.herokuapp.com/
+* Click the link to check! ==> https://stark-chamber-95181.herokuapp.com/
 
 ## LOGIN PAGE:
 * ![](./client/src/images/l.loginpage.jpg )
@@ -65,5 +65,5 @@
 * Heroku
 
 ## Links
-* APP: https://herokuapp.com/
+* APP: https://stark-chamber-95181.herokuapp.com/
 * REPO: https://github.com/brc9087/medapp
