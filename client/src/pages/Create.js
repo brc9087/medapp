@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API"
-import { Container, Row, Col } from "../components/Grid/index";
+//import { Container, Row, Col } from "../components/Grid/index";
 import { ListItem, ListItem2 } from "../components/List2/index";
 import Input from "../components/Input/Input";
-import Header from "../components/Header/Header";
+//import Header from "../components/Header/Header";
 import DeleteBtn from "../components/DeleteBtn";
 // import { Input, FormBtn, TextArea } from "../components/Form2/index"
 
 const styles = {
     div: {
-        backgroundColor: "#038989"
+        backgroundColor: ""
     }
 }
 
@@ -103,7 +103,7 @@ function Create() {
             postion: "fixed",
             width: "100%",
             height: "100%",
-            backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+            backgroundImage: `url(${"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=860"})`,
             padding: "100px",
             textAlign: "center",
         },
@@ -111,10 +111,11 @@ function Create() {
             color: "white"
         },
         card: {
-            border: "25px",
+            width:"700px",
+            border: "0px",
             borderstyle: "solid",
             padding: "40px",
-            backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
+            backgroundImage: "linear-gradient(#22687F, #5A8391, green)",
             marginbottom: "5px",
             color: "white",
             borderStyle: "solid",
@@ -128,15 +129,15 @@ function Create() {
         },
         doc: {
             textAlign: "center",
-            color: "white"
+            color: "black"
         },
         docdiv: {
-            top: "10px"
+            top: "50px"
         }
     }
     return (
         <div>
-            <Header Logo="/logo/logo.png" />
+           
             <div style={styles.body}>
                 <div style={styles.card}>
                     <h1 style={styles.header}> Create Diagnosis </h1>

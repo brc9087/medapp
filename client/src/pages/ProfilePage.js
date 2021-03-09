@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 // import Nav from "../components/Navbar/Nav";
-import Header from "../components/Header/Header";
+//import Header from "../components/Header/Header";
 import UserContext from "../utils/UserContext";
 import API from "../utils/API"
 import DeleteBtn from "../components/DeleteBtn/index"
@@ -32,31 +32,34 @@ const ProfilePage = () => {
 
   const styles = {
     body: {
-      postion: "fixed",
+      postion: "center",
       width: "100%",
-      height: "100%",
-      backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+      height: "60%",
+      backgroundImage: `url(${"https://images.pexels.com/photos/6753136/pexels-photo-6753136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"})`,
       padding: "80px",
       backgroundColor: "#038989",
       color: "white",
       textAlign: "center",
     },
     tiles: {
-      color: "white"
+      width:"60px",
+      color:"black"
     },
     parent: {
-      backgroundColor: "#4ac8c8"
+      backgroundColor: "transparent",
+      
     },
     child: {
-      backgroundColor: "#0d9f9f",
+      backgroundColor: "blue",
       color: "white"
 
-    }
+    },
+    
   }
 
   return (
     <>
-      <Header Logo="/logo/logo.png" />
+      
 
       <div className="main" style={styles.body}>
         <div >

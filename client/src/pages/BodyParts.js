@@ -11,21 +11,20 @@ import { Link, useParams } from "react-router-dom";
 
 const styles = {
     pic: {
-        width: "100%",
         position: "relative",
-        objectPosition: "10%"
+        objectPosition: "30%"
     },
 
     head: {
-        width: "100%",
-        height: "80%"
+        width: "50%",
+        height: "60%"
 
     },
 
     div: {
         // backgroundColor: "#038989",
-        border: "solid 200px",
-        borderColor: "#038989"
+        border: "solid 300px",
+        borderColor: "blue"
     }
 
 

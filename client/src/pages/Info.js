@@ -1,41 +1,54 @@
 import React, { useState, useEffect, useDebugValue } from "react";
 import API from "../utils/API";
 import Input from "../components/Input/Input";
-import Header from "../components/Header/Header";
+//import Header from "../components/Header/Header";
+//import background from "./img/placeholder.png";
+
 
 
 const styles = {
 
     card: {
-        border: "25px",
+        width: "500px",
+        border: "00px",
         borderstyle: "solid",
         padding: "40px",
-        backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
+        backgroundImage: "linear-gradient(#22687F, #5A8391, green)",
         marginbottom: "5px",
         color: "white",
         borderStyle: "solid",
-        borderWidth: "6px",
+        borderWidth: "0px",
         borderColor: "white",
 
     },
 
-    body: {
-        postion: "fixed",
-        width: "100%",
-        height: "100%",
-        backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
-        padding: "100px",
-        textAlign: "center",
-    },
+   
     question: {
         padding: "10px",
-        textAlign: "center"
+        textAlign: "left",
+        
+
     },
     input: {
         marginBottom: "20px",
-        textAlign: "center"
+        textAlign: "center",
+    },
+      
+
+    body: {
+        postion: "fixed",
+        backgroundImage: `url(${"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1200"})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        width: '100vw',
+        height: '140vh'
     }
+   
+      
 }
+
+
 
 
 
@@ -43,7 +56,7 @@ function Info() {
     // Set State
     // const [bio, setBio] = useState([])
     const [bioObject, setbioObject] = useState({})
-
+  
     function onChange(e) {
         const { placeholder, value } = e.target;
         setbioObject({ ...bioObject, [placeholder]: value })
@@ -91,14 +104,14 @@ function Info() {
 
     return (
         <>
-            <Header Logo="/logo/logo.png" />
+            
 
             <div style={styles.body}>
                 <div style={styles.card}>
 
-                    <p> Please answer the following</p>
+                    <p> Please answer the following </p>
 
-                    <h2>Age:</h2>
+                    <h2>Your age:</h2>
                     <form style={styles.question}>
                         <Input style={styles.input}
                             onChange={onChange}
@@ -106,7 +119,7 @@ function Info() {
                             type="text"
                             name="Sex" />
 
-                        <h2>Sex:</h2>
+                        <h2>Your Sex:</h2>
 
                         <Input style={styles.input}
                             onChange={onChange}
@@ -114,7 +127,7 @@ function Info() {
                             type="text"
                             name="Sex" />
 
-                        <h2>Medical History:</h2>
+                        <h2> Your Medical History:</h2>
 
                         <Input style={styles.input}
                             onChange={onChange}
@@ -122,7 +135,7 @@ function Info() {
                             type="text"
                             name="Symptoms" />
 
-                        <h2>What are your symptoms</h2>
+                        <h2>What are your symptoms?</h2>
 
                         <Input style={styles.input}
                             onChange={onChange}
@@ -138,11 +151,26 @@ function Info() {
                         className="button is-info is-rounded">
                         Submit
                         </button>
+                
+                        <div>
+                        <div>
+                            <small>* Term and condition may apply. Please click the following link to see the tearm and conditions.[cleck here]</small>
+                        </div>
+                        </div>
+                        <div>
+                            <small>* Please Subscribe our weekly/monthly Newsletters from the medical Professionals.[click here]</small>
+                        </div>
 
-                </div>
+               
             </div>
+            </div>
+
         </>
     )
 };
 
+
+
 export default Info;
+
+

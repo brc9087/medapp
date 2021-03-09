@@ -6,8 +6,10 @@ import React, { useState, useEffect } from "react";
 
 const styles = {
   div: {
-    backgroundColor: "#038989",
-    color: "white"
+    backgroundColor: "blue",
+    backgroundImage: `url(${"https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=900"})`,
+    color: "white",
+
   }
 }
 

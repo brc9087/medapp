@@ -5,7 +5,7 @@ import "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyDB_53k1uUFjbfLt_zTs4eT32yX77eZol0",
   authDomain: "fb-demo-a3e50.firebaseapp.com",
-  databaseURL: "https://fb-demo-a3e50.firebaseio.com",
+  databaseURL: "https://fb-demo-a3e50.firebaseio.com ",
   projectId: "fb-demo-a3e50",
   storageBucket: "fb-demo-a3e50.appspot.com",
   messagingSenderId: "530808334788",

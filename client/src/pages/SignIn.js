@@ -38,7 +38,7 @@ const SignIn = () => {
       position: "fixed",
       width: "100%",
       height: "100%",
-      backgroundImage: 'linear-gradient(#2a3342, #3e5c90)',
+      backgroundImage: `url(${"https://images.pexels.com/photos/5858740/pexels-photo-5858740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1240"})`,
       padding: "80px",
       backgroundColor: "#038989",
       color: "white",

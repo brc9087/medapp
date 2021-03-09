@@ -3,12 +3,13 @@ import {auth} from "../../utils/firebase";
 
 const styles = {
   navbar: {
-    backgroundImage: "linear-gradient(#22687F, #5A8391, #22687F)",
+    backgroundImage: "linear-gradient(blue, #5A8370, blue)",
     boxShadow: "0 3px 2px -2px rgba(0,0,0,2)",
   },
   navbaritems: {
     color: "white",
-    fontWeight: "bold"
+    fontWeight: "bold",
+   
   }
 }
 function Nav(props) {
